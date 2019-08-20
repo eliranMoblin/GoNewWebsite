@@ -1,11 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="200.059" height="257" viewBox="0 0 212.059 264.938">
-  <defs>
-    <!--<style>
-      .cls-1 {
-        fill: #ed312e;
-        fill-rule: evenodd;
-      }
-    </style>-->
-  </defs>
-  <path id="Rectangle" class="cls-1" d="M870.735,536.51L1069.39,661.552c5.23,3.292,5.23,8.613,0,11.9L870.735,798.5c-5.229,3.292-9.456.962-9.456-5.212V541.722C861.279,535.548,865.506,533.218,870.735,536.51Z" transform="translate(-861.281 -535.031)"/>
+<svg
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="304px" height="356px">
+  <path fill-rule="evenodd"  fill="rgb(237, 49, 46)" stroke-width="16" d="M73.735,42.510 L272.395,167.552 C277.624,170.844 277.624,176.165 272.395,179.456 L73.735,304.498 C68.506,307.790 64.279,305.460 64.279,299.286 L64.279,47.722 C64.279,41.548 68.506,39.218 73.735,42.510 Z"/>
 </svg>

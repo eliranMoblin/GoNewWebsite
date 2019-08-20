@@ -1,7 +1,49 @@
-﻿@{
-    ViewBag.Title = "About";
-}
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+﻿
+<section class=" page-section" id="customer">
 
-<p>Use this area to provide additional information.</p>
+        <div class="container">
+
+
+            <div class="owl-carousel clients-carousel">
+                <img src="~/Images/Rectangle.png" />
+                <img src="~/Images/b144 logo grey.png" />
+                <img src="~/Images/b144 logo grey.png" />
+                <img src="~/Images/b144 logo grey.png" />
+                <img src="~/Images/b144 logo grey.png" />
+                <img src="~/Images/b144 logo grey.png" />
+                <img src="~/Images/b144 logo grey.png" />
+                <img src="~/Images/b144 logo grey.png" />
+                <img src="~/Images/b144 logo grey.png" />
+            </div>
+
+        </div>
+    
+
+</section>
+
+
+@section scripts
+{
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true
+                },
+                600: {
+                    items: 3,
+                    nav: false
+                },
+                1000: {
+                    items: 5,
+                    nav: true,
+                    loop: false
+                }
+            }
+        })
+    </script>
+}
