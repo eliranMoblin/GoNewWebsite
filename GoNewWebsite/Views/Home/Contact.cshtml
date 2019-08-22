@@ -1,105 +1,40 @@
 ﻿
-<style>
 
-    .swiper-container {
-        height: 300px;
-    }
-
-    .swiper-button-prev {
-        color: white !important;
-    }
-
-    .swiper-container {
-        width: 100%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-
-    .swiper-slide {
-        background-position: center;
-        background-size: contain;
-        width: 500px;
-        height: 500px;
-    }
-
-
-    .swiper-slide {
-        /*transform: translate3d(-380px, 0px, -800px) rotateX(0deg) rotateY(0deg) !important;*/
-        /*-webkit-mask-image: url(../../Images/Rectangle.png);*/
-        /*mask-image: url(../../Images/Rectangle.svg);*/
-        fill: lightSkyBlue;
-        stroke: darkRed;
-        stroke-width: 4;
-        fill-rule: evenodd;
-        background-size: contain;
-        /*background-position: center;
-        
-        background-attachment: fixed;*/
-        
-        background-image: url('../../Images/Rectangle.png');
-        background-repeat: no-repeat;
-        /*background-color: red;*/
-        /*width: 595px;
-
-
-            width: 500px;
-            margin-left:  20px;
-            padding-right: 25px;*/
-        /*;
-         /
-        ;*/
-
-    }
-
-    .swiper-slide-next-1 {
-        transform: translate3d(344px, -3px, -540px) rotateX(0deg) rotateY(0deg) !important;
-        background-image: url('../../Images/Rectangle3.png');
-    }
-
-    .swiper-slide-next {
-        transform: translate3d(169px, 0px, -250px) rotateX(0deg) rotateY(0deg) !important;
-        background-image: url('../../Images/Rectangle2.png');
-    }
-    .swiper-slide-prev-1 {
-        transform: translate3d(-407px, 0px, -825px) rotateX(0deg) rotateY(0deg) !important;
-        background-image: url('../../Images/Rectangle3.png');
-    }
-    .swiper-slide-prev {
-        transform: translate3d(-185px, 0px, -510px) rotateX(0deg) rotateY(0deg) !important;
-        background-image: url('../../Images/Rectangle2.png');
-    }
-    .carousel-3d-slide {
-        border-radius: 0.95rem !important;
-    }
-
-
-</style>
-
-<link href="~/Content/swiper.css" rel="stylesheet" />
 
 
 <!-- Swiper -->
 
-<section class="page-section" id="services">
-    <div class="row swiper-container" dir="rtl">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
+<section class="page-section container" id="services">
+    <div id="reta">
+        <carousel-3d :perspective="0" :space="150" :border="0" :display="7" :width="274" :height="437"
+                     :controls-visible="true" :controls-prev-html="'❬'" :controls-next-html="'❭'" :controls-width="30" :controls-height="30" :clickable="true" :autoplay="false" :autoplay-timeout="5000">
+            <slide :index="0">
+                <p class="triangular">Media Planin</p>
+            </slide>
+            <slide :index="1">
+                <p class="triangular">Mobile&Web Development</p>
+                <p class="triangular"></p>
 
-        </div>
-        <!-- Add Arrows -->
-        <div class="swiper-button-next swiper-button-white"></div>
-        <div class="swiper-button-prev swiper-button-white"></div>
+            </slide>
+            <slide :index="2">
+
+            </slide>
+            <slide :index="3">
+
+            </slide>
+            <slide :index="4">
+
+            </slide>
+            <slide :index="5">
+
+            </slide>
+            <slide :index="6">
+
+            </slide>
+
+
+        </carousel-3d>
     </div>
-
     <div class="row">
         <div class=" col-md-6">
         </div>
@@ -114,13 +49,43 @@
     </div>
 </section>
 
-<section class=" page-section" id="portfolio">
-    <div id="carousel3d">
-        <carousel-3d :perspective="0" :space="400" :display="3" :border="0"
-                     :width="660" :height="437":controls-visible="true" :controls-prev-html="'❬'" :controls-next-html="'❭'" :controls-width="30" :controls-height="60" :clickable="true" :autoplay="false" :autoplay-timeout="5000">
+<section class=" page-section container-fluid" id="portfolio">
+    <div class="section-header">
+        <p class="ourCustomer">סיפורי הצלחה</p>
+
+    </div>
+    <div id="story">
+        <carousel-3d :perspective="0" :space="500" :display="3" :border="0"
+                     :width="1113" :height="575" :controls-visible="true" :controls-prev-html="'❬'" :controls-next-html="'❭'" :controls-width="30" :controls-height="60" :clickable="true" :autoplay="false" :autoplay-timeout="5000">
             <slide :index="0">
-                <span class="title">Web Development</span>
-                <a href="https://www.youtube.com/channel/UCXTfDJ60DBmA932Du6B1ydg">Click Here</a>
+                <div class="card col-md-12">
+                    <div class="row no-gutters">
+
+                        <div class="col-md-8">
+                            <div class="card-body" style="color: black">
+
+                                <p class="d-inline-block">500000 זה לא מספר קמפיינים</p>
+                                <span class="d-inline-block btn float-right">
+                                    <img src="~/Images/b144 logo.png" />
+                                </span>
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">
+                                    האתגר: ההתאמה המדויקת בין הצרכן לבית העסק מחייבת ניהול כמות עצומה של דאטה
+                                    בכל יום מתבצעים למעלה מ70 אלף חיפושי עסקים ברשת בישראל, תחת מיליוני ביטויי חיפוש אפשריים, להם צריך להתאים כחצי מיליון עסקים המחולקים ל-1620 סגמנטים ו-16 אזורים. יחד עם ההזדמנות הגדולה שיצר מאגר המידע על העסקים של B144, ניצב גם האתגר הגדול -  תיעול כמות המידע העצומה לכדי תוצאות חיפוש מדויקות וחשיפה איכותית של בית העסק
+                                    הפתרון:
+                                    בניית מערכת שלוקחת את כמות הדאטה העצומה שנאספה, וממשיכה להיאסף בכל רגע נתון, ומבצעת חיתוכים סגמנטיאליים מקוריים. בפועל, מדובר במיליוני שורות מידע, שכל אחת כוללת בית עסק, סגמנטים, ביטויי חיפוש רלוונטיים, קריאייטיבים מותאמים אוטומטית, מידע על הגולשים ועוד. כך, באמצעות קונקטורים ואלגוריתמים המחוברים מצד אחד למערכת הניהול של הלקוח ומצד שני למערכות ההגשה שלנו, נוצרים קמפיינים בהתאמה מדויקת לצרכי הגולש ובית העסק
+
+                                    התוצאות:
+                                    •	החזר השקעה משמעותי לעסקים המפרסמים, עם ROI של 500% פר סגמנט
+                                    •	B144 כמעט משלשת את הכנסותיה, עם עלייה מ-37 מיליון ₪ ב-2015 לכמעט 90 מיליון ₪
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="~/Images/iPhone X - Outline.png" class="card-img">
+                        </div>
+                    </div>
+                </div>
             </slide>
             <slide :index="1">
 
@@ -130,8 +95,9 @@
                         <div class="col-md-8">
                             <div class="card-body" style="color: black">
 
-                                <p class="d-inline-block">500000 זה לא מספר קמפיינים</p><span class="d-inline-block btn float-left">
-                                    <img src="~/Images/b144 logo.png" />
+                                <p class="d-inline-block">500000 זה לא מספר קמפיינים</p>
+                                <span class="d-inline-block btn float-left">
+                                    <img src="~/Images/b144 logo.png" class="img-fluid" />
                                 </span>
                                 <h5 class="card-title">Card title</h5>
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -151,7 +117,8 @@
                         <div class="col-md-8">
                             <div class="card-body" style="color: black">
 
-                                <p class="d-inline-block">500000 זה לא מספר קמפיינים</p><span class="d-inline-block btn float-left">
+                                <p class="d-inline-block">500000 זה לא מספר קמפיינים</p>
+                                <span class="d-inline-block btn float-left">
                                     <img src="~/Images/b144 logo.png" />
                                 </span>
                                 <h5 class="card-title">Card title</h5>
@@ -166,25 +133,14 @@
                 </div>
             </slide>
             <slide :index="3">
-                <span class="title">You know</span>
-                <a href="https://www.youtube.com/channel/UCXTfDJ60DBmA932Du6B1ydg">Click Here</a>
-            </slide>
-            <slide :index="4">
-                <span class="title">You know</span>
-                <a href="https://www.youtube.com/channel/UCXTfDJ60DBmA932Du6B1ydg">Click Here</a>
-            </slide>
-            <slide :index="5">
-                <span class="title">You know</span>
-                <a href="https://www.youtube.com/channel/UCXTfDJ60DBmA932Du6B1ydg">Click Here</a>
-            </slide>
-            <slide :index="6">
                 <div class="card col-md-12">
                     <div class="row no-gutters">
 
                         <div class="col-md-8">
                             <div class="card-body" style="color: black">
 
-                                <p class="d-inline-block">500000 זה לא מספר קמפיינים</p><span class="d-inline-block btn float-left">
+                                <p class="d-inline-block">500000 זה לא מספר קמפיינים</p>
+                                <span class="d-inline-block btn float-left">
                                     <img src="~/Images/b144 logo.png" />
                                 </span>
                                 <h5 class="card-title">Card title</h5>
@@ -198,32 +154,94 @@
                     </div>
                 </div>
             </slide>
-		
+            <slide :index="4">
+                <div class="card col-md-12">
+                    <div class="row no-gutters">
+
+                        <div class="col-md-8">
+                            <div class="card-body" style="color: black">
+
+                                <p class="d-inline-block">500000 זה לא מספר קמפיינים</p>
+                                <span class="d-inline-block btn float-left">
+                                    <img src="~/Images/b144 logo.png" />
+                                </span>
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text float-right"><a href="" style="text-decoration: underline">קרא עוד</a></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="~/Images/iPhone X - Outline.png" class="card-img">
+                        </div>
+                    </div>
+                </div>
+            </slide>
+            <slide :index="5">
+                <div class="card col-md-12">
+                    <div class="row no-gutters">
+
+                        <div class="col-md-8">
+                            <div class="card-body" style="color: black">
+
+                                <p class="d-inline-block">500000 זה לא מספר קמפיינים</p>
+                                <span class="d-inline-block btn float-left">
+                                    <img src="~/Images/b144 logo.png" />
+                                </span>
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text float-right"><a href="" style="text-decoration: underline">קרא עוד</a></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </slide>
+            <slide :index="6">
+                <div class="card col-md-12">
+                    <div class="row no-gutters">
+
+                        <div class="col-md-8">
+                            <div class="card-body" style="color: black">
+
+                                <p class="d-inline-block">500000 זה לא מספר קמפיינים</p>
+                                <span class="d-inline-block btn float-left">
+                                    <img src="~/Images/b144 logo.png" />
+                                </span>
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text float-right"><a href="" style="text-decoration: underline">קרא עוד</a></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="~/Images/iPhone X - Outline.png" class="card-img">
+                        </div>
+                    </div>
+                </div>
+            </slide>
+
         </carousel-3d>
     </div>
-    
+
     <div class="row">
-        <div class=" col-md-6">
+        <div class=" col-md-6 col-sm-1">
         </div>
-        <div class=" col-md-6">
-            <a href="#customer" class="js-scroll-trigger">
+        <div class=" col-md-6 col-sm-1">
+            <a href="#about" class="js-scroll-trigger">
                 <div class="chevron"></div>
                 <div class="chevron"></div>
-                <div class="chevron"></div> 
+                <div class="chevron"></div>
             </a>
 
         </div>
     </div>
 </section>
 
-<section class=" page-section" id="customer">
-    <!--==========================
-    Clients Section
-    ============================-->
+<section class=" page-section" id="about">
+
     <div class="container">
         <div class="section-header">
             <p class="ourCustomer">בין לקוחותינו</p>
-        
+
         </div>
 
         <div class="owl-carousel clients-carousel">
@@ -244,17 +262,36 @@
 
 
 </section>
+
+
 <!--==========================
 Clients Section
 ============================-->
 
-<section class="page-section" id="Job">
-    <div class="row">
+<section class="page-section container" id="Job">
+    <div class="section-header">
+        <p class="ourCustomer">בוא לעבוד איתנו</p>
 
-        <div class="col-8">
-            <div class="tab-content" id="v-pills-tabContent">
-                <div class="tab-pane fade show active" id="v-pills-tab1" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                    <div class="inside-content">
+    </div>
+    <div class="row">
+        <div class="container">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#home" role="tab" aria-controls="home"> Programmatic Media</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Strategy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#messages" role="tab" aria-controls="messages">Social Media Marketing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#settings" role="tab" aria-controls="settings">Creative & Studio</a>
+                </li>
+            </ul>
+            <div class="tab-content">   
+                <div class="tab-pane active" id="home" role="tabpanel">
+                    <div class="item-content">
                         <h4>
                             בואו לנהל את הצרכנים של <br />
                             הלקוחות שלנו בכלל הקמפיינים
@@ -265,22 +302,34 @@ Clients Section
                             חיבור בין מערכות הגשה ומערכות קניית מדיה
                         </p>
                         <p>שימוש בכלים טכנולוגיים מתקדמים (Mobium)</p>
+                        
+                    </div>
+                    <p class="read-more">קרא עוד</p>
+                </div>
+                <div class="tab-pane" id="profile" role="tabpanel">
+                    <div class="item-content">
+                        Tab 2 content. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
                     </div>
                 </div>
-                <div class="tab-pane fade" id="v-pills-tab2" role="tabpanel" aria-labelledby="v-pills-tab2-tab">Here is a content for tab 2.</div>
-                <div class="tab-pane fade" id="v-pills-tab3" role="tabpanel" aria-labelledby="v-pills-tab3-tab">Here is a content for tab 3.</div>
-                <div class="tab-pane fade" id="v-pills-tab4" role="tabpanel" aria-labelledby="v-pills-tab4-tab">Here is a content for tab 4.</div>
+                <div class="tab-pane" id="messages" role="tabpanel">
+                    <div class="item-content">
+                        Tab 2 content. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+                    </div>
+                </div>
+                <div class="tab-pane" id="settings" role="tabpanel">
+                    <div class="item-content">
+                        Tab 2 content. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="col-4">
-            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
-                <a class="tab-content-selected nav-link active" id="v-pills-tab1-tab" data-toggle="pill" href="#v-pills-tab1" role="tab" aria-controls="v-pills-tab1" aria-expanded="true">Progremmatic Media</a>
-                <a class="tab-content-selected nav-link" id="v-pills-tab2-tab" data-toggle="pill" href="#v-pills-tab2" role="tab" aria-controls="v-pills-tab2" aria-expanded="true">TAB 2</a>
-                <a class="tab-content-selected nav-link" id="v-pills-tab3-tab" data-toggle="pill" href="#v-pills-tab3" role="tab" aria-controls="v-pills-tab3" aria-expanded="true">TAB 3</a>
-                <a class="tab-content-selected nav-link" id="v-pills-tab4-tab" data-toggle="pill" href="#v-pills-tab4" role="tab" aria-controls="v-pills-tab4" aria-expanded="true">TAB 4</a>
-            </div>
+            <!-- /Bootstrap Tabs -->
+            <!-- Bootstrap Accordion -->
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"></div>
+            <!-- /Bootstrap Accordion -->
         </div>
     </div>
+
+
 </section>
 
 <!-- Swiper -->
@@ -288,22 +337,27 @@ Clients Section
 
 @section scripts
 {
+
+ 
     <script>
+
+
         $('.clients-carousel').owlCarousel({
-            
             margin: 100,
-            loop:true,
-            autoHeight: true,
+            loop: true,
+            autoHeight: false,
+            autoplay: true,
             nav: true,
             responsiveClass: true, navText: [
-
                 '<i class="fa fa-angle-left" aria-hidden="true"></i>',
                 '<i class="fa fa-angle-right" aria-hidden="true"></i>'
             ],
             responsive: {
                 0: {
-                    items: 1,
-                    nav: true
+                    items: 3,
+                    autoWidth: true,
+                    margin: 50,
+                    nav: false
                 },
                 600: {
                     items: 3,
@@ -311,68 +365,114 @@ Clients Section
                 },
                 1000: {
                     items: 10,
-                    
+
                     loop: true
                 }
             }
         })
     </script>
-             <script>
-                 jQuery(document).ready(function ($) {
-                     var swiper = new Swiper('.swiper-container', {
-                         effect: 'coverflow',
-                         autoplay: false,
-                         speed: 2000,
-                         loop: true,
-                         loopFillGroupWithBlank: true,
-                         centeredSlides: true,
-                         slidesPerView: 3,
-                         initialSlide: 3,
-                         keyboardControl: true,
-                         mousewheelControl: true,
-                         lazyLoading: true,
-                         preventClicks: false,
-                         preventClicksPropagation: false,
-                         lazyLoadingInPrevNext: true,
-                         nextButton: '.swiper-button-next',
-                         prevButton: '.swiper-button-prev',
-                         coverflow: {
-                             rotate: 0,
-                             stretch: 0,
-                             depth: 250,
-                             modifier: 1,
-                             slideShadows: false,
-                         }
-                     });
+    <script>
+        jQuery(document).ready(function ($) {
+            var swiper = new Swiper('.swiper-container', {
+                effect: 'coverflow',
+                autoplay: true,
+                speed: 5000,
+                mousewheelControl: true,
+                loop: true,
+                loopFillGroupWithBlank: true,
+                centeredSlides: true,
+                slidesPerView: 3,
+                initialSlide: 3,
+                keyboardControl: true,
+                loopedSlides: 1,
+                lazyLoading: true,
+                preventClicks: true,
+                preventClicksPropagation: false,
+                lazyLoadingInPrevNext: true,
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+                coverflow: {
+                    rotate: 0,
+                    stretch: 20,
+                    depth: 400,
+                    modifier: 1,
+                    slideShadows: false,
+                }
+            });
 
-      
-                 });
-             </script>
-             <script >
-                 new Vue({
-                     el: '#carousel3d',
-                     data: {
-                         slides: 3
-                     },
-                     components: {
-                         'carousel-3d': Carousel3d.Carousel3d,
-                         'slide': Carousel3d.Slide
-                     },
-                     destroyed: function () {
-                         this.pauseAutoplay(),
-                             this.$isServer || (this.$el.removeEventListener("mouseenter", this.pauseAutoplay), this.$el.removeEventListener("mouseleave", this.startAutoplay))
-                     }
-                     //methods: {
-                     //    pauseAutoplay: function () {
-                     //        this.autoplayInterval && (this.autoplayInterval = clearInterval(this.autoplayInterval))
-                     //    },
-                     //    startAutoplay: function () {
-                     //        var t = this;
-                     //        this.autoplay && (this.autoplayInterval = setInterval(function () {
-                     //            "ltr" === t.dir ? t.goPrev() : t.goNext()
-                     //        }, this.autoplayTimeout))
-                     //    }
-                     //}
-                 })
-             </script>
-         }
+
+        });
+    </script>
+    <script>
+        new Vue({
+            el: '#reta',
+            data: {
+                slides: 2
+            },
+            components: {
+                'carousel-3d': Carousel3d.Carousel3d,
+                'slide': Carousel3d.Slide
+            },
+            destroyed: function () {
+                this.pauseAutoplay(),
+                    this.$isServer || (this.$el.removeEventListener("mouseenter", this.pauseAutoplay), this.$el.removeEventListener("mouseleave", this.startAutoplay))
+            },
+            methods: {
+                pauseAutoplay: function () {
+                    this.autoplayInterval && (this.autoplayInterval = clearInterval(this.autoplayInterval))
+                },
+                startAutoplay: function () {
+                    var t = this;
+                    this.autoplay && (this.autoplayInterval = setInterval(function () {
+                        "ltr" === t.dir ? t.goPrev() : t.goNext()
+                    }, this.autoplayTimeout))
+                }
+            }
+        })
+        new Vue({
+            el: '#story',
+            data: {
+                slides: 3
+            },
+            components: {
+                'carousel-3d': Carousel3d.Carousel3d,
+                'slide': Carousel3d.Slide
+            },
+            destroyed: function () {
+                this.pauseAutoplay(),
+                    this.$isServer || (this.$el.removeEventListener("mouseenter", this.pauseAutoplay), this.$el.removeEventListener("mouseleave", this.startAutoplay))
+            }
+            //methods: {
+            //    pauseAutoplay: function () {
+            //        this.autoplayInterval && (this.autoplayInterval = clearInterval(this.autoplayInterval))
+            //    },
+            //    startAutoplay: function () {
+            //        var t = this;
+            //        this.autoplay && (this.autoplayInterval = setInterval(function () {
+            //            "ltr" === t.dir ? t.goPrev() : t.goNext()
+            //        }, this.autoplayTimeout))
+            //    }
+            //}
+        })
+    </script>
+    
+    <script type="text/javascript">
+        //$(document).ready(function(){
+        //    // Add minus icon for collapse element which is open by default
+        //    $(".in.collapse").each(function(){
+        //        $(this).siblings(".panel-heading").find(".glyphicon").addClass("rotate");
+        //    });
+        
+        //    // Toggle plus minus icon on show hide of collapse element
+        //    $(".collapse").on('show.bs.collapse', function(){
+        //        $(this).parent().find(".glyphicon").addClass("rotate");
+        //    }).on('hide.bs.collapse', function(){
+        //        $(this).parent().find(".glyphicon").removeClass("rotate");
+        //    });
+        //});
+        $(document).ready(function(){
+            getAccordion("#myTab",769);
+        });
+    </script>
+
+}

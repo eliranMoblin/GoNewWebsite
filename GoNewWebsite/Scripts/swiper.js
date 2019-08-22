@@ -929,31 +929,39 @@
           Classes
           ===========================*/
         s.updateClasses = function () {
-            s.slides.removeClass(s.params.slideActiveClass + ' ' + s.params.slideNextClass + ' ' + s.params.slidePrevClass + ' ' + s.params.slidePrevClass1 + ' ' + s.params.slideNextClass1);
+            s.slides.removeClass(s.params.slideActiveClass + ' ' + s.params.slideNextClass + ' ' + s.params.slidePrevClass);
             var activeSlide = s.slides.eq(s.activeIndex);
+
+            console.log(activeSlide);
             // Active classes
             activeSlide.addClass(s.params.slideActiveClass);
             // Next Slide
-            
+
+            console.log(" New actice");
+            console.log(activeSlide);
             var nextSlide = activeSlide.next('.' + s.params.slideClass).addClass(s.params.slideNextClass);
-            var nextNextSlide=activeSlide.next().next('.' + s.params.slideClass).addClass(s.params.slideNextClass1);
+
+            console.log("Next Slide");
+            console.log(nextSlide);
+            //var nextNextSlide = activeSlide.next().next('.' + s.params.slideClass).addClass(s.params.slideNextClass1);
 
             if (s.params.loop && nextSlide.length === 0) {
+                
                 s.slides.eq(0).addClass(s.params.slideNextClass);
             }
-            if (s.params.loop && nextNextSlide.length === 0) {
-                s.slides.eq(1).addClass(s.params.slideNextClass1);
-            }
+            //if (s.params.loop && nextNextSlide.length === 0) {
+            //    s.slides.eq(1).addClass(s.params.slideNextClass1);
+            //}
             // Prev Slide
             var prevSlide = activeSlide.prev('.' + s.params.slideClass).addClass(s.params.slidePrevClass);
-            var prevprevSlide = activeSlide.prev().prev('.' + s.params.slideClass).addClass(s.params.slidePrevClass1);
+            //var prevprevSlide = activeSlide.prev().prev('.' + s.params.slideClass).addClass(s.params.slidePrevClass1);
             if (s.params.loop && prevSlide.length === 0) {
                 s.slides.eq(-1).addClass(s.params.slidePrevClass);
             }
 
-            if (s.params.loop && prevprevSlide.length === 0) {
-                s.slides.eq(-2).addClass(s.params.slidePrevClass1);
-            }
+            //if (s.params.loop && prevprevSlide.length === 0) {
+            //    s.slides.eq(-2).addClass(s.params.slidePrevClass1);
+            //}
 
             // Pagination
             if (s.paginationContainer && s.paginationContainer.length > 0) {

@@ -1,220 +1,474 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
-<div class="carousel">
+﻿<!-- Swiper -->
 
-    <div class="slides">
-  
-        <div class="slideItem">
-            <a href="#"> <img src="/images/slide-1.jpg"> </a>
-            <div class="shadow">
-                <div class="shadowLeft"></div>
-                <div class="shadowMiddle"></div>
-                <div class="shadowRight"></div>
-            </div>
+<section class="page-section container" id="services">
+    <div id="reta">
+        <carousel-3d :perspective="0" :space="150" :border="0" :display="7" :width="274" :height="437"
+                     :controls-visible="true" :controls-prev-html="'❬'" :controls-next-html="'❭'" :controls-width="30" :controls-height="30" :clickable="true" :autoplay="false" :autoplay-timeout="5000">
+            <slide :index="0">
+                <p class="triangular">Media Planin</p>
+            </slide>
+            <slide :index="1">
+                <p class="triangular">Mobile&Web Development</p>
+                <p class="triangular"></p>
+
+            </slide>
+            <slide :index="2">
+
+            </slide>
+            <slide :index="3">
+
+            </slide>
+            <slide :index="4">
+
+            </slide>
+            <slide :index="5">
+
+            </slide>
+            <slide :index="6">
+
+            </slide>
+
+
+        </carousel-3d>
+    </div>
+    <div class="row">
+        <div class=" col-md-6">
+        </div>
+        <div class=" col-md-6">
+            <a href="#portfolio" class="js-scroll-trigger">
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<section class=" page-section container-fluid" id="portfolio">
+    <div class="section-header">
+        <p class="ourCustomer">סיפורי הצלחה</p>
+
+    </div>
+    <div id="story">
+        <carousel-3d :perspective="0" :space="500" :display="3" :border="0"
+                     :width="1113" :height="575" :controls-visible="true" :controls-prev-html="'❬'" :controls-next-html="'❭'" :controls-width="30" :controls-height="60" :clickable="true" :autoplay="false" :autoplay-timeout="5000">
+            <slide :index="0">
+                <div class="card col-md-12">
+                    <div class="row no-gutters">
+
+                        <div class="col-md-8">
+                            <div class="card-body" style="color: black">
+
+                                <p class="d-inline-block">500000 זה לא מספר קמפיינים</p>
+                                <span class="d-inline-block btn float-right">
+                                    <img src="~/Images/b144 logo.png" />
+                                </span>
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">
+                                    האתגר: ההתאמה המדויקת בין הצרכן לבית העסק מחייבת ניהול כמות עצומה של דאטה
+                                    בכל יום מתבצעים למעלה מ70 אלף חיפושי עסקים ברשת בישראל, תחת מיליוני ביטויי חיפוש אפשריים, להם צריך להתאים כחצי מיליון עסקים המחולקים ל-1620 סגמנטים ו-16 אזורים. יחד עם ההזדמנות הגדולה שיצר מאגר המידע על העסקים של B144, ניצב גם האתגר הגדול -  תיעול כמות המידע העצומה לכדי תוצאות חיפוש מדויקות וחשיפה איכותית של בית העסק
+                                    הפתרון:
+                                    בניית מערכת שלוקחת את כמות הדאטה העצומה שנאספה, וממשיכה להיאסף בכל רגע נתון, ומבצעת חיתוכים סגמנטיאליים מקוריים. בפועל, מדובר במיליוני שורות מידע, שכל אחת כוללת בית עסק, סגמנטים, ביטויי חיפוש רלוונטיים, קריאייטיבים מותאמים אוטומטית, מידע על הגולשים ועוד. כך, באמצעות קונקטורים ואלגוריתמים המחוברים מצד אחד למערכת הניהול של הלקוח ומצד שני למערכות ההגשה שלנו, נוצרים קמפיינים בהתאמה מדויקת לצרכי הגולש ובית העסק
+
+                                    התוצאות:
+                                    •	החזר השקעה משמעותי לעסקים המפרסמים, עם ROI של 500% פר סגמנט
+                                    •	B144 כמעט משלשת את הכנסותיה, עם עלייה מ-37 מיליון ₪ ב-2015 לכמעט 90 מיליון ₪
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="~/Images/iPhone X - Outline.png" class="card-img">
+                        </div>
+                    </div>
+                </div>
+            </slide>
+            <slide :index="1">
+
+                <div class="card col-md-12">
+                    <div class="row no-gutters">
+
+                        <div class="col-md-8">
+                            <div class="card-body" style="color: black">
+
+                                <p class="d-inline-block">500000 זה לא מספר קמפיינים</p>
+                                <span class="d-inline-block btn float-left">
+                                    <img src="~/Images/b144 logo.png" class="img-fluid" />
+                                </span>
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text float-right"><a href="" style="text-decoration: underline">קרא עוד</a></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="~/Images/iPhone X - Outline.png" class="card-img">
+                        </div>
+                    </div>
+                </div>
+            </slide>
+            <slide :index="2">
+                <div class="card col-md-12">
+                    <div class="row no-gutters">
+
+                        <div class="col-md-8">
+                            <div class="card-body" style="color: black">
+
+                                <p class="d-inline-block">500000 זה לא מספר קמפיינים</p>
+                                <span class="d-inline-block btn float-left">
+                                    <img src="~/Images/b144 logo.png" />
+                                </span>
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text float-right"><a href="" style="text-decoration: underline">קרא עוד</a></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="~/Images/iPhone X - Outline.png" class="card-img">
+                        </div>
+                    </div>
+                </div>
+            </slide>
+            <slide :index="3">
+                <div class="card col-md-12">
+                    <div class="row no-gutters">
+
+                        <div class="col-md-8">
+                            <div class="card-body" style="color: black">
+
+                                <p class="d-inline-block">500000 זה לא מספר קמפיינים</p>
+                                <span class="d-inline-block btn float-left">
+                                    <img src="~/Images/b144 logo.png" />
+                                </span>
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text float-right"><a href="" style="text-decoration: underline">קרא עוד</a></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="~/Images/iPhone X - Outline.png" class="card-img">
+                        </div>
+                    </div>
+                </div>
+            </slide>
+            <slide :index="4">
+                <div class="card col-md-12">
+                    <div class="row no-gutters">
+
+                        <div class="col-md-8">
+                            <div class="card-body" style="color: black">
+
+                                <p class="d-inline-block">500000 זה לא מספר קמפיינים</p>
+                                <span class="d-inline-block btn float-left">
+                                    <img src="~/Images/b144 logo.png" />
+                                </span>
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text float-right"><a href="" style="text-decoration: underline">קרא עוד</a></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="~/Images/iPhone X - Outline.png" class="card-img">
+                        </div>
+                    </div>
+                </div>
+            </slide>
+            <slide :index="5">
+                <div class="card col-md-12">
+                    <div class="row no-gutters">
+
+                        <div class="col-md-8">
+                            <div class="card-body" style="color: black">
+
+                                <p class="d-inline-block">500000 זה לא מספר קמפיינים</p>
+                                <span class="d-inline-block btn float-left">
+                                    <img src="~/Images/b144 logo.png" />
+                                </span>
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text float-right"><a href="" style="text-decoration: underline">קרא עוד</a></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </slide>
+            <slide :index="6">
+                <div class="card col-md-12">
+                    <div class="row no-gutters">
+
+                        <div class="col-md-8">
+                            <div class="card-body" style="color: black">
+
+                                <p class="d-inline-block">500000 זה לא מספר קמפיינים</p>
+                                <span class="d-inline-block btn float-left">
+                                    <img src="~/Images/b144 logo.png" />
+                                </span>
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text float-right"><a href="" style="text-decoration: underline">קרא עוד</a></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="~/Images/iPhone X - Outline.png" class="card-img">
+                        </div>
+                    </div>
+                </div>
+            </slide>
+
+        </carousel-3d>
+    </div>
+
+    <div class="row">
+        <div class=" col-md-6 col-sm-1">
+        </div>
+        <div class=" col-md-6 col-sm-1">
+            <a href="#about" class="js-scroll-trigger">
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<section class=" page-section" id="about">
+
+    <div class="container">
+        <div class="section-header">
+            <p class="ourCustomer">בין לקוחותינו</p>
+
         </div>
 
-        <div class="slideItem">
-            <a href="#"> <img src="/images/slide-2.jpg"> </a>
-            <div class="shadow">
-                <div class="shadowLeft"></div>
-                <div class="shadowMiddle"></div>
-                <div class="shadowRight"></div>
-            </div>
-        </div>
-
-        <div class="slideItem">
-            <a href="#"> <img src="/images/slide-3.jpg"> </a>
-            <div class="shadow">
-                <div class="shadowLeft"></div>
-                <div class="shadowMiddle"></div>
-                <div class="shadowRight"></div>
-            </div>
+        <div class="owl-carousel clients-carousel">
+            <img src="../Images/b144 logo grey.png" alt="">
+            <img src="../Images/b144 logo grey.png" alt="">
+            <img src="../Images/b144 logo grey.png" alt="">
+            <img src="../Images/b144 logo grey.png" alt="">
+            <img src="../Images/b144 logo grey.png" alt="">
+            <img src="../Images/b144 logo grey.png" alt="">
+            <img src="../Images/b144 logo grey.png" alt="">
+            <img src="../Images/b144 logo grey.png" alt="">
+            <img src="../Images/b144 logo grey.png" alt="">
+            <img src="../Images/b144 logo grey.png" alt="">
+            <img src="../Images/b144 logo grey.png" alt="">
         </div>
 
     </div>
 
-</div>
+
+</section>
 
 
+<!--==========================
+Clients Section
+============================-->
 
-<script>
-        //$(function () {
-        //    Carousel.init($("#carousel"));
-        //    $("#carousel").init();
-        //});
-        $(document).ready(function () {
-            $('.carousel').carousel({
-                carouselWidth: 930,
-                carouselHeight: 330,
-                directionNav: true,
-                shadow: true,
-                buttonNav: 'bullets'
+<section class="page-section container" id="Job">
+    <div class="section-header">
+        <p class="ourCustomer">בוא לעבוד איתנו</p>
+
+    </div>
+    <div class="row">
+        <div class="container">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#home" role="tab" aria-controls="home"> Programmatic Media</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Strategy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#messages" role="tab" aria-controls="messages">Social Media Marketing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#settings" role="tab" aria-controls="settings">Creative & Studio</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="home" role="tabpanel">
+                    <div class="item-content">
+                        <h4>
+                            בואו לנהל את הצרכנים של <br />
+                            הלקוחות שלנו בכלל הקמפיינים
+                        </h4>
+                        <p>קנייה והגשה של מדיה במערכות פרוגרמטיות מתקדמות (DV 360 / Appnexus / Artimedia) </p>
+
+                        <p>
+                            חיבור בין מערכות הגשה ומערכות קניית מדיה
+                        </p>
+                        <p>שימוש בכלים טכנולוגיים מתקדמים (Mobium)</p>
+
+                    </div>
+                    <p class="read-more">קרא עוד</p>
+                </div>
+                <div class="tab-pane" id="profile" role="tabpanel">
+                    <div class="item-content">
+                        Tab 2 content. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+                    </div>
+                </div>
+                <div class="tab-pane" id="messages" role="tabpanel">
+                    <div class="item-content">
+                        Tab 2 content. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+                    </div>
+                </div>
+                <div class="tab-pane" id="settings" role="tabpanel">
+                    <div class="item-content">
+                        Tab 2 content. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+                    </div>
+                </div>
+            </div>
+            <!-- /Bootstrap Tabs -->
+            <!-- Bootstrap Accordion -->
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"></div>
+            <!-- /Bootstrap Accordion -->
+        </div>
+    </div>
+
+
+</section>
+
+<!-- Swiper -->
+
+
+@section scripts
+{
+
+
+    <script>
+
+
+        $('.clients-carousel').owlCarousel({
+            margin: 100,
+            loop: true,
+            autoHeight: false,
+            autoplay: true,
+            nav: true,
+            responsiveClass: true, navText: [
+                '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+                '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+            ],
+            responsive: {
+                0: {
+                    items: 3,
+                    autoWidth: true,
+                    margin: 50,
+                    nav: false
+                },
+                600: {
+                    items: 3,
+                    nav: false
+                },
+                1000: {
+                    items: 10,
+
+                    loop: true
+                }
+            }
+        })
+    </script>
+    <script>
+        jQuery(document).ready(function ($) {
+            var swiper = new Swiper('.swiper-container', {
+                effect: 'coverflow',
+                autoplay: true,
+                speed: 5000,
+                mousewheelControl: true,
+                loop: true,
+                loopFillGroupWithBlank: true,
+                centeredSlides: true,
+                slidesPerView: 3,
+                initialSlide: 3,
+                keyboardControl: true,
+                loopedSlides: 1,
+                lazyLoading: true,
+                preventClicks: true,
+                preventClicksPropagation: false,
+                lazyLoadingInPrevNext: true,
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+                coverflow: {
+                    rotate: 0,
+                    stretch: 20,
+                    depth: 400,
+                    modifier: 1,
+                    slideShadows: false,
+                }
             });
+
+
         });
     </script>
     <script>
-
-        
-        $(function () {
-
-            $('#clients').owlCarousel({
-                loop: true,
-                nav: false,
-                dots: false,
-                autoplay: true, centerMode: true,
-                autoplayTimeout: 3000,
-
-                responsiveClass: true,
-                margin: 25,
-                autoplayHoverPause: false, responsive: {
-                    0: {
-                        items: 2, margin: 20
-                    }
-                    , 768: {
-                        items: 3, margin: 40,
-                    }
-                    , 992: {
-                        items: 4, margin: 60,
-                    }
-                    , 1200: {
-                        items: 5, margin: 80,
-                    }
+        new Vue({
+            el: '#reta',
+            data: {
+                slides: 2
+            },
+            components: {
+                'carousel-3d': Carousel3d.Carousel3d,
+                'slide': Carousel3d.Slide
+            },
+            destroyed: function () {
+                this.pauseAutoplay(),
+                    this.$isServer || (this.$el.removeEventListener("mouseenter", this.pauseAutoplay), this.$el.removeEventListener("mouseleave", this.startAutoplay))
+            },
+            methods: {
+                pauseAutoplay: function () {
+                    this.autoplayInterval && (this.autoplayInterval = clearInterval(this.autoplayInterval))
+                },
+                startAutoplay: function () {
+                    var t = this;
+                    this.autoplay && (this.autoplayInterval = setInterval(function () {
+                        "ltr" === t.dir ? t.goPrev() : t.goNext()
+                    }, this.autoplayTimeout))
                 }
             }
-            );
-
-            $('svg').attr({ "width": "304px", "height": "369px" });
-            if ($(window).width() < 960) {
-                //$('svg').attr({ "width": "200px", "height": "257px" });
+        })
+        new Vue({
+            el: '#story',
+            data: {
+                slides: 3
+            },
+            components: {
+                'carousel-3d': Carousel3d.Carousel3d,
+                'slide': Carousel3d.Slide
+            },
+            destroyed: function () {
+                this.pauseAutoplay(),
+                    this.$isServer || (this.$el.removeEventListener("mouseenter", this.pauseAutoplay), this.$el.removeEventListener("mouseleave", this.startAutoplay))
             }
-            else {
-
-            }
-
-            $('.loop').on('initialized.owl.carousel translate.owl.carousel',
-                function (e) {
-                    idx = e.item.index;
-                    $('.owl-item.big').removeClass('big');
-                    $('.owl-item.medium').removeClass('medium');
-                    $('.owl-item').eq(idx).addClass('big');
-                    $('.owl-item').eq(idx - 1).addClass('medium');
-                    $('.owl-item').eq(idx + 1).addClass('medium');
-                });
-
-
-            var owl = $('#triangle_carousel');
-            owl.owlCarousel({
-                rtl: true,
-                center: true,
-                items: 6,
-                loop: true,
-                //margin: 25,
-                autoplay: false,
-                //autoWidth:true,
-                autoPlay: 3000,
-                singleItem: true,
-                autoHeight: true,
-                nav: true,
-                //animateOut: 'fadeOut',
-                //afterMove: function (elem) {
-                //    var current = this.currentItem;
-                //    var src = elem.find(".owl-item").eq(current).find("img").attr('src');
-                //    console.log('Image current is ' + src);
-                //},
-                navText: [
-                    '<i class="fa fa-angle-left" aria-hidden="true"></i>',
-                    '<i class="fa fa-angle-right" aria-hidden="true"></i>'
-                ],
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 6
-                    },
-                    1000: {
-                        items: 4
-                    }
-                }
-            });
-
-            owl.on('mousewheel', '.owl-stage', function (e) {
-                if (e.deltaY > 0) {
-                    owl.trigger('next.owl');
-                } else {
-                    owl.trigger('prev.owl');
-                }
-                e.preventDefault();
-            });
-        });
-
-        $(document).ready(function () {
-
-
-            //var li = $('li').hasClass('flipster__item--current');
-            //console.log($('.flipster__item--current').children());
-            //var xx = $('.flipster__item--current').children().children('svg');;
-            //xx.attr("fill", "red");
-
-            //var past= $('li').hasClass('flipster__item--past-1').children().children('svg');
-            //past.attr("fill", "red");
-            //console.log(xx);
-            //$('.customer-logos').slick({
-            //    infinite: true,
-            //    centerMode: true,
-            //    centerPadding: '40px',
-            //    arrows:false,
-            //    slidesToShow: 10,
-            //    responsive: [
-            //        {
-            //            breakpoint: 768,
-            //            settings: {
-            //                arrows: false,
-            //                centerMode: true,
-            //                centerPadding: '40px',
-            //                slidesToShow: 3
-            //            }
-            //        },
-            //        {
-            //            breakpoint: 480,
-            //            settings: {
-            //                arrows: false,
-            //                centerMode: true,
-            //                centerPadding: '40px',
-            //                slidesToShow: 1
-            //            }
-            //        }
-            //    ]
-            //});
-            //$('.customer-logos').slick({
-            //    centerMode: true,
-            //    centerPadding: '60px',
-            //    slidesToShow: 6,
-            //    slidesToScroll: 1,
-            //    autoplay: false,
-            //    autoplaySpeed: 1500,
-            //    arrows: true,
-            //    dots: false,
-            //    pauseOnHover: false,
-            //    responsive: [{
-            //        breakpoint: 768,
-            //        settings: {
-            //            slidesToShow: 4
-            //        }
-            //    }, {
-            //        breakpoint: 520,
-            //        settings: {
-            //            slidesToShow: 3
-            //        }
-            //    }]
-            //});
-
-
-        });
-
-
-
-
+            //methods: {
+            //    pauseAutoplay: function () {
+            //        this.autoplayInterval && (this.autoplayInterval = clearInterval(this.autoplayInterval))
+            //    },
+            //    startAutoplay: function () {
+            //        var t = this;
+            //        this.autoplay && (this.autoplayInterval = setInterval(function () {
+            //            "ltr" === t.dir ? t.goPrev() : t.goNext()
+            //        }, this.autoplayTimeout))
+            //    }
+            //}
+        })
     </script>
+
+    <script type="text/javascript">
+        //$(document).ready(function(){
+        //    // Add minus icon for collapse element which is open by default
+        //    $(".in.collapse").each(function(){
+        //        $(this).siblings(".panel-heading").find(".glyphicon").addClass("rotate");
+        //    });
+
+        //    // Toggle plus minus icon on show hide of collapse element
+        //    $(".collapse").on('show.bs.collapse', function(){
+        //        $(this).parent().find(".glyphicon").addClass("rotate");
+        //    }).on('hide.bs.collapse', function(){
+        //        $(this).parent().find(".glyphicon").removeClass("rotate");
+        //    });
+        //});
+        $(document).ready(function () {
+            getAccordion("#myTab", 769);
+        });
+    </script>
+
 }
