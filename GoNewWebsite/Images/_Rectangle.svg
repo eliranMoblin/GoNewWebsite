@@ -1,28 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="304" height="356" viewBox="0 0 304 356">
-  <metadata>
-    <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
-    <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c140 79.160451, 2017/05/06-01:08:21        ">
-      <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-        <rdf:Description rdf:about=""/>
-      </rdf:RDF>
-    </x:xmpmeta>
-    <?xpacket end="w"?>
-  </metadata>
-  <defs>
-    <style>
-      .cls-1 {
-      fill: #ed312e;
-      fill-rule: evenodd;
-      filter: url(#filter);
-      }
-    </style>
-    <filter id="filter" x="797" y="494" width="304" height="356" filterUnits="userSpaceOnUse">
-      <feOffset result="offset" dx="-18.651" dy="3.625" in="SourceAlpha"/>
-      <feGaussianBlur result="blur" stdDeviation="6.782"/>
-      <feFlood result="flood" flood-opacity="0.4"/>
-      <feComposite result="composite" operator="in" in2="blur"/>
-      <feBlend result="blend" in="SourceGraphic"/>
-    </filter>
-  </defs>
-  <path id="Rectangle" class="cls-1" d="M870.735,536.51L1069.39,661.552c5.23,3.292,5.23,8.613,0,11.9L870.735,798.5c-5.229,3.292-9.456.961-9.456-5.212V541.722C861.279,535.548,865.506,533.218,870.735,536.51Z" transform="translate(-797 -494)"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="299px" height="219px">
+  <path fill-rule="evenodd"  fill="rgb(223, 223, 223)"
+        d="M242.381,79.944 C242.381,79.944 198.787,31.446 148.286,72.510 C97.784,113.573 61.000,158.000 61.000,158.000 L243.000,158.000 L242.381,79.944 Z"/>
 </svg>

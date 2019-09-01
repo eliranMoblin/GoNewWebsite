@@ -142,6 +142,7 @@
     <Content Include="Content\fonts\css\svg-with-js.min.css" />
     <Content Include="Content\fonts\css\v4-shims.css" />
     <Content Include="Content\fonts\css\v4-shims.min.css" />
+    <Content Include="Content\fonts\rubik-v9-latin_hebrew-regular.svg" />
     <Content Include="Content\fonts\webfonts\fa-brands-400.svg" />
     <Content Include="Content\fonts\webfonts\fa-regular-400.svg" />
     <Content Include="Content\fonts\webfonts\fa-solid-900.svg" />
@@ -164,8 +165,11 @@
     <Content Include="Images\b144 logo.png" />
     <Content Include="Images\btn_l.png" />
     <Content Include="Images\btn_r.png" />
+    <Content Include="Images\CareerCard.png" />
+    <Content Include="Images\fabi.png" />
     <Content Include="Images\GO_Desktop backgroung.jpg" />
     <Content Include="Images\GO_Mobile_background.jpg" />
+    <Content Include="Images\Group 5979 copy.png" />
     <Content Include="Images\iPhone X - Outline.png" />
     <Content Include="Images\loading.gif" />
     <Content Include="Images\Rectangle.png" />
@@ -175,6 +179,7 @@
     <Content Include="Images\Rectangle3.jpg" />
     <Content Include="Images\Rectangle3.png" />
     <Content Include="Images\Rectangle4.png" />
+    <Content Include="Images\Shape 4331.png" />
     <Content Include="Images\_Rectangle.svg" />
     <Content Include="img\about\1.jpg" />
     <Content Include="img\about\2.jpg" />
@@ -276,6 +281,10 @@
     <Content Include="Content\fonts\webfonts\fa-solid-900.ttf" />
     <Content Include="Content\fonts\webfonts\fa-solid-900.woff" />
     <Content Include="Content\fonts\webfonts\fa-solid-900.woff2" />
+    <Content Include="Content\fonts\rubik-v9-latin_hebrew-regular.eot" />
+    <Content Include="Content\fonts\rubik-v9-latin_hebrew-regular.ttf" />
+    <Content Include="Content\fonts\rubik-v9-latin_hebrew-regular.woff" />
+    <Content Include="Content\fonts\rubik-v9-latin_hebrew-regular.woff2" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Properties\PublishProfiles\go-moblin - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\go-moblin - Web Deploy.pubxml" />
@@ -331,6 +340,7 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Home\Career.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

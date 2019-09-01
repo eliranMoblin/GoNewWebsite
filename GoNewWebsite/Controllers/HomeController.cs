@@ -26,5 +26,10 @@ namespace GoNewWebsite.Controllers
 
             return View();
         }
+
+        public ActionResult Career()
+        {
+            return View();
+        }
     }
 }
