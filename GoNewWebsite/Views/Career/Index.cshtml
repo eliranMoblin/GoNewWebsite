@@ -1,4 +1,4 @@
-﻿
+﻿@model List<GoNewWebsite.Models.Jobs>
 @{
     ViewBag.Title = "Career";
 }
@@ -21,9 +21,9 @@
 
 
 
-        </div>  
+        </div>
     </div>
-    
+
     <div class="row">
         <div class=" col-md-6">
         </div>
@@ -34,10 +34,10 @@
                 <div class="chevron"></div>
             </a>
 
-        </div>
+        </div>  
     </div>
 </section>
-    
+
 
 <section class="page-section container-fluid" id="openPosition">
     <div class="section-header">
@@ -48,33 +48,38 @@
         <div class="container-fluid mt-4" style="color: black">
 
             <div class="row justify-content-center">
-                <div class="col-auto mb-4">
-                    <div class="card img-fluid">
-                        <div class="card-body">
-                            
-                            <h5 class="card-position">Data Architect</h5>
-                            <svg>
-                                <g transform="translate(60,0)">
-                                    <path fill-rule="evenodd" fill="rgb(223, 223, 223)" cx="50" cy="5" class="border-danger"
-                                          d="M242.381,79.944 C242.381,79.944 198.787,31.446 148.286,72.510 C97.784,113.573 61.000,158.000 61.000,158.000 L243.000,158.000 L242.381,79.944 Z"/>
-                                </g>
-                            </svg>
+                @foreach (var item in @Model)
+                {<div class="col-auto mb-4">
+                     <div class="card img-fluid">
+                         
+                         <div class="card-text">
 
-                            <div class="overlay">
+                             <h5 class="card-position">@item.Name</h5>
+                             <svg>
+                                 <g transform="translate(60,0)">
+                                     <path fill-rule="evenodd" fill="rgb(223, 223, 223)" cx="50" cy="5" class="border-danger"
+                                           d="M242.381,79.944 C242.381,79.944 198.787,31.446 148.286,72.510 C97.784,113.573 61.000,158.000 61.000,158.000 L243.000,158.000 L242.381,79.944 Z"/>
+                                 </g>
+                             </svg>
 
-                                <div class="text">
-                                    קנייה והגשה של מדיה במערכות פרוגרמטיות מתקדמות (DV 360 / Appnexus / Artimedia)
-                                    חיבור בין מערכות הגשה ומערכות קניית מדיה
-                                    <a class="hrefPosition">להגשת מועמדות</a>
-                                </div>
+                             <div class="overlay">
 
-                            </div>    
+                                 <div class="text">
+                                     קנייה והגשה של מדיה במערכות פרוגרמטיות מתקדמות (DV 360 / Appnexus / Artimedia)
+                                     חיבור בין מערכות הגשה ומערכות קניית מדיה
+                                     <a class="hrefPosition" href="@Url.Action("Position",new{positionId=@item.Uid})">להגשת מועמדות</a>
+                                 </div>
 
-                        </div>
-                        
+                             </div>
 
-                    </div>
-                </div>
+                         </div>
+                         
+                     </div>
+                 </div>
+
+                }
+
+                
                 <div class="col-auto mb-4">
                     <div class="card img-fluid">
 
