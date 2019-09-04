@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GoMoblinPortal" Class="PortalDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=gomoblinportaldb.database.windows.net,1433;Initial Catalog=GoMoblinPortal;Persist Security Info=True;User ID=MoblinSA" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="GoMoblinPortalConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.Backend_Settings_Get" Method="Backend_Settings_Get">
+    <ElementType Name="Backend_Settings_GetResult">
+      <Column Name="Id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="DocumentTypeId" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Json" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ModifyDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Tstamp" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertHttpRequest" Method="InsertHttpRequest">
+    <Parameter Name="SessionId" Parameter="sessionId" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="UserHostAddress" Parameter="userHostAddress" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="UserId" Parameter="userId" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="Device" Parameter="device" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="UrlReferrer" Parameter="urlReferrer" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="RequestUrl" Parameter="requestUrl" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="MachineId" Parameter="machineId" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="Cookies" Parameter="cookies" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="QueryString" Parameter="queryString" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IsNewSeession" Parameter="isNewSeession" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.WebSite_GetResource_Value" Method="WebSite_GetResource_Value">
+    <Parameter Name="Culture" Parameter="culture" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="NameOut" Parameter="nameOut" Type="System.String" DbType="NVarChar(MAX)" Direction="InOut" />
+    <Parameter Name="CultureOut" Parameter="cultureOut" Type="System.String" DbType="VarChar(10)" Direction="InOut" />
+    <Parameter Name="ValueOut" Parameter="valueOut" Type="System.String" DbType="NVarChar(MAX)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.WebSite_GetResources_Value" Method="WebSite_GetResources_Value">
+    <ElementType Name="WebSite_GetResources_ValueResult">
+      <Column Name="Culture" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

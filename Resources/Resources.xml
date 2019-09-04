@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    
+    <!--  Arabic (AR) -->
+    <resource culture="ar" name="AddPerson" value="إضافة شخص"></resource>
+    <resource culture="ar" name="Age" value="العمر"></resource>
+    <resource culture="ar" name="AgeRange" value="يجب أن يكون بين 10 و 130"></resource>    
+    <resource culture="ar" name="AgeRequired" value="أدخل العمر"></resource>       
+    <resource culture="ar" name="Biography" value="السيرة"></resource>       
+    <resource culture="ar" name="ChooseYourLanguage" value="اختر اللغة"></resource>        
+    <resource culture="ar" name="Create" value="إنشاء"></resource>        
+    <resource culture="ar" name="Email" value="البريد الإلكتروني"></resource>        
+    <resource culture="ar" name="EmailInvalid" value="البريد الإلكتروني غير صحيح"></resource>    
+    <resource culture="ar" name="EmailRequired" value="أدخل البريد الإلكتروني"></resource>
+    <resource culture="ar" name="FirstName" value="الإسم"></resource>
+    <resource culture="ar" name="FirstNameLong" value="يجب أن يكون أقل من 50 حرف"></resource>        
+    <resource culture="ar" name="FirstNameRequired" value="أدخل الإسم"></resource>       
+    <resource culture="ar" name="LastName" value="إسم العائلة"></resource>        
+    <resource culture="ar" name="LastNameLong" value="يجب أن يكون أقل من 50 حرف"></resource>    
+    <resource culture="ar" name="LastNameRequired" value="أدخل إسم العائلة"></resource>    
+    <resource culture="ar" name="LogOff" value="تسجيل خروج"></resource>
+    <resource culture="ar" name="LogOn" value="تسجيل دخول"></resource>
+    <resource culture="ar" name="Register" value="تسجيل"></resource>
+    <!--  Arabic (AR) -->
+
+    <!--  Spanish (es) -->
+    <resource culture="es" name="AddPerson" value="Ingresar persona"></resource>
+    <resource culture="es" name="Age" value="Edad"></resource>
+    <resource culture="es" name="AgeRange" value="Debe ser entre 10 y 130"></resource>
+    <resource culture="es" name="AgeRequired" value="Debe ingresar su edad"></resource>
+    <resource culture="es" name="Biography" value="Biografía"></resource>
+    <resource culture="es" name="ChooseYourLanguage" value="Elige su idioma"></resource>
+    <resource culture="es" name="Create" value="Crear"></resource>
+    <resource culture="es" name="Email" value="Correo electrónico"></resource>
+    <resource culture="es" name="EmailInvalid" value="El correo electrónico ingresado no es válido"></resource>
+    <resource culture="es" name="EmailRequired" value="Debe ingresar su correo electrónico"></resource>
+    <resource culture="es" name="FirstName" value="Primer nombre"></resource>
+    <resource culture="es" name="FirstNameLong" value="Debe ser menos de 50 caracteres"></resource>
+    <resource culture="es" name="FirstNameRequired" value="Debe ingresar su nombre"></resource>
+    <resource culture="es" name="LastName" value="Apellido"></resource>
+    <resource culture="es" name="LastNameLong" value="Debe ser menos de 50 caracteres"></resource>
+    <resource culture="es" name="LastNameRequired" value="Debe ingresar su apellido"></resource>
+    <resource culture="es" name="LogOff" value="Cerrar sesión"></resource>
+    <resource culture="es" name="LogOn" value="Iniciar sesión"></resource>
+    <resource culture="es" name="Register" value="Registrar"></resource>
+    <!-- Spanish (es) -->
+
+    <!--  English (en-US) -->
+    <resource culture="en-us" name="AddPerson" value="Add person"></resource>
+    <resource culture="en-us" name="Age" value="Age"></resource>    
+    <resource culture="en-us" name="AgeRange" value="Must be between 10 and 130"></resource>    
+    <resource culture="en-us" name="AgeRequired" value="Age is required"></resource>    
+    <resource culture="en-us" name="Biography" value="Biography"></resource>
+    <resource culture="en-us" name="ChooseYourLanguage" value="Choose your language"></resource>
+    <resource culture="en-us" name="Create" value="Create"></resource>
+    <resource culture="en-us" name="Email" value="Email"></resource>
+    <resource culture="en-us" name="EmailInvalid" value="Email is not valid"></resource>
+    <resource culture="en-us" name="EmailRequired" value="Email is required"></resource>
+    <resource culture="en-us" name="FirstName" value="First name"></resource>    
+    <resource culture="en-us" name="FirstNameLong" value="Must be less than 50 characters"></resource>        
+    <resource culture="en-us" name="FirstNameRequired" value="First name is required"></resource>    
+    <resource culture="en-us" name="LastName" value="Last name"></resource>
+    <resource culture="en-us" name="LastNameLong" value="Must be less than 50 characters"></resource>
+    <resource culture="en-us" name="LastNameRequired" value="Last name is required"></resource>
+    <resource culture="en-us" name="LogOff" value="Log off"></resource>
+    <resource culture="en-us" name="LogOn" value="Log on"></resource>
+    <resource culture="en-us" name="Register" value="Register"></resource>    
+    <!-- English (en-US) -->
+
+</resources>

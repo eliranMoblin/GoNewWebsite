@@ -1,7 +1,21 @@
-﻿<!DOCTYPE html>
-<html>
+﻿@using GoNewWebsite.Helpers
+@using Web;
+
+@{
+    var culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name.ToLowerInvariant();
+}
+
+@helper selected(string c, string culture)
+{
+    if (c == culture)
+    {
+        @:checked="checked"
+    }
+}
+<!DOCTYPE html>
+<html >
 <head>
-    
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#ff0000">
@@ -18,79 +32,82 @@
 
     <meta name="twitter:title" content="GO Digital Marketing">
     <meta name="twitter:description" content="Digital Marketing. Business Results." />
-    
+
     <title> GO Digital Marketing</title>
     <link rel="icon" type="image/png" href="/Images/fabi.png" />
+
+    @Styles.Render("~/Content/css" + (CultureHelper.IsRighToLeft() ? "-rtl" : ""))
+    @Scripts.Render("~/bundles/modernizr")
+
     <!--[if IE]>
         <link rel="shortcut icon" href="~/Img/fabi.png" type="image/vnd.microsoft.icon" />
     <![endif]-->
     <!-- Plugin CSS -->
+    @*    <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css" integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If" crossorigin="anonymous">*@
 
-@*    <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css" integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If" crossorigin="anonymous">*@
 
-    
     @*<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />*@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    
+
     <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
     <script src="~/Scripts/Logo/logo_HTML5Canvas.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.css" />
     <link href="~/plugin/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-    
+
 
 </head>
 <body id="page-top" onload="init();" style="margin: 0px;">
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-    <div class="container-fluid">
-        <div class="square">
-            <div id="animation_container">
-                <canvas id="canvas"></canvas>
-                <div id="dom_overlay_container">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container-fluid">
+            <div class="square">
+                <div id="animation_container">
+                    <canvas id="canvas"></canvas>
+                    <div id="dom_overlay_container">
+                    </div>
+                </div>
+
+
+            </div>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#services">@Resources.Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#portfolio">אודותינו</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">שירותים ופתרונות</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#Job">קריירה</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#ContacUs">צור קשר</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div class="overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <source src="~/Videos/1920x520.mp4" type="video/mp4">
+        </video>
+        <div class="container h-100">
+            <div class="d-flex h-100 text-center align-items-center">
+                <div class="w-100 text-white">
+                    <h1 class="display-3">כותרת</h1>
+                    <p class="lead mb-0">סוכנות דיגיטלית שנותנת מענה שלם ברמה המקצועית </p>
+                    <p class="lead mb-0">הגבוהה ביותר בעולם השיווק הדיגיטלי </p>
                 </div>
             </div>
-
-
         </div>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav text-uppercase ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#services">עמוד ראשי</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#portfolio">אודותינו</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#about">שירותים ופתרונות</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#Job">קריירה</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#ContacUs">צור קשר</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-<header>
-    <div class="overlay"></div>
-    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-        <source src="~/Videos/1920x520.mp4" type="video/mp4">
-    </video>
-    <div class="container h-100">
-        <div class="d-flex h-100 text-center align-items-center">
-            <div class="w-100 text-white">
-                <h1 class="display-3">כותרת</h1>
-                <p class="lead mb-0">סוכנות דיגיטלית שנותנת מענה שלם ברמה המקצועית </p>
-                <p class="lead mb-0">הגבוהה ביותר בעולם השיווק הדיגיטלי </p>
-            </div>
-        </div>
-    </div>
-</header>
+    </header>
 
 
     <div class="container-fluid body-content">
@@ -100,20 +117,20 @@
                 <div id="dom_overlay_container">
                 </div>
             </div>
-         
 
-        </div>  
+
+        </div>
         @RenderBody()
-        
+
         <section class="page-section container" id="ContacUs">
             <div class="section-header">
                 <p class="ourCustomer">צרו קשר</p>
                 <p class="location">
                     גיבורי ישראל 5, מתחם פולג, נתניה
-                <i class="fa fa-map-marker"></i>
+                    <i class="fa fa-map-marker"></i>
                 </p>
-                
-            </div>  
+
+            </div>
 
             <form class=" container-fluid footer-form" dir="rtl">
                 <div class="form-row align-items-center">
@@ -137,21 +154,59 @@
                     </div>
                 </div>
             </form>
-            
+
         </section>
         <div class="footer-strip">
 
-            
-            <div class="col-md-7" ><p dir="rtl">
-    כל הזכויות שמורות ל -
-    <span dir="ltr">GO 2019</span>
-</p>
-                </div>
+
+            <div class="col-md-7">
+                <p dir="rtl">
+                    כל הזכויות שמורות ל -
+                    <span dir="ltr">GO 2019</span>
+                </p>
+            </div>
         </div>
-</div>
+    </div>
+
+    @using (Html.BeginForm("SetCulture", "Home"))
+    {
+        <fieldset>
+            <legend>@Resources.ChooseYourLanguage</legend>
+
+            <div class="control-group">
+                <div class="controls">
+                    <label for="en-us">
+                        <input name="culture" id="en-us" value="en-us" type="radio" @selected("en-us", culture) /> English
+                    </label>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <div class="controls">
+                    <label for="es">
+                        <input name="culture" id="es" value="es" type="radio" @selected("es", culture) /> Español
+                    </label>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <div class="controls">
+                    <label for="ar">
+                        <input name="culture" id="he" value="he" type="radio" @selected("he", culture) /> עברית
+                    </label>
+                </div>
+            </div>
+
+
+        </fieldset>
+
+
+
+
+    }
 
     @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/bootstrap" + (CultureHelper.IsRighToLeft() ? "-rtl" : ""))
     <script src="~/plugin/owlcarousel/owl.carousel.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.11/jquery.mousewheel.min.js"></script>
     <script src="~/Scripts/jquery.easing.min.js"></script>
@@ -159,8 +214,8 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.7/vue.js'></script>
     <script src="~/Scripts/vue-carousel-3d.js"></script>
     @*<script src='https://rawgit.com/Wlada/vue-carousel-3d/master/dist/vue-carousel-3d.min.js'></script>*@
-<script src="~/Scripts/Custom.js"></script>
-<script src="~/Scripts/bootstrap-tabcollapse.js"></script>
+    <script src="~/Scripts/Custom.js"></script>
+    <script src="~/Scripts/bootstrap-tabcollapse.js"></script>
 
     <script>
 
@@ -374,7 +429,14 @@
             fnStartAnimation();
         }
     </script>
-
+<script type="text/javascript">
+    (function ($) {
+        $("input[type = 'radio']").click(function () {
+            $(this).parents("form").submit(); // post form
+        });
+            
+    })(jQuery);
+</script>
     @*<script type="text/javascript">
             $(document).ready(function() {
                 var carousel = $("#carousel").slidingCarousel({

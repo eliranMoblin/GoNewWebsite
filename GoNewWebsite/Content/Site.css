@@ -49,6 +49,16 @@
         background-image: url(../Images/Rectangle3.png);
         visibility: hidden !important;
     }
+
+    .footer-strip {
+        /* height: 36px; */
+        text-align: center;
+        background-color: #1e2a32;
+        margin-left: -5%;
+        width: -webkit-fill-available;
+        padding-bottom: 45px;
+        margin-right: -4.5%;
+    }
 }
 
 
