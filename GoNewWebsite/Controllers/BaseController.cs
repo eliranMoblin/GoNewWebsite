@@ -1,15 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Threading;
 using System.Web;
 using System.Web.Mvc;
+using BLL.Cache;
 using GoNewWebsite.Helpers;
 
 namespace GoNewWebsite.Controllers
 {
     public class BaseController : Controller
     {
+
+        public Guid SessionId
+        {
+            get
+            {
+                var session = HttpContext.Session.SessionID;
+                return Guid.Parse(session);
+            }
+        }
+
+
+
+        private HttpPostedFileBase[] _files = null;
+
+
+
+        protected readonly GoWebsiteCache GoWebsiteCache;
+
+
+        protected string ConnectionString =
+            ConfigurationManager.ConnectionStrings["GoMoblinPortalEntities"].ConnectionString;
+
         protected override IAsyncResult BeginExecuteCore(AsyncCallback callback, object state)
         {
             string cultureName = null;
@@ -19,8 +43,9 @@ namespace GoNewWebsite.Controllers
             if (cultureCookie != null)
                 cultureName = cultureCookie.Value;
             else
-                cultureName = Request.UserLanguages != null && Request.UserLanguages.Length > 0 ?
-                    Request.UserLanguages[0] :  // obtain it from HTTP header AcceptLanguages
+                cultureName = Request.UserLanguages != null && Request.UserLanguages.Length > 0
+                    ? Request.UserLanguages[0]
+                    : // obtain it from HTTP header AcceptLanguages
                     null;
             // Validate culture name
             cultureName = CultureHelper.GetImplementedCulture(cultureName); // This is safe
@@ -30,6 +55,13 @@ namespace GoNewWebsite.Controllers
             Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture;
 
             return base.BeginExecuteCore(callback, state);
+        }
+
+
+        public BaseController()
+        {
+            GoWebsiteCache = new GoWebsiteCache();
+
         }
     }
 }

@@ -39,6 +39,9 @@ namespace Entities.System
         public static  readonly  DocumentType VersionControl = new DocumentType(90, "VersionControl");
 
 
+        public static readonly DocumentType WebsitePage = new DocumentType(100, "WebsitePage");
+
+
         public byte Value { get; protected set; }
         public string Name { get; protected set; }
 

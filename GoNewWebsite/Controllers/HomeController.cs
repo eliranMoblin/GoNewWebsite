@@ -1,17 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using Entities;
 using GoNewWebsite.Helpers;
 
 namespace GoNewWebsite.Controllers
 {
     public class HomeController : BaseController
     {
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
-            return View();
+            var pages = await GoWebsiteCache.GetWebsitePages();
+            var homePage = pages.SingleOrDefault(x => x.IsHomePage && x.Language == Language.Hebrew);
+            return View(homePage);
         }
 
         public ActionResult About()

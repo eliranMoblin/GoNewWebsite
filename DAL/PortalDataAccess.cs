@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.Linq;
 using System.IO;
@@ -93,13 +94,21 @@ namespace DAL
         {
             List<WebSite_GetResources_ValueResult> resources = null;
 
-
+            IList<ResourceEntry> list =  new List<ResourceEntry>();
             using (var context = new PortalDataContext("Server=tcp:gomoblinportaldb.database.windows.net,1433;Initial Catalog=GoMoblinPortal;Persist Security Info=False;User ID=MoblinSA;Password=Moblin1@#;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"))
             {
                 resources = context.WebSite_GetResources_Value().ToList();
             }
 
-            IList<ResourceEntry> list = resources.Cast<ResourceEntry>().ToList();
+            foreach (var resource in resources)
+            {
+                list.Add(new ResourceEntry
+                {
+                    Culture = resource.Culture,
+                    Name = resource.Name,
+                    Value = resource.Value
+                });
+            }
             return list;
         }
 

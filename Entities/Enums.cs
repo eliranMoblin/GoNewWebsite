@@ -42,10 +42,10 @@ namespace Entities
         Redirector = 1,
         PhoneApp = 2,
         Banner = 3,
-        EmailToUser=4,
-        SMS=5,
-        OptSMS=6,
-        EmailConfirmation=7
+        EmailToUser = 4,
+        SMS = 5,
+        OptSMS = 6,
+        EmailConfirmation = 7
     }
 
 
@@ -54,9 +54,9 @@ namespace Entities
         SMS = 1,
         Email = 2,
         Lead = 3,
-        EmailToUser=4,
-        SmsOtp=5,
-        PushNotifications=6
+        EmailToUser = 4,
+        SmsOtp = 5,
+        PushNotifications = 6
     }
 
     public enum ProviderType
@@ -71,7 +71,7 @@ namespace Entities
         WebsiteSetting = 1,
         Providers = 2,
         UserGroup = 4,
-        AlertSettings=5,
+        AlertSettings = 5,
         Customer = 20,
         Application = 21,
         Campaign = 22,
@@ -79,26 +79,26 @@ namespace Entities
         MailSetting = 24,
         Condition = 25,
         Banner = 26,
-        Template=27,
-        EmailToUser=28,
-        SmsToUser=29,
-        FtpSite=30,
-        CarouselBanner=31,
+        Template = 27,
+        EmailToUser = 28,
+        SmsToUser = 29,
+        FtpSite = 30,
+        CarouselBanner = 31,
 
 
         Lead = 70,
-        VersionControl=90
-
+        VersionControl = 90
+            , WebsitePage = 100
     }
 
     public enum LogType
     {
         HttpRequest = 1,
         Redirector = 2,
-        Click=3,
-        SMSOtp=4,
-        PhoneApp=5,
-        VersionControl=6
+        Click = 3,
+        SMSOtp = 4,
+        PhoneApp = 5,
+        VersionControl = 6
     }
 
     public enum CommonStatus
@@ -125,10 +125,10 @@ namespace Entities
 
     public enum NotificationType
     {
-        Success=1,
-        Info=2,
-        Warning=3,
-        Danger=4
+        Success = 1,
+        Info = 2,
+        Warning = 3,
+        Danger = 4
 
     }
 
@@ -188,47 +188,47 @@ namespace Entities
     public enum Language
     {
         Hebrew = 1,
-        English=2,
-        Arabic=3
+        English = 2,
+        Arabic = 3
     }
 
     public enum CampaignType
     {
-        LandingPage=1,
-        Banner=2
+        LandingPage = 1,
+        Banner = 2
     }
 
     public enum AppAction
     {
         Nothing_To_Do = 0,
-        Update_Mandatory  = 1,
+        Update_Mandatory = 1,
         Update_Optional = 2,
 
     }
 
     public enum PooshWooshTagType
     {
-        Integer=1,
-        String=2,
-        List=3,
-        Date =4,
-        Boolean=5,
-        Decimal=6,
-        Version=7
+        Integer = 1,
+        String = 2,
+        List = 3,
+        Date = 4,
+        Boolean = 5,
+        Decimal = 6,
+        Version = 7
     }
 
     public enum DeviceType
     {
-        IOS=1,
-        BlackBerry=2,
-        Android=3,
-        WindowsPhone=5,
-        OSX=7,
+        IOS = 1,
+        BlackBerry = 2,
+        Android = 3,
+        WindowsPhone = 5,
+        OSX = 7,
         Windows8 = 8,
-        Amazon=9,
-        Safari=10,
-        Chrome=11,
-        Firefox=12
+        Amazon = 9,
+        Safari = 10,
+        Chrome = 11,
+        Firefox = 12
     }
 }
 
