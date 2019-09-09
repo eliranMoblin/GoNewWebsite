@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 
 namespace Entities.Website
 {
-    public class WebsitePage : IDocument
+    public class WebsitePage:IDocument
     {
 
         public Document Document { get; set; }
@@ -40,8 +40,8 @@ namespace Entities.Website
         [JsonProperty("HeaderPage")]
         public HeaderPage HeaderPage { get; set; }
 
-        [JsonProperty("UniversalSections")]
-        public List<UniversalSection> UniversalSections { get; set; }
+        [JsonProperty("Section")]
+        public List<Section> Section { get; set; }
 
         [JsonProperty("IsHomePage")]
         public bool IsHomePage { get; set; }

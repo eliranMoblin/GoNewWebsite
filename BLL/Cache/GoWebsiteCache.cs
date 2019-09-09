@@ -27,13 +27,31 @@ namespace BLL.Cache
             _loadImages = loadImages;
         }
 
-     
+
+        #region GoWebSite
 
         public async Task<List<WebsitePage>> GetWebsitePages(bool showIsDeleted = false)
         {
-            var contacts = await GetDocuments<WebsitePage>(documentType: DocumentType.WebsitePage);
-            return contacts.Where(x => x.Document.IsDeleted == showIsDeleted).ToList();
+            var result = await GetDocuments<WebsitePage>(documentType: DocumentType.WebsitePage);
+            return result.Where(x => x.Document.IsDeleted == showIsDeleted).ToList();
         }
+
+
+        public async Task<List<CaseStudyCard>> GetCaseStudyCard(bool showIsDeleted = false)
+        {
+            var result = await GetDocuments<CaseStudyCard>(documentType: DocumentType.CaseStudyCard);
+            return result.Where(x => x.Document.IsDeleted == showIsDeleted).ToList();
+        }
+
+
+        public async Task<List<ColsData>> GetColsData(bool showIsDeleted = false)
+        {
+            var result = await GetDocuments<ColsData>(documentType: DocumentType.ColsData);
+            return result.Where(x => x.Document.IsDeleted == showIsDeleted).ToList();
+        }
+
+
+        #endregion
 
 
         public async Task<List<Image>> GetImages(Guid? parentImageId = null,

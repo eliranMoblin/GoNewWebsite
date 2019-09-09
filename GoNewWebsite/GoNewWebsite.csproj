@@ -340,6 +340,10 @@
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="Scripts\vue-carousel-3d.js" />
+    <Content Include="Videos\1920x520.mp4" />
+    <Content Include="Videos\320x250.mp4" />
+    <Content Include="Videos\3D_1920x1000.mp4" />
+    <Content Include="Videos\3D_1920x740.mp4" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -366,10 +370,10 @@
     <Content Include="Views\Home\Career.cshtml" />
     <Content Include="Views\Career\Index.cshtml" />
     <Content Include="Views\Career\Position.cshtml" />
+    <Content Include="Views\Home\Page.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Videos\" />
     <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>

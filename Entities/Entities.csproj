@@ -57,7 +57,10 @@
     <Compile Include="System\IDocument.cs" />
     <Compile Include="System\Image.cs" />
     <Compile Include="System\ImageBaseEntity.cs" />
+    <Compile Include="Website\CaseStudyCard.cs" />
+    <Compile Include="Website\ColsData.cs" />
     <Compile Include="Website\MaetaData.cs" />
+    <Compile Include="Website\Services.cs" />
     <Compile Include="Website\WebsitePage.cs" />
   </ItemGroup>
   <ItemGroup>

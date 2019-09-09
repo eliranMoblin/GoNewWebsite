@@ -14,7 +14,7 @@
     }
 }
 <!DOCTYPE html>
-<html >
+<html>
 <head>
 
     <meta charset="utf-8" />
@@ -37,7 +37,7 @@
     <title> GO Digital Marketing</title>
     <link rel="icon" type="image/png" href="/Images/fabi.png" />
 
-    @Styles.Render("~/Content/css" + (CultureHelper.IsRighToLeft() ? "-rtl" : ""))
+    @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
     <!--[if IE]>
@@ -102,9 +102,13 @@
         <div class="container h-100">
             <div class="d-flex h-100 text-center align-items-center">
                 <div class="w-100 text-white">
-                    <h1 class="display-3">@Model.HeaderPage.Main</h1>
-                    <p class="lead mb-0">סוכנות דיגיטלית שנותנת מענה שלם ברמה המקצועית </p>
-                    <p class="lead mb-0">הגבוהה ביותר בעולם השיווק הדיגיטלי </p>
+                    
+                    @*<h1 class="display-3">@Model.HeaderPage.Main</h1>*@
+                    @*@if (!string.IsNullOrEmpty(Model.HeaderPage.Content))
+                    {
+                        <p class="lead mb-0" style="white-space: pre-line">@Html.Raw(@Model.HeaderPage.Content)</p>
+                    }*@
+
                 </div>
             </div>
         </div>
@@ -112,6 +116,12 @@
 
 
     <div class="container-fluid body-content">
+        <div class="fullscreen-bg">
+            <video loop muted autoplay poster="" class="fullscreen-bg__video">
+                <source src="~/Videos/3D_1920x1000.mp4" type="video/mp4" />
+                
+            </video>
+        </div>
         <div class="square">
             <div id="animation_container">
                 <canvas id="canvas"></canvas>
@@ -121,6 +131,7 @@
 
 
         </div>
+
         @RenderBody()
 
         <section class="page-section container" id="ContacUs">
@@ -169,7 +180,7 @@
         </div>
     </div>
 
-    @using (Html.BeginForm("SetCulture", "Home"))
+    @*@using (Html.BeginForm("SetCulture", "Home"))
     {
         <fieldset>
             <legend>@Resources.ChooseYourLanguage</legend>
@@ -204,10 +215,10 @@
 
 
 
-    }
+    }*@
 
     @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap" + (CultureHelper.IsRighToLeft() ? "-rtl" : ""))
+    @Scripts.Render("~/bundles/bootstrap" )
     <script src="~/plugin/owlcarousel/owl.carousel.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.11/jquery.mousewheel.min.js"></script>
     <script src="~/Scripts/jquery.easing.min.js"></script>
@@ -430,14 +441,14 @@
             fnStartAnimation();
         }
     </script>
-<script type="text/javascript">
-    (function ($) {
-        $("input[type = 'radio']").click(function () {
-            $(this).parents("form").submit(); // post form
-        });
-            
-    })(jQuery);
-</script>
+    <script type="text/javascript">
+        (function ($) {
+            $("input[type = 'radio']").click(function () {
+                $(this).parents("form").submit(); // post form
+            });
+
+        })(jQuery);
+    </script>
     @*<script type="text/javascript">
             $(document).ready(function() {
                 var carousel = $("#carousel").slidingCarousel({

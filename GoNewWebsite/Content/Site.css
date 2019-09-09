@@ -59,6 +59,15 @@
         padding-bottom: 45px;
         margin-right: -4.5%;
     }
+
+    header {
+        position: relative;
+        /*background-color: black;*/
+        height: 0px !important;
+        min-height: 0rem !important;
+        width: 100%;
+        overflow: hidden;
+    }
 }
 
 
@@ -1892,6 +1901,12 @@ span[data-v-43e93932] {
     padding-bottom: 25px;
 }
 
+
+p.section-header {
+    text-align: center;
+    font-size: 46px;
+    padding-bottom: 25px;
+}
 section[data-title] {
     font-family: 'Rubik';
 }
@@ -2018,8 +2033,10 @@ section.active {
 }
 
 .about_office_text {
-    font-size: 28px;
+    font-size: 22px;
     text-align: center;
+    white-space: pre-line;
+    line-height: 1.4;
 }
 
 /*.col-centered {
@@ -2060,3 +2077,46 @@ p.ql-align-right.ql-direction-rtl {
 }
 
 
+
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .fullscreen-bg__video {
+        height: 300%;
+        top: -100%;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .fullscreen-bg__video {
+        width: 300%;
+        left: -100%;
+    }
+}
+
+@media (max-width: 767px) {
+    /*.fullscreen-bg {
+        
+        background: url('../Images/GO_Mobile_background.jpg') center center / cover no-repeat;
+    }
+
+    .fullscreen-bg__video {
+        display: none;
+    }*/
+}

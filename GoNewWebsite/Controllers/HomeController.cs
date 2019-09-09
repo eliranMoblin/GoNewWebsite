@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Entities;
+using Entities.Website;
 using GoNewWebsite.Helpers;
 
 namespace GoNewWebsite.Controllers
@@ -18,9 +19,17 @@ namespace GoNewWebsite.Controllers
             return View(homePage);
         }
 
-        public ActionResult About()
+
+        public async Task<ActionResult> Page(string name)
         {
-            ViewBag.Message = "Your application description page.";
+            var results = await GoWebsiteCache.GetWebsitePages();
+            WebsitePage page = results.SingleOrDefault(x => x.Name == name);
+            return View(page);
+        }
+
+        public async Task<ActionResult> About()
+        {
+            
 
             return View();
         }

@@ -14,8 +14,8 @@ namespace Entities.System
         public static readonly DocumentType WebsiteSetting = new DocumentType(1, "WebsiteSetting");
         public static readonly DocumentType Provider = new DocumentType(2, "Provider");
         public static readonly DocumentType Product = new DocumentType(3, "Product");
-        public static readonly  DocumentType Groups = new DocumentType(4, "Groups");
-        public static readonly DocumentType AlertSettings= new DocumentType(5, "AlertSettings");
+        public static readonly DocumentType Groups = new DocumentType(4, "Groups");
+        public static readonly DocumentType AlertSettings = new DocumentType(5, "AlertSettings");
 
 
 
@@ -26,7 +26,7 @@ namespace Entities.System
         //public static readonly DocumentType MailSetting = new DocumentType(24, "MailSetting");
         public static readonly DocumentType Condition = new DocumentType(25, "Condition");
         public static readonly DocumentType Banner = new DocumentType(26, "Banner");
-        public static readonly DocumentType Template=new DocumentType(27,"Template");
+        public static readonly DocumentType Template = new DocumentType(27, "Template");
         public static readonly DocumentType EmailToUser = new DocumentType(28, "EmailToUser");
         public static readonly DocumentType SmsToUser = new DocumentType(29, "SmsToUser");
         public static readonly DocumentType FtpSite = new DocumentType(30, "FtpSite");
@@ -36,10 +36,13 @@ namespace Entities.System
 
         public static readonly DocumentType Lead = new DocumentType(70, "DocumentLead");
 
-        public static  readonly  DocumentType VersionControl = new DocumentType(90, "VersionControl");
+        public static readonly DocumentType VersionControl = new DocumentType(90, "VersionControl");
 
 
         public static readonly DocumentType WebsitePage = new DocumentType(100, "WebsitePage");
+        public static readonly DocumentType CaseStudyCard = new DocumentType(101, "CaseStudyCard");
+        public static readonly DocumentType ColsData = new DocumentType(102, "ColsData");
+
 
 
         public byte Value { get; protected set; }
@@ -52,11 +55,7 @@ namespace Entities.System
             _documentTypes.Add(internalValue, this);
         }
 
-        //public static List<SelectOption> GetSelectOptions()
-        //{
-        //    return _documentTypes.Select(x => new SelectOption(x.Value.Name, x.Key)).ToList();
-        //}
-
+      
         public static explicit operator DocumentType(int x)
         {
             if (!_documentTypes.ContainsKey(x))
@@ -118,3 +117,4 @@ namespace Entities.System
         }
     }
 }
+
