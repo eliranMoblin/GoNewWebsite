@@ -87,8 +87,11 @@ namespace Entities
 
 
         Lead = 70,
-        VersionControl = 90
-            , WebsitePage = 100
+        VersionControl = 90,
+        WebsitePage = 100,
+        CaseStudyCard = 101,
+        ColsData = 102,
+        Section = 103
     }
 
     public enum LogType

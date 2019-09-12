@@ -189,6 +189,26 @@
     <Content Include="Images\btn_l.png" />
     <Content Include="Images\btn_r.png" />
     <Content Include="Images\CareerCard.png" />
+    <Content Include="Images\CustomerEn\Color\1.png" />
+    <Content Include="Images\CustomerEn\Color\10.png" />
+    <Content Include="Images\CustomerEn\Color\2.png" />
+    <Content Include="Images\CustomerEn\Color\3.png" />
+    <Content Include="Images\CustomerEn\Color\4.png" />
+    <Content Include="Images\CustomerEn\Color\5.png" />
+    <Content Include="Images\CustomerEn\Color\6.png" />
+    <Content Include="Images\CustomerEn\Color\7.png" />
+    <Content Include="Images\CustomerEn\Color\8.png" />
+    <Content Include="Images\CustomerEn\Color\9.png" />
+    <Content Include="Images\CustomerEn\grey\1.png" />
+    <Content Include="Images\CustomerEn\grey\10.png" />
+    <Content Include="Images\CustomerEn\grey\2.png" />
+    <Content Include="Images\CustomerEn\grey\3.png" />
+    <Content Include="Images\CustomerEn\grey\4.png" />
+    <Content Include="Images\CustomerEn\grey\5.png" />
+    <Content Include="Images\CustomerEn\grey\6.png" />
+    <Content Include="Images\CustomerEn\grey\7.png" />
+    <Content Include="Images\CustomerEn\grey\8.png" />
+    <Content Include="Images\CustomerEn\grey\9.png" />
     <Content Include="Images\fabi.png" />
     <Content Include="Images\GO_Desktop backgroung.jpg" />
     <Content Include="Images\GO_Mobile_background.jpg" />
@@ -405,6 +425,10 @@
     <ProjectReference Include="D:\Projects\Gim\PortalMoblin\Shared\Shared\Common\Common.csproj">
       <Project>{76ed2b05-b59c-4fa6-ad39-a29b5757f9cd}</Project>
       <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Projects\Gim\PortalMoblin\Shared\Shared\Entities\Shared.Entities.csproj">
+      <Project>{5A3B7D6B-D02B-480F-9EDE-A51505104510}</Project>
+      <Name>Shared.Entities</Name>
     </ProjectReference>
     <ProjectReference Include="D:\Projects\Gim\PortalMoblin\Shared\Shared\Web\Web.csproj">
       <Project>{03e95170-fe0b-4882-91b9-2b8447d4ca96}</Project>

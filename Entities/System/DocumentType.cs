@@ -39,9 +39,12 @@ namespace Entities.System
         public static readonly DocumentType VersionControl = new DocumentType(90, "VersionControl");
 
 
+
         public static readonly DocumentType WebsitePage = new DocumentType(100, "WebsitePage");
         public static readonly DocumentType CaseStudyCard = new DocumentType(101, "CaseStudyCard");
         public static readonly DocumentType ColsData = new DocumentType(102, "ColsData");
+        public static readonly DocumentType Section = new DocumentType(103, "Section");
+
 
 
 

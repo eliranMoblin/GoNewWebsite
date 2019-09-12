@@ -6,6 +6,8 @@ using System.Threading;
 using System.Web;
 using System.Web.Mvc;
 using BLL.Cache;
+using Entities;
+using Entities.Portal;
 using GoNewWebsite.Helpers;
 
 namespace GoNewWebsite.Controllers
@@ -55,6 +57,16 @@ namespace GoNewWebsite.Controllers
             Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture;
 
             return base.BeginExecuteCore(callback, state);
+        }
+
+        protected InternalBag Bag
+        {
+            get
+            {
+
+                return ViewBag.Bag;
+            }
+
         }
 
 

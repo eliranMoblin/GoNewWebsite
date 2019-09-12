@@ -48,6 +48,7 @@
     <Compile Include="Documents\CreationConverter.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="HttpRequestInfo.cs" />
+    <Compile Include="InternalBag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings\ApplicationSettingManager.cs" />
     <Compile Include="Settings\WebsiteSetting.cs" />

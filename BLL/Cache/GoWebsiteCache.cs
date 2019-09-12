@@ -28,6 +28,7 @@ namespace BLL.Cache
         }
 
 
+
         #region GoWebSite
 
         public async Task<List<WebsitePage>> GetWebsitePages(bool showIsDeleted = false)
@@ -49,6 +50,12 @@ namespace BLL.Cache
             var result = await GetDocuments<ColsData>(documentType: DocumentType.ColsData);
             return result.Where(x => x.Document.IsDeleted == showIsDeleted).ToList();
         }
+
+        //public async Task<List<Section>> GetSections(bool showIsDeleted = false)
+        //{
+        //    var result = await GetDocuments<Section>(documentType: DocumentType.Section);
+        //    return result.Where(x => x.Document.IsDeleted == showIsDeleted).ToList();
+        //}
 
 
         #endregion

@@ -1,84 +1,91 @@
-﻿<!-- Swiper -->
+﻿
 
-<section class="page-section container" id="services">
-    <div id="reta">
-        <carousel-3d :perspective="0" :space="150" :border="0" :display="7" :width="274" :height="437"
-                     :controls-visible="true" :controls-prev-html="'❬'" :controls-next-html="'❭'" :controls-width="30" :controls-height="30" :clickable="true" :autoplay="false" :autoplay-timeout="5000">
-            <slide :index="0">
-                <p class="triangular">Media Planin</p>
-            </slide>
-            <slide :index="1">
-                <p class="triangular">Mobile&Web Development</p>
-                <p class="triangular"></p>
+<section class="page-section container-fluid services" id="services">
+    <div class="container">
+        <div id="reta">
+            <carousel-3d :perspective="0" :space="200" :border="0" :display="7" :width="274" :height="437"
+                         :controls-visible="true" :controls-width="30" :controls-height="30" :clickable="true" :autoplay="false" :autoplay-timeout="5000">
+                <slide :index="0">
+                    <p class="triangular">Media Planin</p>
+                </slide>
+                <slide :index="1">
+                    <p class="triangular">Mobile&Web Development</p>
+                    <p class="triangular"></p>
 
-            </slide>
-            <slide :index="2">
+                </slide>
+                <slide :index="2">
 
-            </slide>
-            <slide :index="3">
+                </slide>
+                <slide :index="3">
 
-            </slide>
-            <slide :index="4">
+                </slide>
+                <slide :index="4">
 
-            </slide>
-            <slide :index="5">
+                </slide>
+                <slide :index="5">
 
-            </slide>
-            <slide :index="6">
+                </slide>
+                <slide :index="6">
 
-            </slide>
+                </slide>
 
 
-        </carousel-3d>
-    </div>
-    <div class="row">
-        <div class=" col-md-6">
+            </carousel-3d>
         </div>
-        <div class=" col-md-6">
-            <a href="#portfolio" class="js-scroll-trigger">
-                <div class="chevron"></div>
-                <div class="chevron"></div>
-                <div class="chevron"></div>
-            </a>
+        <div class="row">
+            <div class=" col-md-6">
+            </div>
+            <div class=" col-md-6">
+                <a href="#portfolio" class="js-scroll-trigger">
+                    <div class="chevron"></div>
+                    <div class="chevron"></div>
+                    <div class="chevron"></div>
+                </a>
 
+            </div>
         </div>
     </div>
+
 </section>
 
-<section class=" page-section container-fluid" id="portfolio">
+<section class=" page-section container-fluid" id="caseStudy">
     <div class="section-header">
         <p class="ourCustomer">סיפורי הצלחה</p>
 
     </div>
     <div id="story">
-        <carousel-3d :perspective="0" :space="500" :display="3" :border="0"
-                     :width="1113" :height="575" :controls-visible="true" :controls-prev-html="'❬'" :controls-next-html="'❭'" :controls-width="30" :controls-height="60" :clickable="true" :autoplay="false" :autoplay-timeout="5000">
+        <carousel-3d class="story" :perspective="0" :space="500" :display="3" :border="0"
+                     :width="1113" :height="545" :controls-visible="true" :controls-prev-html="'❬'" :controls-next-html="'❭'" :controls-width="30" :controls-height="60" :clickable="true" :autoplay="false" :autoplay-timeout="5000">
             <slide :index="0">
                 <div class="card col-md-12">
                     <div class="row no-gutters">
 
-                        <div class="col-md-8">
+                        <div class="col-md-9" dir="rtl">
                             <div class="card-body" style="color: black">
 
-                                <p class="d-inline-block">500000 זה לא מספר קמפיינים</p>
-                                <span class="d-inline-block btn float-right">
-                                    <img src="~/Images/b144 logo.png" />
-                                </span>
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">
-                                    האתגר: ההתאמה המדויקת בין הצרכן לבית העסק מחייבת ניהול כמות עצומה של דאטה
-                                    בכל יום מתבצעים למעלה מ70 אלף חיפושי עסקים ברשת בישראל, תחת מיליוני ביטויי חיפוש אפשריים, להם צריך להתאים כחצי מיליון עסקים המחולקים ל-1620 סגמנטים ו-16 אזורים. יחד עם ההזדמנות הגדולה שיצר מאגר המידע על העסקים של B144, ניצב גם האתגר הגדול -  תיעול כמות המידע העצומה לכדי תוצאות חיפוש מדויקות וחשיפה איכותית של בית העסק
-                                    הפתרון:
-                                    בניית מערכת שלוקחת את כמות הדאטה העצומה שנאספה, וממשיכה להיאסף בכל רגע נתון, ומבצעת חיתוכים סגמנטיאליים מקוריים. בפועל, מדובר במיליוני שורות מידע, שכל אחת כוללת בית עסק, סגמנטים, ביטויי חיפוש רלוונטיים, קריאייטיבים מותאמים אוטומטית, מידע על הגולשים ועוד. כך, באמצעות קונקטורים ואלגוריתמים המחוברים מצד אחד למערכת הניהול של הלקוח ומצד שני למערכות ההגשה שלנו, נוצרים קמפיינים בהתאמה מדויקת לצרכי הגולש ובית העסק
 
-                                    התוצאות:
-                                    •	החזר השקעה משמעותי לעסקים המפרסמים, עם ROI של 500% פר סגמנט
-                                    •	B144 כמעט משלשת את הכנסותיה, עם עלייה מ-37 מיליון ₪ ב-2015 לכמעט 90 מיליון ₪
+                                <p class="d-inline-block card-title  " dir="rtl">
+                                    <span class="d-inline-block  float-right">
+                                        <img src="~/Images/b144 logo.png" class="logo-card" />
+
+                                    </span>
+                                    50000 זה לא מספר טלפון, זה מספר הקמפיינים ש – B144 יודעת לייצר ביום
+                                </p>
+                                @*<p class="d-inline-block card-title  " dir="rtl">50000 זה לא מספר טלפון, </p>
+                                    <p class="d-inline-block card-title  ">זה מספר הקמפיינים ש – B144 יודעת לייצר ביום </p>*@
+
+
+                                <h5 class="card-title">האתגר: </h5>
+                                <p class="card-text">
+                                    מהלך השקה מוחדש של שירות חדש שדורש חינוך ושמייצר ערך שונה לכל סגמנט או קהל יעד רלוונטי. למהלך זה קדם קמפיין השקה שביטא את הרצון של בזק להתמקד בקהל אחד מרכזי ובעקבות כף גרם ליצירת מכנה משותף רחב מדי והתקשה להסביר לקהלי היעד השונים מה הערך המוסף של שירות הבית החכם עבורם. כתוצאה מכך, מכירות המותג הגיעו לתקרת זכוכית בדמות אותם קהלים שאוהבים ומעריכים את הטכנולוגיה.
                                 </p>
                             </div>
+                            <div class="read-more-card">
+                                <p class="card-text float-right"><a href="" style="text-decoration: underline">קרא עוד</a></p>
+                            </div>
                         </div>
-                        <div class="col-md-4">
-                            <img src="~/Images/iPhone X - Outline.png" class="card-img">
+                        <div class="col-md-3">
+                            <img src="~/Images/iPhone X - Outline.png" class="card-img" style="height: 500px; width: 244px; ">
                         </div>
                     </div>
                 </div>
@@ -232,28 +239,60 @@
     </div>
 </section>
 
-<section class=" page-section" id="about">
+<section class=" page-section customers_section" id="about">
 
     <div class="container">
         <div class="section-header">
-            <p class="ourCustomer">בין לקוחותינו</p>
+            <p class="ourCustomer">A Few Of Our Clients</p>
 
         </div>
 
         <div class="owl-carousel clients-carousel">
-            <img src="../Images/b144 logo grey.png" alt="">
-            <img src="../Images/b144 logo grey.png" alt="">
-            <img src="../Images/b144 logo grey.png" alt="">
-            <img src="../Images/b144 logo grey.png" alt="">
-            <img src="../Images/b144 logo grey.png" alt="">
-            <img src="../Images/b144 logo grey.png" alt="">
-            <img src="../Images/b144 logo grey.png" alt="">
-            <img src="../Images/b144 logo grey.png" alt="">
-            <img src="../Images/b144 logo grey.png" alt="">
-            <img src="../Images/b144 logo grey.png" alt="">
-            <img src="../Images/b144 logo grey.png" alt="">
-        </div>
+            <div class="cusmer-carousel-image">
+                <img src="~/Images/CustomerEn/color/1.png" class="color-image" />
+                <img src="~/Images/CustomerEn/grey/1.png" />
 
+            </div>
+            <div class="cusmer-carousel-image">
+                <img src="~/Images/CustomerEn/color/2.png" class="color-image" />
+                <img src="~/Images/CustomerEn/grey/2.png" />
+            </div>
+
+            <div class="cusmer-carousel-image">
+                <img src="~/Images/CustomerEn/color/3.png" class="color-image" />
+                <img src="~/Images/CustomerEn/grey/3.png" />
+            </div>
+            <div class="cusmer-carousel-image">
+                <img src="~/Images/CustomerEn/color/4.png" class="color-image" />
+                <img src="~/Images/CustomerEn/grey/4.png" />
+            </div>
+            <div class="cusmer-carousel-image">
+                <img src="~/Images/CustomerEn/color/5.png" class="color-image" />
+                <img src="~/Images/CustomerEn/grey/5.png" />
+
+                <div class="cusmer-carousel-image">
+                    <img src="~/Images/CustomerEn/color/6.png" class="color-image" />
+                    <img src="~/Images/CustomerEn/grey/6.png" />
+                </div>
+                <div class="cusmer-carousel-image">
+                    <img src="~/Images/CustomerEn/color/7.png" class="color-image" />
+                    <img src="~/Images/CustomerEn/grey/7.png" />
+                </div>
+                
+                <div class="cusmer-carousel-image">
+                    <img src="~/Images/CustomerEn/color/8.png" class="color-image" />
+                </div>
+                <div class="cusmer-carousel-image">
+                    <img src="~/Images/CustomerEn/color/9.png" class="color-image" />
+                    <img src="~/Images/CustomerEn/grey/9.png" />
+                </div>
+                <div class="cusmer-carousel-image">
+                    <img src="~/Images/CustomerEn/color/10.png" />
+                    <img src="~/Images/CustomerEn/grey/10.png" />
+                </div>
+            </div>
+
+        </div>
     </div>
 
 
@@ -266,33 +305,37 @@ Clients Section
 
 <section class="page-section container" id="Job">
     <div class="section-header">
-        <p class="ourCustomer">בוא לעבוד איתנו</p>
+        <p class="ourCustomer">Career</p>
 
     </div>
     <div class="row">
         <div class="container">
-            
+
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#home" role="tab" aria-controls="home"> Programmatic Media</a>
+                    <a class="nav-link job-il active" data-toggle="tab" href="#home" role="tab" aria-controls="home"> Programmatic Media</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Strategy</a>
+                    <a class="nav-link job-il" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Strategy</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#messages" role="tab" aria-controls="messages">Social Media Marketing</a>
+                    <a class="nav-link job-il" data-toggle="tab" href="#messages" role="tab" aria-controls="messages">Social Media Marketing</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#settings" role="tab" aria-controls="settings">Creative & Studio</a>
+                    <a class="nav-link job-il" data-toggle="tab" href="#settings" role="tab" aria-controls="settings">Creative & Studio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link job-il" data-toggle="tab" href="#settings" role="tab" aria-controls="settings">Developer</a>
                 </li>
             </ul>
             <div class="tab-content">
                 <div class="tab-pane active" id="home" role="tabpanel">
                     <div class="item-content">
                         <h4>
-                            בואו לנהל את הצרכנים של <br/>
+                            בואו לנהל את הצרכנים של <br />
                             הלקוחות שלנו בכלל הקמפיינים
                         </h4>
+                        <p></p>
                         <p>קנייה והגשה של מדיה במערכות פרוגרמטיות מתקדמות (DV 360 / Appnexus / Artimedia) </p>
 
                         <p>
@@ -309,6 +352,11 @@ Clients Section
                     </div>
                 </div>
                 <div class="tab-pane" id="messages" role="tabpanel">
+                    <div class="item-content">
+                        Tab 2 content. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+                    </div>
+                </div>
+                <div class="tab-pane" id="settings" role="tabpanel">
                     <div class="item-content">
                         Tab 2 content. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
                     </div>
@@ -337,65 +385,95 @@ Clients Section
 
 
     <script>
+        $(".story").attr(":controls_visible", "false");
+        if ($(window).width() < 769) {
+            console.log("asdsa");
+            console.log($(".story").attr(":width", "274"));
+            console.log($(".story").attr(":height", "437"));
+
+            console.log($("#story carousel-3d")[0].outerHTML);
+
+        }
 
 
-        $('.clients-carousel').owlCarousel({
-            margin: 100,
-            loop: true,
-            autoHeight: false,
-            autoplay: true,
-            nav: true,
-            responsiveClass: true, navText: [
-                '<i class="fa fa-angle-left" aria-hidden="true"></i>',
-                '<i class="fa fa-angle-right" aria-hidden="true"></i>'
-            ],
-            responsive: {
-                0: {
-                    items: 3,
-                    autoWidth: true,
-                    margin: 50,
-                    nav: false
-                },
-                600: {
-                    items: 3,
-                    nav: false
-                },
-                1000: {
-                    items: 10,
 
-                    loop: true
+
+        $(document).ready(function (parameters) {
+            if ($(window).width() < 1025) {
+                var elems = document.getElementsByClassName('next');
+                for (var i = 0; i < elems.length; i += 1) {
+                    elems[i].style.display = 'none';
                 }
+
+                var elems = document.getElementsByClassName('prev');
+                for (var i = 0; i < elems.length; i += 1) {
+                    elems[i].style.display = 'none';
+                }
+
             }
+
+            $('.clients-carousel').owlCarousel({
+                margin: 100,
+                loop: true,
+                autoHeight: false,
+                autoplay: true,
+                nav: true,
+                responsiveClass: true,
+                navText: [
+                    '<i class="fal fa-chevron-left"></i>',
+                    '<i class="fal fa-chevron-right"></i>'
+                ],
+                responsive: {
+                    0: {
+                        items: 3,
+                        autoWidth: true,
+                        margin: 50,
+                        nav: false
+                    },
+                    600: {
+                        items: 3,
+                        nav: false
+                    },
+
+                    1000: {
+                        items: 5,
+
+                        loop: true
+                    }
+                }
+            })
         })
+
     </script>
     <script>
         jQuery(document).ready(function ($) {
-            var swiper = new Swiper('.swiper-container', {
-                effect: 'coverflow',
-                autoplay: true,
-                speed: 5000,
-                mousewheelControl: true,
-                loop: true,
-                loopFillGroupWithBlank: true,
-                centeredSlides: true,
-                slidesPerView: 3,
-                initialSlide: 3,
-                keyboardControl: true,
-                loopedSlides: 1,
-                lazyLoading: true,
-                preventClicks: true,
-                preventClicksPropagation: false,
-                lazyLoadingInPrevNext: true,
-                nextButton: '.swiper-button-next',
-                prevButton: '.swiper-button-prev',
-                coverflow: {
-                    rotate: 0,
-                    stretch: 20,
-                    depth: 400,
-                    modifier: 1,
-                    slideShadows: false,
-                }
-            });
+            var swiper = new Swiper('.swiper-container',
+                {
+                    effect: 'coverflow',
+                    autoplay: true,
+                    speed: 5000,
+                    mousewheelControl: true,
+                    loop: true,
+                    loopFillGroupWithBlank: true,
+                    centeredSlides: true,
+                    slidesPerView: 3,
+                    initialSlide: 3,
+                    keyboardControl: true,
+                    loopedSlides: 1,
+                    lazyLoading: true,
+                    preventClicks: true,
+                    preventClicksPropagation: false,
+                    lazyLoadingInPrevNext: true,
+                    nextButton: '.swiper-button-next',
+                    prevButton: '.swiper-button-prev',
+                    coverflow: {
+                        rotate: 0,
+                        stretch: 20,
+                        depth: 400,
+                        modifier: 1,
+                        slideShadows: false,
+                    }
+                });
 
 
         });
@@ -412,7 +490,10 @@ Clients Section
             },
             destroyed: function () {
                 this.pauseAutoplay(),
-                    this.$isServer || (this.$el.removeEventListener("mouseenter", this.pauseAutoplay), this.$el.removeEventListener("mouseleave", this.startAutoplay))
+                    this.$isServer ||
+                    (this.$el.removeEventListener("mouseenter", this.pauseAutoplay), this.$el.removeEventListener(
+                        "mouseleave",
+                        this.startAutoplay))
             },
             methods: {
                 pauseAutoplay: function () {
@@ -420,9 +501,11 @@ Clients Section
                 },
                 startAutoplay: function () {
                     var t = this;
-                    this.autoplay && (this.autoplayInterval = setInterval(function () {
-                        "ltr" === t.dir ? t.goPrev() : t.goNext()
-                    }, this.autoplayTimeout))
+                    this.autoplay &&
+                        (this.autoplayInterval = setInterval(function () {
+                            "ltr" === t.dir ? t.goPrev() : t.goNext()
+                        },
+                            this.autoplayTimeout))
                 }
             }
         })
@@ -437,37 +520,24 @@ Clients Section
             },
             destroyed: function () {
                 this.pauseAutoplay(),
-                    this.$isServer || (this.$el.removeEventListener("mouseenter", this.pauseAutoplay), this.$el.removeEventListener("mouseleave", this.startAutoplay))
+                    this.$isServer ||
+                    (this.$el.removeEventListener("mouseenter", this.pauseAutoplay), this.$el.removeEventListener(
+                        "mouseleave",
+                        this.startAutoplay))
             }
-            //methods: {
-            //    pauseAutoplay: function () {
-            //        this.autoplayInterval && (this.autoplayInterval = clearInterval(this.autoplayInterval))
-            //    },
-            //    startAutoplay: function () {
-            //        var t = this;
-            //        this.autoplay && (this.autoplayInterval = setInterval(function () {
-            //            "ltr" === t.dir ? t.goPrev() : t.goNext()
-            //        }, this.autoplayTimeout))
-            //    }
-            //}
         })
+
+
     </script>
 
     <script type="text/javascript">
-        //$(document).ready(function(){
-        //    // Add minus icon for collapse element which is open by default
-        //    $(".in.collapse").each(function(){
-        //        $(this).siblings(".panel-heading").find(".glyphicon").addClass("rotate");
-        //    });
-
-        //    // Toggle plus minus icon on show hide of collapse element
-        //    $(".collapse").on('show.bs.collapse', function(){
-        //        $(this).parent().find(".glyphicon").addClass("rotate");
-        //    }).on('hide.bs.collapse', function(){
-        //        $(this).parent().find(".glyphicon").removeClass("rotate");
-        //    });
-        //});
         $(document).ready(function () {
+            $('.prev span').html('<i class="fal fa-chevron-left"></i>');
+            $('.next span').html('<i class="fal fa-chevron-right"></i>');
+        });
+
+        $(document).ready(function () {
+
             getAccordion("#myTab", 769);
         });
     </script>
