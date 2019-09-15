@@ -151,6 +151,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\carousel.css" />
+    <Content Include="Content\font-awesome-animation.min.css" />
     <Content Include="Content\fonts\css\all.css" />
     <Content Include="Content\fonts\css\all.min.css" />
     <Content Include="Content\fonts\css\brands.css" />
@@ -223,6 +224,8 @@
     <Content Include="Images\Rectangle3.png" />
     <Content Include="Images\Rectangle4.png" />
     <Content Include="Images\Shape 4331.png" />
+    <Content Include="Images\SmallRet.png" />
+    <Content Include="Images\triangle_eng.png" />
     <Content Include="Images\_Rectangle.svg" />
     <Content Include="img\about\1.jpg" />
     <Content Include="img\about\2.jpg" />
@@ -391,6 +394,7 @@
     <Content Include="Views\Career\Index.cshtml" />
     <Content Include="Views\Career\Position.cshtml" />
     <Content Include="Views\Home\Page.cshtml" />
+    <Content Include="Views\Home\Solutions.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

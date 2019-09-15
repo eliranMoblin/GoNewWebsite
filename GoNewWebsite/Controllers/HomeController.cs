@@ -17,13 +17,12 @@ namespace GoNewWebsite.Controllers
             //var pages = await GoWebsiteCache.GetWebsitePages();
             //var homePage = pages.SingleOrDefault(x => x.IsHomePage && x.Language == Language.Hebrew);
 
-            WebsitePage website=new WebsitePage
+            WebsitePage website = new WebsitePage
             {
-                HeaderPage =new HeaderPage{Main = "GO Digital Marketing ", Content = "GO is an award-winning digital agency, specializing in high scale performance marketing for global brands " } 
-                
+                HeaderPage = new HeaderPage { Main = "GO Digital Marketing ", Content = "GO is an award-winning digital agency, specializing in high scale performance marketing for global brands " }
             };
-            return View(website);
-                //return View();
+            ViewBag.Website = website;
+            return View();
         }
 
 
@@ -38,8 +37,27 @@ namespace GoNewWebsite.Controllers
 
         public async Task<ActionResult> About()
         {
-            
+            WebsitePage website = new WebsitePage
+            {
+                HeaderPage = new HeaderPage { Main = "About ", Content = "With a focus on scalability, transparency and human touch service, performance marketing is at the core of our success delivering critical speed where seconds counts. Speed to execute. Speed to measure. Speed to scale." }
 
+            };
+
+            ViewBag.Website = website;
+            return View();
+        }
+
+        public ActionResult Solutions()
+        {
+            WebsitePage website = new WebsitePage
+            {
+                HeaderPage = new HeaderPage { Main = "Solutions ", Content = "bla vlval kshd lkashd kjahdlkjhd kjahfgahfg;kjhaf gafgkha flgkh afgkh ;fjgh afg" +
+                                                                             "sdafjh sd;akjfh sd;kjafh dsfh a;dfh" +
+                                                                             "asdfjh ;dsjfh s;dajfkh" }
+
+            };
+
+            ViewBag.Website = website;
             return View();
         }
 

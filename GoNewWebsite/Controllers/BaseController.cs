@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using BLL.Cache;
 using Entities;
 using Entities.Portal;
+using Entities.Website;
 using GoNewWebsite.Helpers;
 
 namespace GoNewWebsite.Controllers
@@ -31,6 +32,7 @@ namespace GoNewWebsite.Controllers
 
 
         protected readonly GoWebsiteCache GoWebsiteCache;
+
 
 
         protected string ConnectionString =
@@ -69,9 +71,15 @@ namespace GoNewWebsite.Controllers
 
         }
 
+        protected WebsitePage WebsitePage;
+        
+
+
 
         public BaseController()
         {
+
+            WebsitePage=new WebsitePage();
             GoWebsiteCache = new GoWebsiteCache();
 
         }

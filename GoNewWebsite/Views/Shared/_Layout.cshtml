@@ -1,9 +1,11 @@
-﻿@using GoNewWebsite.Helpers
+﻿@using Entities.Website
+@using GoNewWebsite.Helpers
 @using Web;
 @model Entities.Website.WebsitePage
 
 @{
     var culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name.ToLowerInvariant();
+    WebsitePage website = ViewBag.Website;
 }
 
 @helper selected(string c, string culture)
@@ -56,21 +58,26 @@
     <script src="~/Scripts/Logo/logo_HTML5Canvas.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.css" />
     <link href="~/plugin/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.2.1/font-awesome-animation.css" rel="stylesheet" />
 
 
 </head>
 <body id="page-top" onload="init();" style="margin: 0px;">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        
         <div class="container-fluid">
-            <div class="square">
-                <div id="animation_container">
-                    <canvas id="canvas"></canvas>
-                    <div id="dom_overlay_container">
+            <a href="@Url.Action("Index", "Home")">
+                <div class="square">
+                    <div id="animation_container">
+                        <canvas id="canvas"></canvas>
+                        <div id="dom_overlay_container">
+                        </div>
                     </div>
+
+
                 </div>
-
-
-            </div>
+            </a>
+            
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
@@ -80,10 +87,10 @@
                         <a class="nav-link js-scroll-trigger" href="#services">Home Page</a>
                     </li>
                     <li class="nav-item" nav-item="4">
-                        <a class="nav-link js-scroll-trigger" href="@Url.Action("About","Home")">About Us</a>
+                        <a class="nav-link js-scroll-trigger" href="@Url.Action("About", "Home")">About Us</a>
                     </li>
                     <li class="nav-item" nav-item="3">
-                        <a class="nav-link js-scroll-trigger" href="#about">Solutions</a>
+                        <a class="nav-link js-scroll-trigger" href="@Url.Action("Solutions", "Home")">Solutions</a>
                     </li>
                     <li class="nav-item" nav-item="2">
                         <a class="nav-link js-scroll-trigger" href="#Job">Careers</a>
@@ -123,12 +130,12 @@
             <div class="d-flex h-100 text-center align-items-center">
                 <div class="w-100 text-white">
 
-                    @if (@Model != null)
+                    @if (website != null)
                     {
-                        <h1 class="display-3">@Model.HeaderPage.Main</h1>
-                        if (!string.IsNullOrEmpty(Model.HeaderPage.Content))
+                        <h1 class="display-3">@website.HeaderPage.Main</h1>
+                        if (!string.IsNullOrEmpty(website.HeaderPage.Content))
                          {
-                             <p class="lead mb-0" style="white-space: pre-line">@Html.Raw(@Model.HeaderPage.Content)</p>
+                             <p class="lead mb-0" style="white-space: pre-line">@Html.Raw(website.HeaderPage.Content)</p>
                          }
 
                     }
@@ -187,27 +194,27 @@
 
             </div>
 
-            <form class=" container-fluid footer-form" dir="rtl">
-                <div class="form-row align-items-center">
-                    <div class="col-auto">
+            <form class="form-inline justify-content-center">
+                
+                    <div class="col-md-3">
                         <div class="input-group mb-2">
                             <input type="text" class="form-control" id="FullName" placeholder="Full name">
                         </div>
                     </div>
-                    <div class="col-auto">
+                <div class="col-md-3">
                         <div class="input-group mb-2">
                             <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Email">
                         </div>
                     </div>
-                    <div class="col-auto">
+                <div class="col-md-3">
                         <div class="input-group mb-2">
                             <input type="tel" class="form-control" id="phoneNumber" placeholder="Phone">
                         </div>
                     </div>
-                    <div class="col-sm-12 col-lg-3">
+                <div class="col-md-3">
                         <button type="submit" class="btn btn-primary ">GO</button>
                     </div>
-                </div>
+                
             </form>
 
         </section>
@@ -273,6 +280,7 @@
     <script src="~/Scripts/bootstrap-tabcollapse.js"></script>
 
     <script>
+
 
 
 
@@ -470,13 +478,13 @@
                         iw = window.innerWidth / 6, ih = window.innerHeight;
                     }
 
-                    console.log();
+                    
 
                     var pRatio = window.devicePixelRatio || 1, xRatio = iw / w, yRatio = ih / h, sRatio = 1;
                     if (isResp) {
                         if ((respDim == 'width' && lastW == iw) || (respDim == 'height' && lastH == ih)) {
                             sRatio = lastS;
-                            console.log(w);
+                            
                         } else if (!isScale) {
                             if (iw < w || ih < h)
                                 sRatio = Math.min(xRatio, yRatio);

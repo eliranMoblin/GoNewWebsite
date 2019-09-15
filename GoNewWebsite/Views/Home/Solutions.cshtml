@@ -1,0 +1,268 @@
+﻿<nav id="cd-vertical-nav">
+    <ul>
+        <li>
+            <a href="#services" data-number="1" class="is-selected">
+                <span class="cd-dot"></span>
+                <span class="cd-label">Services</span>
+            </a>
+        </li>
+        <li>
+            <a href="#strategy" data-number="2" class="">
+                <span class="cd-dot"></span>
+                <span class="cd-label">strategy</span>
+            </a>
+        </li>
+        <li>
+            <a href="#analytics" data-number="3" class="">
+                <span class="cd-dot"></span>
+                <span class="cd-label">analytics</span>
+            </a>
+        </li>
+        <li>
+            <a href="#section4" data-number="4" class="">
+                <span class="cd-dot"></span>
+                <span class="cd-label">Portfolio</span>
+            </a>
+        </li>
+        <li>
+            <a href="#section5" data-number="5">
+                <span class="cd-dot"></span>
+                <span class="cd-label">Pricing</span>
+            </a>
+        </li>
+        <li>
+            <a href="#section6" data-number="6">
+                <span class="cd-dot"></span>
+                <span class="cd-label">Contact</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+
+
+<section class="page-section container-fluid services" id="services">
+    <div class="container">
+        <div id="reta">
+            <carousel-3d :perspective="0" :space="200" :border="0" :display="7" :width="274" :height="437"
+                         :controls-visible="true" :controls-width="30" :controls-height="5" :clickable="true" :autoplay="false" :autoplay-timeout="5000">
+                <slide :index="0">
+                    <p class="triangular">Media Planin</p>
+                </slide>
+                <slide :index="1">
+                    <p class="triangular">Mobile&Web Development</p>
+                    <p class="triangular"></p>
+
+                </slide>
+                <slide :index="2">
+
+                </slide>
+                <slide :index="3">
+
+                </slide>
+                <slide :index="4">
+
+                </slide>
+                <slide :index="5">
+
+                </slide>
+                <slide :index="6">
+
+                </slide>
+
+
+            </carousel-3d>
+        </div>
+        <div class="row">
+            <div class=" col-md-6">
+            </div>
+            <div class=" col-md-6">
+                <a href="#portfolio" class="js-scroll-trigger">
+                    <div class="chevron"></div>
+                    <div class="chevron"></div>
+                    <div class="chevron"></div>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="page-section container services" id="strategy">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="~/Images/Rectangle2.png" class="img-fluid" />
+        </div>
+        <div class="col-md-8">
+            <p class="Solution_subHeader">Strategy</p>
+            <p class="Solutions_litext">
+                kasjd kljkahd jhjhd
+            </p>
+            <p class="Solutions_litext">
+                kasjd kljkahd jhjhd
+            </p>
+            <p class="Solutions_litext">
+                kasjd kljkahd jhjhd
+            </p>
+            <p class="Solutions_litext">
+                kasjd kljkahd jhjhd
+            </p>
+        </div>
+
+
+    </div>
+</section>
+
+<section class="page-section container services" id="analytics">
+    <div class="row">
+        <div class="col-md-8">
+            <p class="Solution_subHeader">Strategy</p>
+            <p class="Solutions_litext">
+                kasjd kljkahd jhjhd
+            </p>
+            <p class="Solutions_litext">
+                kasjd kljkahd jhjhd
+            </p>
+            <p class="Solutions_litext">
+                kasjd kljkahd jhjhd
+            </p>
+            <p class="Solutions_litext">
+                kasjd kljkahd jhjhd
+            </p>
+        </div>
+        <div class="col-md-4">
+            <img src="~/Images/Rectangle.png" class="img-fluid" />
+        </div>
+    </div>
+</section>
+
+
+@section scripts
+{
+
+    <script>
+
+
+        $(document).ready(function () {
+            if ($(window).width() < 1025) {
+                var elems = document.getElementsByClassName('next');
+                for (var i = 0; i < elems.length; i += 1) {
+                    elems[i].style.display = 'none';
+                }
+
+                var elems = document.getElementsByClassName('prev');
+                for (var i = 0; i < elems.length; i += 1) {
+                    elems[i].style.display = 'none';
+                }
+
+            }
+
+
+        })
+
+        /* dot nav */
+        jQuery(document).ready(function($){
+            var contentSections = $('section'),
+                navigationItems = $('#cd-vertical-nav a');
+
+            updateNavigation();
+            $(window).on('scroll', function(){
+                updateNavigation();
+            });
+
+            //smooth scroll to the section
+            navigationItems.on('click', function(event){
+                event.preventDefault();
+                smoothScroll($(this.hash));
+            });
+            //smooth scroll to second section
+            $('.cd-scroll-down').on('click', function(event){
+                event.preventDefault();
+                smoothScroll($(this.hash));
+            });
+
+            //open-close navigation on touch devices
+            $('.touch .cd-nav-trigger').on('click', function(){
+                $('.touch #cd-vertical-nav').toggleClass('open');
+  
+            });
+            //close navigation on touch devices when selectin an elemnt from the list
+            $('.touch #cd-vertical-nav a').on('click', function(){
+                $('.touch #cd-vertical-nav').removeClass('open');
+            });
+
+            function updateNavigation() {
+
+                contentSections.each(function () {
+
+                    $this = $(this);
+                    var activeSection = $('#cd-vertical-nav a[href="#' + $this.attr('id') + '"]').data('number') - 1;
+                    
+                    console.log($this);
+                    
+                    if (($this.offset().top - $(window).height() / 4 < $(window).scrollTop()+110) && ($this.offset().top + $this.height() - $(window).height() / 4 > $(window).scrollTop() + 100 ) ) {
+                        navigationItems.eq(activeSection).addClass('is-selected');
+                    }else {
+                        navigationItems.eq(activeSection).removeClass('is-selected');
+                    }
+                });
+            }
+
+            function smoothScroll(target) {
+                console.log($(window).scrollTop());
+                $('html, body').animate({
+                    scrollTop: (target.offset().top - 60)
+                }, 1000, "easeInOutExpo");
+            }
+        });
+        /* end dot nav */
+
+    </script>
+
+
+
+
+    <script>
+
+
+        new Vue({
+            el: '#reta',
+            data: {
+                slides: 2
+            },
+            components: {
+                'carousel-3d': Carousel3d.Carousel3d,
+                'slide': Carousel3d.Slide
+            },
+            destroyed: function () {
+                this.pauseAutoplay(),
+                    this.$isServer ||
+                    (this.$el.removeEventListener("mouseenter", this.pauseAutoplay), this.$el.removeEventListener(
+                        "mouseleave",
+                        this.startAutoplay))
+            },
+            methods: {
+                pauseAutoplay: function () {
+                    this.autoplayInterval && (this.autoplayInterval = clearInterval(this.autoplayInterval))
+                },
+                startAutoplay: function () {
+                    var t = this;
+                    this.autoplay &&
+                        (this.autoplayInterval = setInterval(function () {
+                            "ltr" === t.dir ? t.goPrev() : t.goNext()
+                        },
+                            this.autoplayTimeout))
+                }
+            }
+        })
+
+
+        $(document).ready(function () {
+            $('.prev span').html('<i class="fal fa-chevron-left"></i>');
+            $('.next span').html('<i class="fal fa-chevron-right"></i>');
+        });
+
+    </script>
+}
