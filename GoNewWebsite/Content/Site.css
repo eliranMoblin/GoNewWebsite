@@ -373,11 +373,17 @@ table {
 
 /** Card */
 .card {
-    border-radius: 2.95rem !important;
+    border-radius: 0.65rem !important;
 }
 
+
+.Career-card {
+    border-radius: 1.95rem !important;
+}
+
+
 svg {
-    border-radius: 0.95rem !important;
+    border-radius: 0.65rem !important;
 }
 
 
@@ -428,23 +434,25 @@ p {
 
 .text {
     color: black;
-    font-size: 14.96px;
+    font-size: 13.96px;
     position: absolute;
-    height: -webkit-fill-available;
-    width: fit-content;
-    top: 63%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    top: 53%;
     left: 50%;
+    max-height: 92%;
+    max-width: 90%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
 }
-
 .hrefPosition {
     text-decoration: underline !important;
     left: 4%;
     position: absolute;
-    top: 58%;
+    top: 67%;
     font-weight: 600;
 }
 
@@ -1252,7 +1260,11 @@ h2 {
 }
 
 svg {
+    top: 29px;
     fill: #2f373d;
+    position: absolute;
+    left: 54px;
+    
 }   
 
 .owl-next {
@@ -1465,6 +1477,7 @@ label.btn.btn-lang.active {
 
 
 .triangular {
+    cursor: pointer;
     width: 25px;
     font-size: 27px;
     color: white;
@@ -1935,7 +1948,7 @@ p.card-title {
         .tab-content {
             float: left;
             height: 420px;
-            /*width: auto;*/
+            width: 70% !important;
             margin-left: -35px;
         }
 
@@ -2221,9 +2234,13 @@ p.card-title {
     transition: opacity 1s ease;
 }*/
     p.ql-align-right.ql-direction-rtl {
-        direction: rtl;
+        
+        font-size: 22px;
         text-align: center;
-        font-size: 28px;
+        white-space: pre-line;
+        line-height: 1.4;
+    
+        /*font-size: 28px;*/
     }
 
     .New-card {
@@ -2685,3 +2702,42 @@ Main components
         bottom: 40px;
     }
 }
+
+
+.job-card {
+    height: 180px !important;
+    width: 100%;
+
+}
+.jobs-card {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .jobs-card {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .jobs-card {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .jobs-card {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .jobs-card {
+        max-width: 1540px;
+    }
+}
+

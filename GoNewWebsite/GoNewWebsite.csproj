@@ -395,6 +395,7 @@
     <Content Include="Views\Career\Position.cshtml" />
     <Content Include="Views\Home\Page.cshtml" />
     <Content Include="Views\Home\Solutions.cshtml" />
+    <Content Include="Views\Career\GetJobsForHomePage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

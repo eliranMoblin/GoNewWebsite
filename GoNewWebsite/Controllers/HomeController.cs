@@ -51,15 +51,13 @@ namespace GoNewWebsite.Controllers
         {
             WebsitePage website = new WebsitePage
             {
-                HeaderPage = new HeaderPage { Main = "Solutions ", Content = "bla vlval kshd lkashd kjahdlkjhd kjahfgahfg;kjhaf gafgkha flgkh afgkh ;fjgh afg" +
-                                                                             "sdafjh sd;akjfh sd;kjafh dsfh a;dfh" +
-                                                                             "asdfjh ;dsjfh s;dajfkh" }
+                HeaderPage = new HeaderPage { Main = "Solutions ", Content = "We at GO know how to provide a complete answer at the highest professional level. From strategy, through creative cracking, to the implementation of advanced media capabilities and data systems that ultimately delivers better business results" }
 
             };
 
             ViewBag.Website = website;
             return View();
-        }
+        }   
 
         public ActionResult Contact()
         {

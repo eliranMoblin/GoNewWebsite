@@ -9,7 +9,7 @@ using Newtonsoft.Json.Serialization;
 namespace GoNewWebsite.Models
 {
 
-    public class Jobs
+    public partial class Jobs
     {
         [JsonProperty("name")]
         public string Name { get; set; }
@@ -24,16 +24,16 @@ namespace GoNewWebsite.Models
         public string EmailAlias { get; set; }
 
         [JsonProperty("url_comeet_hosted_page")]
-        public string UrlComeetHostedPage { get; set; }
+        public Uri UrlComeetHostedPage { get; set; }
 
         [JsonProperty("url_active_page")]
-        public string UrlActivePage { get; set; }
+        public Uri UrlActivePage { get; set; }
 
         [JsonProperty("employment_type")]
         public string EmploymentType { get; set; }
 
         [JsonProperty("experience_level")]
-        public object ExperienceLevel { get; set; }
+        public string ExperienceLevel { get; set; }
 
         [JsonProperty("uid")]
         public string Uid { get; set; }
@@ -66,18 +66,31 @@ namespace GoNewWebsite.Models
         public object PictureUrl { get; set; }
 
         [JsonProperty("time_updated")]
-        public DateTime TimeUpdated { get; set; }
+        public DateTimeOffset TimeUpdated { get; set; }
 
         [JsonProperty("company_name")]
         public string CompanyName { get; set; }
 
         [JsonProperty("position_url")]
-        public string PositionUrl { get; set; }
+        public Uri PositionUrl { get; set; }
 
         [JsonProperty("details")]
-        public List<Detail> Details { get; set; }
+        public Detail[] Details { get; set; }
     }
-    public class Location
+
+    public partial class Detail
+    {
+        [JsonProperty("name")]
+        public string Name { get; set; }
+
+        [JsonProperty("value")]
+        public string Value { get; set; }
+
+        [JsonProperty("order")]
+        public long Order { get; set; }
+    }
+
+    public partial class Location
     {
         [JsonProperty("name")]
         public string Name { get; set; }
@@ -101,7 +114,8 @@ namespace GoNewWebsite.Models
         public object ArrivalInstructions { get; set; }
 
         [JsonProperty("street_number")]
-        public string StreetNumber { get; set; }
+        [JsonConverter(typeof(ParseStringConverter))]
+        public long StreetNumber { get; set; }
 
         [JsonProperty("timezone")]
         public string Timezone { get; set; }
@@ -110,18 +124,35 @@ namespace GoNewWebsite.Models
         public string LocationUid { get; set; }
     }
 
-    public class Detail
+
+    internal class ParseStringConverter : JsonConverter
     {
-        [JsonProperty("name")]
-        public string Name { get; set; }
+        public override bool CanConvert(Type t) => t == typeof(long) || t == typeof(long?);
 
-        [JsonProperty("value")]
-        public string Value { get; set; }
+        public override object ReadJson(JsonReader reader, Type t, object existingValue, JsonSerializer serializer)
+        {
+            if (reader.TokenType == JsonToken.Null) return null;
+            var value = serializer.Deserialize<string>(reader);
+            long l;
+            if (Int64.TryParse(value, out l))
+            {
+                return l;
+            }
+            throw new Exception("Cannot unmarshal type long");
+        }
 
+        public override void WriteJson(JsonWriter writer, object untypedValue, JsonSerializer serializer)
+        {
+            if (untypedValue == null)
+            {
+                serializer.Serialize(writer, null);
+                return;
+            }
+            var value = (long)untypedValue;
+            serializer.Serialize(writer, value.ToString());
+            return;
+        }
 
-        [JsonProperty("order")]
-        public int Order { get; set; }
+        public static readonly ParseStringConverter Singleton = new ParseStringConverter();
     }
-
-   
 }

@@ -1186,7 +1186,7 @@
                 var t = this,
                     e = t.$createElement,
                     n = t._self._c || e;
-                console.log(this.slideHeight);
+                
                 return n("div", {
                     staticClass: "carousel-3d-container",
                     style: {

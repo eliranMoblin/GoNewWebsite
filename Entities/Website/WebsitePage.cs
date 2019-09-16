@@ -45,5 +45,13 @@ namespace Entities.Website
 
         [JsonProperty("IsHomePage")]
         public bool IsHomePage { get; set; }
+
+        public List<Solutions> Solutions { get; set; }
+        
+    }
+
+    public class Solutions
+    {
+        public Dictionary<string, List<string>> Solution { get; set; }
     }
 }

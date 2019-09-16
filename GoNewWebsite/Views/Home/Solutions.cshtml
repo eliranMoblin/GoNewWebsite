@@ -90,7 +90,7 @@
 </section>
 
 
-<section class="page-section container services" id="strategy">
+<section class="page-section container services" id="strategy" name="strategy">
     <div class="row">
         <div class="col-md-4">
             <img src="~/Images/Rectangle2.png" class="img-fluid" />
@@ -98,54 +98,76 @@
         <div class="col-md-8">
             <p class="Solution_subHeader">Strategy</p>
             <p class="Solutions_litext">
-                kasjd kljkahd jhjhd
+                Building the brand present in the digital ecosystem
             </p>
             <p class="Solutions_litext">
-                kasjd kljkahd jhjhd
+                Formulate the media plan and content strategy
             </p>
             <p class="Solutions_litext">
-                kasjd kljkahd jhjhd
+                Building Cross Platform user’s journey campaigns
             </p>
             <p class="Solutions_litext">
-                kasjd kljkahd jhjhd
+                Building a customer profile and LTV model
+            </p>
+            <p class="Solutions_litext">
+                Assisting and conduct research, market analysis and competitors reviews 
             </p>
         </div>
-
-
     </div>
 </section>
 
 <section class="page-section container services" id="analytics">
     <div class="row">
         <div class="col-md-8">
-            <p class="Solution_subHeader">Strategy</p>
-            <p class="Solutions_litext">
-                kasjd kljkahd jhjhd
-            </p>
-            <p class="Solutions_litext">
-                kasjd kljkahd jhjhd
-            </p>
-            <p class="Solutions_litext">
-                kasjd kljkahd jhjhd
-            </p>
-            <p class="Solutions_litext">
-                kasjd kljkahd jhjhd
-            </p>
+            <p class="Solution_subHeader">Analytics & Data Management</p>
+            <p class="Solutions_litext">Marketing effectiveness analysis across all digital assets </p>
+            <p class="Solutions_litext">Audience segmentation and characterization of data-based personas</p>
+            <p class="Solutions_litext">Optimization of conversion rates (CROs) and integration between media performance and CRM systems</p>
+            <p class="Solutions_litext">Implementation and maintenance of digital asset</p>
+            <p class="Solutions_litext">Data Visualization on dashboards and automated reports</p>
         </div>
         <div class="col-md-4">
             <img src="~/Images/Rectangle.png" class="img-fluid" />
         </div>
     </div>
 </section>
+<section class="page-section container services" id="MediaPlanning" >
+    <div class="row">
+        <div class="col-md-4">
+            <img src="~/Images/Rectangle2.png" class="img-fluid" />
+        </div>
+        <div class="col-md-8">
+            <p class="Solution_subHeader">Media Planning</p>
+            <p class="Solutions_litext">Strategic Planning and Full Management Digital Media Across Platform</p>
+            <p class="Solutions_litext">Build optimal multichannel media design models</p>
+            <p class="Solutions_litext">Determining metrics and goals for each activity phase (KPI)</p>
+            <p class="Solutions_litext">Maximize and streamline media budgets in holistic management</p>
+            <p class="Solutions_litext">Analyze data and build advanced reports for real-time optimization and decision making</p>
+        </div>
+    </div>
+</section>
 
-
+<section class="page-section container services" id="SEO/SearchEngineOptimization">
+    <div class="row">
+        <div class="col-md-8">
+            <p class="Solutions_litext">Market analysis, organic promotion planning and strategy tailored to the marketing needs</p>
+            <p class="Solutions_litext">Search Engine Optimization (ASO)</p>
+            <p class="Solutions_litext">Creating and distributing of content including link monitoring and buying</p>
+            <p class="Solutions_litext">On-going consultation and advice on setting up new sites</p>
+            <p class="Solutions_litext">Reputation and image management, Google penalizing site extraction</p>
+        </div>
+        <div class="col-md-4">
+            <img src="~/Images/Rectangle.png" class="img-fluid" />
+        </div>
+    </div>
+</section>
 @section scripts
 {
 
     <script>
 
-
         $(document).ready(function () {
+            
             if ($(window).width() < 1025) {
                 var elems = document.getElementsByClassName('next');
                 for (var i = 0; i < elems.length; i += 1) {
@@ -162,8 +184,22 @@
 
         })
 
+
+
         /* dot nav */
-        jQuery(document).ready(function($){
+        jQuery(document).ready(function ($) {
+            if (window.location.hash) {
+                var hash = window.location.hash;
+
+                $('html, body').animate({
+                    scrollTop: ($(hash).offset().top - 60)
+                }, 1000, "easeInOutExpo");
+                //$('html, body').animate({
+                //    scrollTop :  $(hash).offset().top
+                //}, 500);
+            };
+            
+
             var contentSections = $('section'),
                 navigationItems = $('#cd-vertical-nav a');
 
@@ -175,6 +211,7 @@
             //smooth scroll to the section
             navigationItems.on('click', function(event){
                 event.preventDefault();
+                console.log($(this.hash));
                 smoothScroll($(this.hash));
             });
             //smooth scroll to second section
@@ -196,11 +233,10 @@
             function updateNavigation() {
 
                 contentSections.each(function () {
-
+                    
                     $this = $(this);
                     var activeSection = $('#cd-vertical-nav a[href="#' + $this.attr('id') + '"]').data('number') - 1;
                     
-                    console.log($this);
                     
                     if (($this.offset().top - $(window).height() / 4 < $(window).scrollTop()+110) && ($this.offset().top + $this.height() - $(window).height() / 4 > $(window).scrollTop() + 100 ) ) {
                         navigationItems.eq(activeSection).addClass('is-selected');
@@ -211,13 +247,15 @@
             }
 
             function smoothScroll(target) {
-                console.log($(window).scrollTop());
+                
                 $('html, body').animate({
                     scrollTop: (target.offset().top - 60)
                 }, 1000, "easeInOutExpo");
             }
         });
         /* end dot nav */
+
+
 
     </script>
 

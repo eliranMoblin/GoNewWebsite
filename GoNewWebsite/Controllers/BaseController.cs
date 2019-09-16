@@ -71,15 +71,19 @@ namespace GoNewWebsite.Controllers
 
         }
 
-        protected WebsitePage WebsitePage;
         
-
+        protected WebsitePage WebsitePage
+        {
+            get => ViewBag.Shared;
+            set => ViewBag.Shared = value;
+        }
 
 
         public BaseController()
         {
+            if (WebsitePage == null)
+                WebsitePage = new WebsitePage();
 
-            WebsitePage=new WebsitePage();
             GoWebsiteCache = new GoWebsiteCache();
 
         }

@@ -1,0 +1,89 @@
+﻿@using GoNewWebsite.Models
+@model List<GoNewWebsite.Models.Jobs>
+@{
+    var isActive = true;
+}
+
+<section class="page-section container" id="Job">
+    <div class="section-header">
+        <p class="ourCustomer">Career</p>
+
+    </div>
+    <div class="row">
+        <div class="container">
+
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+
+                @foreach (var item in Model)
+                {
+
+                    if (isActive)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link job-il active" data-toggle="tab" href="#@item.Name.Replace(" ", string.Empty)" role="tab" aria-controls="@item.Name.Replace(" ", string.Empty)"> @item.Name</a>
+                        </li>
+                        { isActive = false; }
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link job-il" data-toggle="tab" href="#@item.Name.Replace(" ", string.Empty)" role="tab" aria-controls="@item.Name.Replace(" ", string.Empty)"> @item.Name</a>
+                        </li>
+                    }
+                }
+                @{
+                    isActive = true;
+                }
+
+
+            </ul>
+            <div class="tab-content">
+
+
+                @foreach (var item in Model)
+                {
+                    if (isActive)
+                    {
+                        <div class="tab-pane active" id="@item.Name.Replace(" ", string.Empty)" role="tabpanel">
+                            <div class="item-content">
+                                @Html.Raw(@item.Details[0].Value)
+                            </div>
+                            <p class="read-more"> <a class="hrefPosition" href="@Url.Action("Position", new {positionId = @item.Uid})">להגשת מועמדות</a></p>
+                        </div>
+                        isActive = false;
+                    }
+                    else
+                    {
+                        <div class="tab-pane" id="@item.Name.Replace(" ", string.Empty)" role="tabpanel">
+                            <div class="item-content">
+                                @Html.Raw(@item.Details[0].Value)
+                            </div>
+                            <p class="read-more"> <a class="hrefPosition" href="@Url.Action("Position", new {positionId = @item.Uid})">להגשת מועמדות</a></p>
+                        </div>    
+                    }
+                    
+                }
+
+
+            </div>
+            <!-- /Bootstrap Tabs -->
+            <!-- Bootstrap Accordion -->
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"></div>
+            <!-- /Bootstrap Accordion -->
+        </div>
+    </div>
+
+
+</section>
+
+
+
+@section scripts
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            getAccordion("#myTab", 769);
+        });
+    </script>
+}

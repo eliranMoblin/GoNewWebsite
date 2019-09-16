@@ -10,21 +10,31 @@ using Newtonsoft.Json;
 
 namespace GoNewWebsite.Controllers
 {
-    public class CareerController : Controller
+    public class CareerController : BaseController
     {
         // GET: Career
-        public async Task<ActionResult> Index()
+        
+        public ActionResult Index()
         {
-            var jobs = await GetJobs();
+            var jobs =GetJobs();
+//            WebsitePage.HeaderPage.Main = "Career";
             return View(jobs);
         }
 
-        public async Task<List<Jobs>> GetJobs()
+        public ActionResult GetJobsForHomePage()
+        {
+            var jobs = GetJobs();
+            var newJobs = jobs.Where(x => !string.IsNullOrWhiteSpace(x.Details[0].Value) ).Take(5).ToList();
+            return PartialView(newJobs);
+        }
+
+
+        public List<Jobs> GetJobs()
         {
             string result;
             using (WebClient client = new WebClient())
             {
-                result = await client.DownloadStringTaskAsync("https://www.comeet.co/careers-api/2.0/company/A2.00E/positions?token=2AED6602AE12C2AB81014157010141014&details=true");
+                result =  client.DownloadString("https://www.comeet.co/careers-api/2.0/company/A2.00E/positions?token=2AED6602AE12C2AB81014157010141014&details=true");
             }
 
             var jobs= JsonConvert.DeserializeObject<List<Jobs>>(result);
