@@ -34,7 +34,7 @@
                 <div class="chevron"></div>
             </a>
 
-        </div>  
+        </div>
     </div>
 </section>
 
@@ -48,41 +48,34 @@
         <div class="container-fluid mt-4" style="color: black">
             <div class="jobs-card">
                 <div class="row justify-content-center">
-                    <svg 
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                        width="299px" height="219px">
-                        <path fill-rule="evenodd"  fill="rgb(223, 223, 223)"
-                              d="M242.381,79.944 C242.381,79.944 198.787,31.446 148.286,72.510 C97.784,113.574 61.000,158.000 61.000,158.000 L243.000,158.000 L242.381,79.944 Z"/>
-                    </svg>
                     @foreach (var item in @Model)
                     {
-                    <div class="col-md-3 mb-4">
-                        <div class="card job-card img-fluid">
+                        <div class="col-md-3 mb-4">
+                            <div class="card job-card img-fluid">
 
-                            <div class="card-text">
+                                <div class="card-text">
 
-                                <h5 class="card-position">@item.Name</h5>
-                                <svg>
-                                    <g transform="translate(60,0)">
-                                        <path fill-rule="evenodd" fill="rgb(223, 223, 223)" cx="50" cy="5" class="border-danger"
-                                              d="M242.381,79.944 C242.381,79.944 198.787,31.446 148.286,72.510 C97.784,113.573 61.000,158.000 61.000,158.000 L243.000,158.000 L242.381,79.944 Z"/>
-                                    </g>
-                                </svg>
+                                    <h5 class="card-position">@item.Name</h5>
+                                    <svg>
+                                        <g transform="translate(60,0)">
+                                            <path fill-rule="evenodd" fill="rgb(223, 223, 223)" cx="50" cy="5" class="border-danger"
+                                                  d="M242.381,79.944 C242.381,79.944 198.787,31.446 148.286,72.510 C97.784,113.573 61.000,158.000 61.000,158.000 L243.000,158.000 L242.381,79.944 Z" />
+                                        </g>
+                                    </svg>
 
-                                <div class="overlay">
+                                    <div class="overlay">
 
-                                    <div class="text">
-                                        @Html.Raw(@item.Details[0].Value)
-                                        <a class="hrefPosition" href="@Url.Action("Position", new {positionId = @item.Uid})">להגשת מועמדות</a>
+                                        <div class="text">
+                                            @Html.Raw(@item.Details[0].Value)
+                                            <a class="hrefPosition" href="@Url.Action("Position", new {positionId = @item.Uid})">להגשת מועמדות</a>
+                                        </div>
+
                                     </div>
 
                                 </div>
 
                             </div>
-
                         </div>
-                    </div>
 
                     }
 
@@ -90,7 +83,17 @@
 
                 </div>
             </div>
-            
+
         </div>
     </div>
 </section>
+
+
+
+@section scripts
+{
+    <script type="text/javascript">
+        $('.nav-link').removeClass("active");
+        $('.Careers').addClass("active");
+    </script>
+}

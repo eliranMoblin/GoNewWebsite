@@ -24,7 +24,7 @@ namespace GoNewWebsite.Controllers
         public ActionResult GetJobsForHomePage()
         {
             var jobs = GetJobs();
-            var newJobs = jobs.Where(x => !string.IsNullOrWhiteSpace(x.Details[0].Value) ).Take(5).ToList();
+            var newJobs = jobs.Where(x => !string.IsNullOrWhiteSpace(x.Details[0].Value) ).Take(6).ToList();
             return PartialView(newJobs);
         }
 

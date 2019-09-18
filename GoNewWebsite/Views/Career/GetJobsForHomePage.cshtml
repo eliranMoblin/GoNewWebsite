@@ -44,12 +44,13 @@
                 {
                     if (isActive)
                     {
-                        <div class="tab-pane active" id="@item.Name.Replace(" ", string.Empty)" role="tabpanel">
-                            <div class="item-content">
-                                @Html.Raw(@item.Details[0].Value)
-                            </div>
-                            <p class="read-more"> <a class="hrefPosition" href="@Url.Action("Position", new {positionId = @item.Uid})">להגשת מועמדות</a></p>
-                        </div>
+                <div class="tab-pane active" id="@item.Name.Replace(" ", string.Empty)" role="tabpanel">
+                    <div class="item-content">
+                        @Html.Raw(@item.Details[0].Value)
+                        <p class="read-more"> <a class="" href="@Url.Action("Position", new {positionId = @item.Uid})">Apply Now</a></p>
+                    </div>
+                    
+                </div>
                         isActive = false;
                     }
                     else
@@ -57,8 +58,9 @@
                         <div class="tab-pane" id="@item.Name.Replace(" ", string.Empty)" role="tabpanel">
                             <div class="item-content">
                                 @Html.Raw(@item.Details[0].Value)
+                                <p class="read-more"> <a class="" href="@Url.Action("Position", new {positionId = @item.Uid})">Apply Now</a></p>
                             </div>
-                            <p class="read-more"> <a class="hrefPosition" href="@Url.Action("Position", new {positionId = @item.Uid})">להגשת מועמדות</a></p>
+                           
                         </div>    
                     }
                     
@@ -80,10 +82,5 @@
 
 @section scripts
 {
-    <script type="text/javascript">
-        $(document).ready(function () {
 
-            getAccordion("#myTab", 769);
-        });
-    </script>
 }

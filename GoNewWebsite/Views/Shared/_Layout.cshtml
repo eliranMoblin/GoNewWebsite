@@ -41,8 +41,8 @@
 
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
-    <link href="//pro.fontawesome.com/releases/v5.1.0/css/all.css" rel="stylesheet">
+    <link href="~/Content/fonts/css/all.min.css" rel="stylesheet" />
+    @*<link href="//pro.fontawesome.com/releases/v5.1.0/css/all.css" rel="stylesheet">*@
     @*<link href="~/Content/fonts/css/fontawesome.min.css" rel="stylesheet" />*@
 
     <!--[if IE]>
@@ -84,20 +84,20 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ml-auto">
                     <li class="nav-item" nav-item="5">
-                        <a class="nav-link js-scroll-trigger" href="#services">Home Page</a>
+                        <a class="nav-link js-scroll-trigger active" href="@Url.Action("Index", "Home")">Home</a>
                     </li>
                     <li class="nav-item" nav-item="4">
-                        <a class="nav-link js-scroll-trigger" href="@Url.Action("About", "Home")">About Us</a>
+                        <a class="nav-link js-scroll-trigger About" href="@Url.Action("About", "Home")">About</a>
                     </li>
                     <li class="nav-item" nav-item="3">
-                        <a class="nav-link js-scroll-trigger" href="@Url.Action("Solutions", "Home")">Solutions</a>
+                        <a class="nav-link js-scroll-trigger Services" href="@Url.Action("Solutions", "Home")">Services</a>
                     </li>
                     <li class="nav-item" nav-item="2">
-                        <a class="nav-link js-scroll-trigger" href="#Job">Careers</a>
+                        <a class="nav-link js-scroll-trigger Careers" href="@Url.Action("Index", "Career")">Careers</a>
                     </li>
 
                     <li class="nav-item" nav-item="1">
-                        <a class="nav-link js-scroll-trigger" href="#ContacUs">Contact Us</a>
+                        <a class="nav-link js-scroll-trigger" href="#ContacUs">Contact</a>
                     </li>
 
 
@@ -132,10 +132,10 @@
 
                     @if (website != null)
                     {
-                        <h1 class="display-3">@website.HeaderPage.Main</h1>
+                        <h1 class="display-3 text-header">@website.HeaderPage.Main</h1>
                         if (!string.IsNullOrEmpty(website.HeaderPage.Content))
                          {
-                             <p class="lead mb-0" style="white-space: pre-line">@Html.Raw(website.HeaderPage.Content)</p>
+                             <p class="main_subHeader mb-0" style="white-space: pre-line">@Html.Raw(website.HeaderPage.Content)</p>
                          }
 
                     }
@@ -153,18 +153,7 @@
 
             </video>
         </div>
-        @*<div class="square">
-                <div id="animation_container">
-                    <canvas id="canvas"></canvas>
-                    <div id="dom_overlay_container">
-                    </div>
-                </div>
-
-
-            </div>*@
-
         @RenderBody()
-
         <section class="page-section container footer_section" id="ContacUs">
             <div class="section-header">
                 <p class="ourCustomer">Contact us</p>
@@ -186,7 +175,7 @@
                 </a>
 
                 <p class="location">
-                    Giborei Israel 5, Poleg Center, Netanya
+                    Giborey Israel 5 14, P.O.Box 8870, Netanya Israel.
                     &nbsp; &nbsp;
                     <i class="fa fa-map-marker"></i>
                 </p>
@@ -211,7 +200,7 @@
                             <input type="tel" class="form-control" id="phoneNumber" placeholder="Phone">
                         </div>
                     </div>
-                <div class="col-md-3">
+                <div class="col-md-3  btn-form" >
                         <button type="submit" class="btn btn-primary ">GO</button>
                     </div>
                 
@@ -530,29 +519,34 @@
 
         })(jQuery);
     </script>
-    <script type="text/javascript">
-        $(document).ready(function () {
+<script type="text/javascript">
+    $(document).ready(function () {
 
-            //$(".navbar-nav").html(
+        //$(".navbar-nav").html(
 
-            //    $(".navbar-nav").children("li").sort(function (a, b) {
+        //    $(".navbar-nav").children("li").sort(function (a, b) {
 
-            //        return $(a).text().toUpperCase().localeCompare(
+        //        return $(a).text().toUpperCase().localeCompare(
 
-            //            $(b).text().toUpperCase());
+        //            $(b).text().toUpperCase());
 
-            //    }) // End Sort
+        //    }) // End Sort
 
-            //); // End HTML
-            //var deferred = sortMeBy("nav-item", "ul.navbar-nav", "li", "asc");
-            $('label').click(function () {
-                var xx = $(this)[0].childNodes;
-                console.log();
-                $.post("\Home//SetCulture", { culture: xx[1].defaultValue })
-            });
-
+        //); // End HTML
+        //var deferred = sortMeBy("nav-item", "ul.navbar-nav", "li", "asc");
+        $('label').click(function () {
+            var xx = $(this)[0].childNodes;
+            console.log();
+            $.post("\Home//SetCulture", { culture: xx[1].defaultValue })
         });
-    </script>
+
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        getAccordion("#myTab", 769);
+    });
+</script>
     @RenderSection("scripts", required: false)
 </body>
 </html>

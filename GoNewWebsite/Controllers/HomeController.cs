@@ -19,7 +19,9 @@ namespace GoNewWebsite.Controllers
 
             WebsitePage website = new WebsitePage
             {
-                HeaderPage = new HeaderPage { Main = "GO Digital Marketing ", Content = "GO is an award-winning digital agency, specializing in high scale performance marketing for global brands " }
+                HeaderPage = new HeaderPage { 
+                     Content = "GO Digital Marketing is an award-winning digital agency," +
+                                                                                                           " \r\nspecializing in high scale performance marketing  and eCommerce for global brands " }
             };
             ViewBag.Website = website;
             return View();
@@ -39,7 +41,7 @@ namespace GoNewWebsite.Controllers
         {
             WebsitePage website = new WebsitePage
             {
-                HeaderPage = new HeaderPage { Main = "About ", Content = "With a focus on scalability, transparency and human touch service, performance marketing is at the core of our success delivering critical speed where seconds counts. Speed to execute. Speed to measure. Speed to scale." }
+                HeaderPage = new HeaderPage { Main = "About ", Content = "GO is an award-winning digital agency, specializing in high scale performance marketing and eCommerce for global brands \r\nWe offer a full-service solution starting from building eCommerce websites, Amazon stores, creating a winning digital strategy across all digital media channels, and up to data analysis and conversion rate optimization for ultimate business results.\r\n" }
 
             };
 

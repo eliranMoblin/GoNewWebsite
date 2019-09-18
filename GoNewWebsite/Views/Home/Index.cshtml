@@ -1,46 +1,47 @@
-﻿
-
-
-<section class="page-section container-fluid services" id="Services">
+﻿<section class="page-section container-fluid services" id="Services">
     <div class="container">
-        <div id="reta">
-            <carousel-3d :perspective="0" :space="200" :border="0" :display="7" :width="274" :height="437"
-                         :controls-visible="true" :controls-width="30" :controls-height="5" :clickable="true" :autoplay="false" :autoplay-timeout="5000">
+        <div id="triangular">
+            <carousel-3d :perspective="0" :space="200" :border="0" :display="7" :width="274" :height="309"
+                         :controls-visible="true" :controls-width="30" :controls-height="5" :clickable="true" :autoplay="false" :autoplay-timeout="5000" >
                 <slide :index="0">
                     <a href="#Strategy"><p class="triangular">Strategy</p></a>
                 </slide>
                 <slide :index="1">
-                    <a href="#Analytics"><p class="triangular"> Analytics & Data Management</p></a>
+                    <a href="#Analytics"><p class="triangular data-analysis">Data Analysis</p></a>
                 </slide>
                 <slide :index="2">
-                    <a href="#MediaPlanning"><p class="triangular">Media Planning</p></a>
+                    <a href="#MediaPlanning">
+                        <p class="triangular media-planning">Media Planning</p>
+                    </a>
                 </slide>
                 <slide :index="3">
-                    <a href="#SEOSearchEngineOptimization"><p class="triangular">SEO/Search Engine Optimization</p></a>
+                    <a href="#SEOSearchEngineOptimization"><p class="triangular">SEO</p></a>
                 </slide>
                 <slide :index="4">
-                    <a href="#SearchEngineManagementPPC"><p class="triangular">Search Engine Management/PPC</p></a>
+                    <a href="#SearchEngineManagementPPC"><p class="triangular">PPC</p></a>
                 </slide>
                 <slide :index="5">
-                    <a href="#SocialMediaMarketing"><p class="triangular">Social Media Marketing</p></a>
+                    <a href="#SocialMediaMarketing"><p class="triangular social-media">Social Media</p></a>
                 </slide>
                 <slide :index="6">
-                    <a href="#ProgrammaticMedia"><p class="triangular">Programmatic Media</p></a>
+                    <a href="#ProgrammaticMedia"><p class="triangular programtic">Programmatic Media</p></a>
                 </slide>
                 <slide :index="7">
-                    <a href="#CreativeStudio"><p class="triangular">Creative & Studio</p></a>
+                    <a href="#CreativeStudio"><p class="triangular creative">Creative & Studio</p></a>
                 </slide>
                 <slide :index="8">
-                    <a href="#ContentMarketing"><p class="triangular">Content Marketing</p></a>
+                    <a href="#ContentMarketing"><p class="triangular content-marketing">Content Marketing</p></a>
                 </slide>
                 <slide :index="9">
-                    <a href="#MobileWebdevelopment"><p class="triangular">Mobile & Web development</p></a>
+                    <br/>
+                    <a href="#MobileWebdevelopment">
+                        <p class="triangular devlopment">Development</p></a>
                 </slide>
                 <slide :index="10">
                     <a href="#eCommerce"><p class="triangular">eCommerce</p></a>
                 </slide>
                 <slide :index="11">
-                    <a href="#MarketingTechnologiesSolutions"><p class="triangular">Marketing Technologies Solutions</p></a>
+                    <a href="#MarketingTechnologiesSolutions"><p class="triangular martech">Mar-tech Solutions</p></a>
                 </slide>
 
 
@@ -50,7 +51,7 @@
             <div class=" col-md-6">
             </div>
             <div class=" col-md-6">
-                <a href="#portfolio" class="js-scroll-trigger">
+                <a href="#caseStudy" class="js-scroll-trigger">
                     <div class="chevron"></div>
                     <div class="chevron"></div>
                     <div class="chevron"></div>
@@ -64,7 +65,7 @@
 
 <section class=" page-section container-fluid" id="caseStudy">
     <div class="section-header">
-        <p class="ourCustomer">סיפורי הצלחה</p>
+        <p class="ourCustomer">Success Stories</p>
 
     </div>
     <div id="story">
@@ -265,8 +266,8 @@
             <div class="customer-carousel-image">
 
 
-                <img src="~/Images/CustomerEn/color/1.png" />
-                <img src="~/Images/CustomerEn/grey/1.png" class="color-image" />
+                <img src="~/Images/CustomerEn/color/1.png" class="color-image"  />
+                <img src="~/Images/CustomerEn/grey/1.png" />
 
             </div>
 
@@ -350,12 +351,7 @@ Clients Section
 
 
         $(document).ready(function (parameters) {
-            $(".carousel-3d-slide.current a").on('click', function (event) {
-
-                console.log();
-                window.location.replace('/Home/Solutions' + $(this).attr("href"));
-
-            });
+       
             if ($(window).width() < 1025) {
                 var elems = document.getElementsByClassName('next');
                 for (var i = 0; i < elems.length; i += 1) {
@@ -437,7 +433,7 @@ Clients Section
     </script>
     <script>
         new Vue({
-            el: '#reta',
+            el: '#triangular',
             data: {
                 slides: 12
             },
@@ -491,6 +487,13 @@ Clients Section
         $(document).ready(function () {
             $('.prev span').html('<i class="fal fa-chevron-left"></i>');
             $('.next span').html('<i class="fal fa-chevron-right"></i>');
+        });
+
+        $(".carousel-3d-slide a p").on('click', function (event) {
+
+            
+            window.location.replace('/Home/Solutions' + $(this).attr("href"));
+
         });
 
             //$(document).ready(function () {
