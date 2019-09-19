@@ -1,45 +1,51 @@
 ﻿<nav id="cd-vertical-nav">
     <ul>
         <li>
-            <a href="#Strategy" data-number="2" class="">
+            <a href="#ProgrammaticMedia" data-number="1">
                 <span class="cd-dot"></span>
-                <span class="cd-label">Strategy</span>
+                <span class="cd-label">Programmatic Media</span>
             </a>
         </li>
         <li>
-            <a href="#Analytics" data-number="3" class="">
-                <span class="cd-dot"></span>
-                <span class="cd-label">Analytics & Data Management</span>
-            </a>
-        </li>
-        <li>
-            <a href="#MediaPlanning" data-number="4" class="">
-                <span class="cd-dot"></span>
-                <span class="cd-label">Media Planning</span>
-            </a>
-        </li>
-        <li>
-            <a href="#SEOSearchEngineOptimization" data-number="5">
-                <span class="cd-dot"></span>
-                <span class="cd-label">SEO/Search Engine Optimization</span>
-            </a>
-        </li>
-        <li>
-            <a href="#SearchEngineManagementPPC" data-number="6">
+            <a href="#SearchEngineManagementPPC" data-number="2">
                 <span class="cd-dot"></span>
                 <span class="cd-label">Search Engine Management/PPC</span>
             </a>
         </li>
         <li>
-            <a href="#SocialMediaMarketing" data-number="7">
+            <a href="#SEOSearchEngineOptimization" data-number="3">
+                <span class="cd-dot"></span>
+                <span class="cd-label">SEO/Search Engine Optimization</span>
+            </a>
+        </li>
+        <li>
+            <a href="#SocialMediaMarketing" data-number="4">
                 <span class="cd-dot"></span>
                 <span class="cd-label">Social Media Marketing</span>
             </a>
         </li>
         <li>
-            <a href="#ProgrammaticMedia" data-number="8">
+            <a href="#MediaPlanning" data-number="5" class="">
                 <span class="cd-dot"></span>
-                <span class="cd-label">Programmatic Media</span>
+                <span class="cd-label">Media Planning</span>
+            </a>
+        </li>
+        <li>
+            <a href="#ContentMarketing" data-number="6">
+                <span class="cd-dot"></span>
+                <span class="cd-label">Content Marketing</span>
+            </a>
+        </li>
+        <li>
+            <a href="#Analytics" data-number="7" class="">
+                <span class="cd-dot"></span>
+                <span class="cd-label">Analytics & Data Management</span>
+            </a>
+        </li>
+        <li>
+            <a href="#Strategy" data-number="8" class="">
+                <span class="cd-dot"></span>
+                <span class="cd-label">Strategy</span>
             </a>
         </li>
         <li>
@@ -48,312 +54,338 @@
                 <span class="cd-label">Creative & Studio</span>
             </a>
         </li>
+   
         <li>
-            <a href="#ContentMarketing" data-number="10">
-                <span class="cd-dot"></span>
-                <span class="cd-label">Content Marketing</span>
-            </a>
-        </li>
-        <li>
-            <a href="#MobileWebdevelopment" data-number="11">
+            <a href="#MobileWebdevelopment" data-number="10">
                 <span class="cd-dot"></span>
                 <span class="cd-label">Mobile & Web development</span>
             </a>
         </li>
         <li>
-            <a href="#eCommerce" data-number="12">
+            <a href="#eCommerce" data-number="11">
                 <span class="cd-dot"></span>
                 <span class="cd-label">eCommerce</span>
             </a>
         </li>
         <li>
-            <a href="#MarketingTechnologiesSolutions" data-number="13">
+            <a href="#MarketingTechnologiesSolutions" data-number="12">
                 <span class="cd-dot"></span>
                 <span class="cd-label">Marketing Technologies Solutions</span>
             </a>
-        </li>
-
+        </li>   
     </ul>
 </nav>
 
+<div id="Services">
+    <!--Carousel-->
+    <section class="page-section container-fluid services">
+        <div class="container">
+            <div id="triangular">
+                <carousel-3d :perspective="0" :space="200" :border="0" :display="7" :width="274" :height="309"
+                             :controls-visible="true" :controls-width="30" :controls-height="5" :clickable="true" :autoplay="false" :autoplay-timeout="5000">
+                    <slide :index="0">
+                        <a href="#ProgrammaticMedia"><p class="triangular programtic">Programmatic Media</p></a>
+
+                    </slide>
+                    <slide :index="1">
+                        <a href="#SearchEngineManagementPPC"><p class="triangular">PPC</p></a>
+
+                    </slide>
+                    <slide :index="2">
+                        <a href="#SEOSearchEngineOptimization"><p class="triangular">SEO</p></a>
+
+                    </slide>
+                    <slide :index="3">
+                        <a href="#SocialMediaMarketing"><p class="triangular social-media">Social Media</p></a>
+                    </slide>
+                    <slide :index="4">
+                        <a href="#MediaPlanning">
+                            <p class="triangular media-planning">Media Planning</p>
+                        </a>
+                    </slide>
+                    <slide :index="5">
+                        <a href="#ContentMarketing"><p class="triangular content-marketing">Content Marketing</p></a>
+                    </slide>
+                    <slide :index="6">
+                        <a href="#Analytics">
+                            <p class="triangular data-analysis">Data Analysis</p>
+                        </a>
+                    </slide>
+                    <slide :index="7">
+                        <a href="#Strategy">
+                            <p class="triangular">Strategy</p>
+                        </a>
+
+                    </slide>
+                    <slide :index="8">
+                        <a href="#CreativeStudio">
+                            <p class="triangular creative">Creative & Studio</p>
+                        </a>
+                    </slide>
+                    <slide :index="9">
+                        <a href="#MobileWebdevelopment">
+                            <p class="triangular devlopment">Development</p>
+                        </a>
+                    </slide>
+                    <slide :index="10">
+                        <a href="#eCommerce"><p class="triangular">eCommerce</p></a>
+                    </slide>
+                    <slide :index="11">
+                        <a href="#MarketingTechnologiesSolutions"><p class="triangular martech">Mar-tech Solutions</p></a>
+                    </slide>
 
 
-<section class="page-section container-fluid services" id="Services">
-    <div class="container">
-        <div id="triangular">
-            <carousel-3d :perspective="0" :space="200" :border="0" :display="7" :width="274" :height="309"
-                         :controls-visible="true" :controls-width="30" :controls-height="5" :clickable="true" :autoplay="false" :autoplay-timeout="5000">
-                <slide :index="0">
-                    <a href="#Strategy"><p class="triangular">Strategy</p></a>
-                </slide>
-                <slide :index="1">
-                    <a href="#Analytics"><p class="triangular"> Analytics & Data Management</p></a>
-                </slide>
-                <slide :index="2">
-                    <a href="#MediaPlanning"><p class="triangular">Media Planning</p></a>
-                </slide>
-                <slide :index="3">
-                    <a href="#SEOSearchEngineOptimization"><p class="triangular">SEO/Search Engine Optimization</p></a>
-                </slide>
-                <slide :index="4">
-                    <a href="#SearchEngineManagementPPC"><p class="triangular">Search Engine Management/PPC</p></a>
-                </slide>
-                <slide :index="5">
-                    <a href="#SocialMediaMarketing"><p class="triangular">Social Media Marketing</p></a>
-                </slide>
-                <slide :index="6">
-                    <a href="#ProgrammaticMedia"><p class="triangular">Programmatic Media</p></a>
-                </slide>
-                <slide :index="7">
-                    <a href="#CreativeStudio"><p class="triangular">Creative & Studio</p></a>
-                </slide>
-                <slide :index="8">
-                    <a href="#ContentMarketing"><p class="triangular">Content Marketing</p></a>
-                </slide>
-                <slide :index="9">
-                    <a href="#MobileWebdevelopment"><p class="triangular">Mobile & Web development</p></a>
-                </slide>
-                <slide :index="10">
-                    <a href="#eCommerce"><p class="triangular">eCommerce</p></a>
-                </slide>
-                <slide :index="11">
-                    <a href="#MarketingTechnologiesSolutions"><p class="triangular">Marketing Technologies Solutions</p></a>
-                </slide>
-                
+                </carousel-3d>
+            </div>
+            <div class="space"></div>
+            <div class="row">
+                <div class=" col-md-6">
+                </div>
+                <div class=" col-md-6">
+                    <a href="#portfolio" class="js-scroll-trigger">
+                        <div class="chevron"></div>
+                        <div class="chevron"></div>
+                        <div class="chevron"></div>
+                    </a>
 
-            </carousel-3d>
+                </div>
+            </div>
         </div>
+
+    </section>
+    <!-- End Of Carousel-->
+    <!--Programmatic Media--->
+    <section class="page-section container services-section " id="ProgrammaticMedia">
         <div class="row">
-            <div class=" col-md-6">
+            <div class="col-md-3  wow fadeInLeft">
+                <img src="/Images/Rectangle2.png" class="img-fluid image-triangular" />
             </div>
-            <div class=" col-md-6">
-                <a href="#portfolio" class="js-scroll-trigger">
-                    <div class="chevron"></div>
-                    <div class="chevron"></div>
-                    <div class="chevron"></div>
-                </a>
-
+            <div class="col-md-9">
+                <p class="Solution_subHeader">Programmatic Media</p>
+                <p class="Solutions_litext">Buying and Serving Media in Advanced Programmatic Systems (DV 360 / Appnexus / Artimedia)</p>
+                <p class="Solutions_litext">Integration between Ad serving systems and media buying systems</p>
+                <p class="Solutions_litext">Using advanced technology tools (Mobium, Fortivision, Google Web Designer)</p>
+                <p class="Solutions_litext">Smart consumer campaign management and holistic control at the level of exposure and frequency throughout the campaign</p>
+                <p class="Solutions_litext">Analyze data and build advanced reports for real-time optimization and decision making</p>
             </div>
         </div>
-    </div>
+    </section>
+    <!--End of Programmatic Media--->
+    <!--Search EngineManagement PPC--->
+    <section class="page-section container services-section " id="SearchEngineManagementPPC">
+        <div class="row">
+            <div class="col-md-3 order-md-2  wow fadeInRight">
+                <img src="/Images/Rectangle.png" class="img-fluid image-triangular" />
+            </div>
+            <div class="col-md-9">
+                <p class="Solution_subHeader">Search Engine Management/PPC</p>
+                <p class="Solutions_litext">Build strategy with optimal budget allocation between brand, generic, competitors and shopping campaigns</p>
+                <p class="Solutions_litext">Keyword optimization that enables campaign targeting and account quality improvement</p>
+                <p class="Solutions_litext">Optimization based on the signals received in campaigns, such as deferent targeting, locations, audiences, ads, etc.</p>
+                <p class="Solutions_litext">Manage a user's journey based on online and offline data, in order to adjust the messages and landing pages</p>
+                <p class="Solutions_litext">Analyse data and build advanced reports for real-time optimization and decision making</p>
+            </div>
+        </div>
+    </section>
+    <!--End of Search EngineManagement PPC--->
+    <!--SEO Search Engine Optimization--->
+    <section class="page-section container services-section " id="SEOSearchEngineOptimization">
+        <div class="row">
+            <div class="col-md-3  wow fadeInLeft">
+                <img src="/Images/Rectangle2.png" class="img-fluid image-triangular" />
+            </div>
+            <div class="col-md-9 order-md-1 ">
+                <p class="Solution_subHeader">SEO/Search Engine Optimization</p>
+                <p class="Solutions_litext">Market analysis, organic promotion planning and strategy tailored to the marketing needs</p>
+                <p class="Solutions_litext">Search Engine Optimization (ASO)</p>
+                <p class="Solutions_litext">Creating and distributing of content including link monitoring and buying</p>
+                <p class="Solutions_litext">On-going consultation and advice on setting up new sites</p>
+                <p class="Solutions_litext">Reputation and image management, Google penalizing site extraction</p>
+            </div>
 
-</section>
+        </div>
+    </section>
+    <!--End of SEO Search Engine Optimization--->
+    <!--End of Social Media Marketing--->
+    <section class="page-section container services-section " id="SocialMediaMarketing">
+        <div class="row">
+            <div class="col-md-3 order-md-2  wow fadeInRight">
+                <img src="/Images/Rectangle.png" class="img-fluid image-triangular" />
+            </div>
+            <div class="col-md-9 order-md-1 ">
+                <p class="Solution_subHeader">Social Media Marketing</p>
+                <p class="Solutions_litext">Market analysis, organic promotion planning and strategy tailored to the marketing needs</p>
+                <p class="Solutions_litext">Search Engine Optimization (ASO)</p>
+                <p class="Solutions_litext">Creating and distributing of content including link monitoring and buying</p>
+                <p class="Solutions_litext">On-going consultation and advice on setting up new sites</p>
+                <p class="Solutions_litext">Reputation and image management, Google penalizing site extraction</p>
+            </div>
 
+        </div>
+    </section>
+    <!--End of Social Media Marketing--->
+    <!--MediaPlanning--->
+    <section class="page-section container services-section " id="MediaPlanning">
+        <div class="row">
+            <div class="col-md-3  wow fadeInLeft">
+                <img src="/Images/Rectangle2.png" class="img-fluid image-triangular" />
+            </div>
+            <div class="col-md-9">
+                <p class="Solution_subHeader">Media Planning</p>
+                <p class="Solutions_litext">Strategic Planning and Full Management Digital Media Across Platform</p>
+                <p class="Solutions_litext">Build optimal multichannel media design models</p>
+                <p class="Solutions_litext">Determining metrics and goals for each activity phase (KPI)</p>
+                <p class="Solutions_litext">Maximize and streamline media budgets in holistic management</p>
+                <p class="Solutions_litext">Analyze data and build advanced reports for real-time optimization and decision making</p>
+            </div>
+        </div>
+    </section>
+    <!--End of MediaPlanning--->
+    <!--Content Marketing--->
+    <section class="page-section container services-section " id="ContentMarketing">
+        <div class="row">
+            <div class="col-md-3 order-md-2  wow fadeInRight">
+                <img src="/Images/Rectangle.png" class="img-fluid image-triangular" />
+            </div>
+            <div class="col-md-9">
+                <p class="Solution_subHeader">Content Marketing</p>
+                <p class="Solutions_litext">Content strategy development and management</p>
+                <p class="Solutions_litext">Content Asset Management: Facebook, Instagram, LinkedIn, Pinterest, Blogs and influencers</p>
+                <p class="Solutions_litext">Creating and producing content, text, video and infographic, Questionnaires and quizzes</p>
+                <p class="Solutions_litext">Network discourse monitoring</p>
+                <p class="Solutions_litext">Commerce Optimized Content</p>
+            </div>
+        </div>
+    </section>
+    <!--End of Content Marketing--->
+    <!--Analytics-->
+    <section class="page-section container services-section " id="Analytics">
+        <div class="row">
+            <div class="col-md-3  wow fadeInLeft">
+                <img src="/Images/Rectangle2.png" class="img-fluid image-triangular triangular-float" />
+            </div>
+            <div class="col-md-9 order-md-1 ">
+                <p class="Solution_subHeader">Analytics & Data Management</p>
+                <p class="Solutions_litext">Marketing effectiveness analysis across all digital assets </p>
+                <p class="Solutions_litext">Audience segmentation and characterization of data-based personas</p>
+                <p class="Solutions_litext">Optimization of conversion rates (CROs) and integration between media performance and CRM systems</p>
+                <p class="Solutions_litext">Implementation and maintenance of digital asset</p>
+                <p class="Solutions_litext">Data Visualization on dashboards and automated reports</p>
+            </div>
 
-<section class="page-section container services-section " id="Strategy" >
-    <div class="row">
-        <div class="col-md-3">
-            <img src="~/Images/Rectangle2.png" class="img-fluid image-triangular " />
         </div>
-        <div class="col-md-9">
-            <p class="Solution_subHeader">Strategy</p>
-            <p class="Solutions_litext">
-                Building the brand present in the digital ecosystem
-            </p>
-            <p class="Solutions_litext">
-                Formulate the media plan and content strategy
-            </p>
-            <p class="Solutions_litext">
-                Building Cross Platform user’s journey campaigns
-            </p>
-            <p class="Solutions_litext">
-                Building a customer profile and LTV model
-            </p>
-            <p class="Solutions_litext">
-                Assisting and conduct research, market analysis and competitors reviews
-            </p>
+    </section>
+    <!--End of Analytics-->
+    <!--Strategy-->
+    <section class="page-section container services-section " id="Strategy">
+        <div class="row">
+            <div class="col-md-3 order-md-2  wow fadeInRight">
+                <img src="/Images/Rectangle.png" class="img-fluid image-triangular" />
+            </div>
+            <div class="col-md-9">
+                <p class="Solution_subHeader">Strategy</p>
+                <p class="Solutions_litext">
+                    Building the brand present in the digital ecosystem
+                </p>
+                <p class="Solutions_litext">
+                    Formulate the media plan and content strategy
+                </p>
+                <p class="Solutions_litext">
+                    Building Cross Platform user’s journey campaigns
+                </p>
+                <p class="Solutions_litext">
+                    Building a customer profile and LTV model
+                </p>
+                <p class="Solutions_litext">
+                    Assisting and conduct research, market analysis and competitors reviews
+                </p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+    <!--End of Strategy -->
+    <!--Creative And Studio--->
+    <section class="page-section container services-section " id="CreativeStudio">
+        <div class="row">
+            <div class="col-md-3  wow fadeInLeft">
+                <img src="/Images/Rectangle2.png" class="img-fluid image-triangular " />
+            </div>
+            <div class="col-md-9 order-md-1 ">
+                <p class="Solution_subHeader">Creative & Studio</p>
+                <p class="Solutions_litext">Conceptual decoding across all media, content and social platforms</p>
+                <p class="Solutions_litext">Specification of UX UI for sites and apps</p>
+                <p class="Solutions_litext">Graphic and creative design in the digital worlds</p>
+                <p class="Solutions_litext">Specialty in Social Media Design (Facebook, Instagram, LinkedIn etc.)</p>
+                <p class="Solutions_litext">Video and animation productions</p>
+            </div>
 
-<section class="page-section container services-section " id="Analytics">
-    <div class="row">
-        <div class="col-md-3 order-md-2">
-            <img src="~/Images/Rectangle.png" class="img-fluid image-triangular triangular-float"  />
         </div>
-        <div class="col-md-9 order-md-1 ">
-            <p class="Solution_subHeader">Analytics & Data Management</p>
-            <p class="Solutions_litext">Marketing effectiveness analysis across all digital assets </p>
-            <p class="Solutions_litext">Audience segmentation and characterization of data-based personas</p>
-            <p class="Solutions_litext">Optimization of conversion rates (CROs) and integration between media performance and CRM systems</p>
-            <p class="Solutions_litext">Implementation and maintenance of digital asset</p>
-            <p class="Solutions_litext">Data Visualization on dashboards and automated reports</p>
-        </div>
+    </section>
+    <!--End of Creative And Studio--->
+    <!--Mobile Web Development--->
+    <section class="page-section container services-section " id="MobileWebdevelopment">
+        <div class="row">
+            <div class="col-md-3 order-md-2  wow fadeInRight">
+                <img src="/Images/Rectangle.png" class="img-fluid image-triangular" />
+            </div>
+            <div class="col-md-9 order-md-1">
+                <p class="Solution_subHeader">	Mobile & Web development</p>
+                <p class="Solutions_litext">Technological marketing consulting</p>
+                <p class="Solutions_litext">UI / UX Specification and digital project management and assets</p>
+                <p class="Solutions_litext">Website development, mobile applications (iOS and Android) and SDK implementation</p>
+                <p class="Solutions_litext">Specialization in e-commerce (eCommerce) systems and digital stores</p>
+                <p class="Solutions_litext">Specializations in all types of development required: Apps, Server, Web, HTML5, ENT Integration Automation, Games, Platforms</p>
+            </div>
 
-    </div>
-</section>
-<section class="page-section container services-section " id="MediaPlanning">
-    <div class="row">
-        <div class="col-md-3">
-            <img src="~/Images/Rectangle2.png" class="img-fluid image-triangular" />
         </div>
-        <div class="col-md-9">
-            <p class="Solution_subHeader">Media Planning</p>
-            <p class="Solutions_litext">Strategic Planning and Full Management Digital Media Across Platform</p>
-            <p class="Solutions_litext">Build optimal multichannel media design models</p>
-            <p class="Solutions_litext">Determining metrics and goals for each activity phase (KPI)</p>
-            <p class="Solutions_litext">Maximize and streamline media budgets in holistic management</p>
-            <p class="Solutions_litext">Analyze data and build advanced reports for real-time optimization and decision making</p>
+    </section>
+    <!--End of Mobile Web Development--->
+    <!--eCommerce-->
+    <section class="page-section container services-section " id="eCommerce">
+        <div class="row">
+            <div class="col-md-3  wow fadeInLeft">
+                <img src="/Images/Rectangle2.png" class="img-fluid image-triangular" />
+            </div>
+            <div class="col-md-9">
+                <p class="Solution_subHeader">eCommerce</p>
+                <p class="Solutions_litext">Full level of Consulting and Support for various ecommerce models (Amazon, eBay)</p>
+                <p class="Solutions_litext">Building the full research infrastructure and establishing the organization’s eCommerce strategy</p>
+                <p class="Solutions_litext">Hands-On full project management, from initial establishment to ongoing and outsourcing management</p>
+                <p class="Solutions_litext">Connecting with the stores</p>
+                <p class="Solutions_litext">In-house training of key project personnel + assistance in recruiting and HR need, including IT and media trade desk </p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+    <!--End of eCommerce-->
+    <!--Marketing Technologies Solutions-->
+    <section class="page-section container services-section " id="MarketingTechnologiesSolutions">
+        <div class="row">
 
-<section class="page-section container services-section " id="SEOSearchEngineOptimization">
-    <div class="row">
-        <div class="col-md-3 order-md-2">
-            <img src="~/Images/Rectangle.png" class="img-fluid image-triangular" />
-        </div>
-        <div class="col-md-9 order-md-1 ">
-            <p class="Solution_subHeader">SEO/Search Engine Optimization</p>
-            <p class="Solutions_litext">Market analysis, organic promotion planning and strategy tailored to the marketing needs</p>
-            <p class="Solutions_litext">Search Engine Optimization (ASO)</p>
-            <p class="Solutions_litext">Creating and distributing of content including link monitoring and buying</p>
-            <p class="Solutions_litext">On-going consultation and advice on setting up new sites</p>
-            <p class="Solutions_litext">Reputation and image management, Google penalizing site extraction</p>
-        </div>
+            <div class="col-md-3 order-md-2  wow fadeInRight">
+                <img src="/Images/Rectangle.png" class="img-fluid image-triangular" />
+            </div>
 
-    </div>
-</section>
+            <div class="col-md-9 order-md-1">
+                <p class="Solution_subHeader">Marketing Technologies Solutions</p>
+                <p class="Solutions_litext">Mapping and building organizational processes tailored to the digital age - BPR</p>
+                <p class="Solutions_litext">Building personalization and marketing automation processes - MA</p>
+                <p class="Solutions_litext">Technological innovation and unique digital solutions</p>
+                <p class="Solutions_litext">Accompanying and connecting complex trade and commerce processes</p>
+                <p class="Solutions_litext">Initiative of meetings and matching clients with start-ups and companies engaged in technological innovation while providing unique digital solutions</p>
+            </div>
+        </div>
+    </section>
+    <!--End of Marketing Technologies Solutions-->
 
-<section class="page-section container services-section " id="SearchEngineManagementPPC">
-    <div class="row">
-        <div class="col-md-3">
-            <img src="~/Images/Rectangle2.png" class="img-fluid image-triangular" />
-        </div>
-        <div class="col-md-9">
-            <p class="Solution_subHeader">Search Engine Management/PPC</p>
-            <p class="Solutions_litext">Build strategy with optimal budget allocation between brand, generic, competitors and shopping campaigns</p>
-            <p class="Solutions_litext">Keyword optimization that enables campaign targeting and account quality improvement</p>
-            <p class="Solutions_litext">Optimization based on the signals received in campaigns, such as deferent targeting, locations, audiences, ads, etc.</p>
-            <p class="Solutions_litext">Manage a user's journey based on online and offline data, in order to adjust the messages and landing pages</p>
-            <p class="Solutions_litext">Analyse data and build advanced reports for real-time optimization and decision making</p>
-        </div>
-    </div>
-</section>
-<section class="page-section container services-section " id="SocialMediaMarketing">
-    <div class="row">
-        <div class="col-md-3 order-md-2">
-            <img src="~/Images/Rectangle.png" class="img-fluid image-triangular" />
-        </div>
-        <div class="col-md-9 order-md-1 ">
-            <p class="Solution_subHeader">Social Media Marketing</p>
-            <p class="Solutions_litext">Market analysis, organic promotion planning and strategy tailored to the marketing needs</p>
-            <p class="Solutions_litext">Search Engine Optimization (ASO)</p>
-            <p class="Solutions_litext">Creating and distributing of content including link monitoring and buying</p>
-            <p class="Solutions_litext">On-going consultation and advice on setting up new sites</p>
-            <p class="Solutions_litext">Reputation and image management, Google penalizing site extraction</p>
-        </div>
-        
-    </div>
-</section>
-<section class="page-section container services-section " id="ProgrammaticMedia">
-    <div class="row">
-        <div class="col-md-3">
-            <img src="~/Images/Rectangle2.png" class="img-fluid image-triangular" />
-        </div>
-        <div class="col-md-9">
-            <p class="Solution_subHeader">Programmatic Media</p>
-            <p class="Solutions_litext">Buying and Serving Media in Advanced Programmatic Systems (DV 360 / Appnexus / Artimedia)</p>
-            <p class="Solutions_litext">Integration between Ad serving systems and media buying systems</p>
-            <p class="Solutions_litext">Using advanced technology tools (Mobium, Fortivision, Google Web Designer)</p>
-            <p class="Solutions_litext">Smart consumer campaign management and holistic control at the level of exposure and frequency throughout the campaign</p>
-            <p class="Solutions_litext">Analyze data and build advanced reports for real-time optimization and decision making</p>
-        </div>
-    </div>
-</section>
+</div>
 
-
-
-<section class="page-section container services-section " id="CreativeStudio">
-    <div class="row">
-        <div class="col-md-3 order-md-2 ">
-            <img src="~/Images/Rectangle.png" class="img-fluid image-triangular " />
-        </div>
-        <div class="col-md-9 order-md-1 ">
-            <p class="Solution_subHeader">Creative & Studio</p>
-            <p class="Solutions_litext">Conceptual decoding across all media, content and social platforms</p>
-            <p class="Solutions_litext">Specification of UX UI for sites and apps</p>
-            <p class="Solutions_litext">Graphic and creative design in the digital worlds</p>
-            <p class="Solutions_litext">Specialty in Social Media Design (Facebook, Instagram, LinkedIn etc.)</p>
-            <p class="Solutions_litext">Video and animation productions</p>
-        </div>
-        
-    </div>
-</section>
-<section class="page-section container services-section " id="ContentMarketing">
-    <div class="row">
-        <div class="col-md-3">
-            <img src="~/Images/Rectangle2.png" class="img-fluid image-triangular" />
-        </div>
-        <div class="col-md-9">
-            <p class="Solution_subHeader">Content Marketing</p>
-            <p class="Solutions_litext">Content strategy development and management</p>
-            <p class="Solutions_litext">Content Asset Management: Facebook, Instagram, LinkedIn, Pinterest, Blogs and influencers</p>
-            <p class="Solutions_litext">Creating and producing content, text, video and infographic, Questionnaires and quizzes</p>
-            <p class="Solutions_litext">Network discourse monitoring</p>
-            <p class="Solutions_litext">Commerce Optimized Content</p>
-        </div>
-    </div>
-</section>
-
-
-<section class="page-section container services-section " id="MobileWebdevelopment">
-    <div class="row">
-        <div class="col-md-3 order-md-2">
-            <img src="~/Images/Rectangle.png" class="img-fluid image-triangular" />
-        </div>
-        <div class="col-md-9 order-md-1" >
-            <p class="Solution_subHeader">	Mobile & Web development</p>
-            <p class="Solutions_litext">Technological marketing consulting</p>
-            <p class="Solutions_litext">UI / UX Specification and digital project management and assets</p>
-            <p class="Solutions_litext">Website development, mobile applications (iOS and Android) and SDK implementation</p>
-            <p class="Solutions_litext">Specialization in e-commerce (eCommerce) systems and digital stores</p>
-            <p class="Solutions_litext">Specializations in all types of development required: Apps, Server, Web, HTML5, ENT Integration Automation, Games, Platforms</p>
-        </div>
-        
-    </div>
-</section>
-<section class="page-section container services-section " id="eCommerce">
-    <div class="row">
-        <div class="col-md-3">
-            <img src="~/Images/Rectangle2.png" class="img-fluid image-triangular" />
-        </div>
-        <div class="col-md-9">
-            <p class="Solution_subHeader">eCommerce</p>
-            <p class="Solutions_litext">Full level of Consulting and Support for various ecommerce models (Amazon, eBay)</p>
-            <p class="Solutions_litext">Building the full research infrastructure and establishing the organization’s eCommerce strategy</p>
-            <p class="Solutions_litext">Hands-On full project management, from initial establishment to ongoing and outsourcing management</p>
-            <p class="Solutions_litext">Connecting with the stores</p>
-            <p class="Solutions_litext">In-house training of key project personnel + assistance in recruiting and HR need, including IT and media trade desk </p>
-        </div>
-    </div>
-</section>
-
-<section class="page-section container services-section " id="MarketingTechnologiesSolutions">
-    <div class="row">
-
-        <div class="col-md-3 order-md-2">
-            <img src="~/Images/Rectangle.png" class="img-fluid image-triangular" />
-        </div>
-        
-        <div class="col-md-9 order-md-1">
-            <p class="Solution_subHeader">Marketing Technologies Solutions</p>
-            <p class="Solutions_litext">Mapping and building organizational processes tailored to the digital age - BPR</p>
-            <p class="Solutions_litext">Building personalization and marketing automation processes - MA</p>
-            <p class="Solutions_litext">Technological innovation and unique digital solutions</p>
-            <p class="Solutions_litext">Accompanying and connecting complex trade and commerce processes</p>
-            <p class="Solutions_litext">Initiative of meetings and matching clients with start-ups and companies engaged in technological innovation while providing unique digital solutions</p>
-        </div>
-    </div>
-</section>
 
 @section scripts
 {
-<script>
-    $('.nav-link').removeClass("active");
-    $('.Services').addClass("active");
+    <script>
+        $('.nav-link').removeClass("active");
+        $('.Services').addClass("active");
         $(document).ready(function () {
-            
+
             if ($(window).width() < 1025) {
                 var elems = document.getElementsByClassName('next');
                 for (var i = 0; i < elems.length; i += 1) {
@@ -421,7 +453,7 @@
                 contentSections.each(function () {
 
                     $this = $(this);
-                    var activeSection = $('#cd-vertical-nav a[href="#' + $this.attr('id') + '"]').data('number') - 2;
+                    var activeSection = $('#cd-vertical-nav a[href="#' + $this.attr('id') + '"]').data('number') - 1;
 
                     if (($this.offset().top - $(window).height() / 2 < $(window).scrollTop()) && ($this.offset().top + $this.height() - $(window).height() / 2 > $(window).scrollTop())) {
                         navigationItems.eq(activeSection).addClass('is-selected');
@@ -443,11 +475,6 @@
 
 
     </script>
-    
-
-
-
-
     <script>
 
 

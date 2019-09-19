@@ -1,57 +1,93 @@
-﻿<section class="page-section container-fluid services" id="Services">
-    <div class="container">
+﻿
+   
+    @*<div id="video-container">
+        <video autoplay loop  muted="muted">
+            <source src="~/Videos/3D_1920x1000.mp4" type="video/mp4" />
+            
+            Your browser does not support the video tag. I suggest you upgrade your browser.
+        </video>
+    </div>*@
+
+<section class="services" id="Services">
+    <div class="container container-fluid" id="triangularcarousel">
+
         <div id="triangular">
-            <carousel-3d :perspective="0" :space="200" :border="0" :display="7" :width="274" :height="309"
-                         :controls-visible="true" :controls-width="30" :controls-height="5" :clickable="true" :autoplay="false" :autoplay-timeout="5000" >
+            <carousel-3d class="triangular-carousel" :perspective="0" :space="200" :border="0" :display="7" :width="274" :height="309"
+                         :controls-visible="true" :controls-width="30" :controls-height="5" :clickable="true" :autoplay="false" :autoplay-timeout="5000">
                 <slide :index="0">
-                    <a href="#Strategy"><p class="triangular">Strategy</p></a>
+                    <a href="#ProgrammaticMedia">
+                        <p class="triangular programtic">Programmatic Media</p>
+                    </a>
                 </slide>
                 <slide :index="1">
-                    <a href="#Analytics"><p class="triangular data-analysis">Data Analysis</p></a>
+                    <a href="#SearchEngineManagementPPC">
+                        <p class="triangular ppc">PPC</p>
+                    </a>
+
                 </slide>
                 <slide :index="2">
+                    <a href="#SEOSearchEngineOptimization">
+                        <p class="triangular seo">SEO</p>
+                    </a>
+
+                </slide>
+                <slide :index="3">
+                    <a href="#SocialMediaMarketing">
+                        <p class="triangular social-media">Social Media</p>
+                    </a>
+                </slide>
+                <slide :index="4">
                     <a href="#MediaPlanning">
                         <p class="triangular media-planning">Media Planning</p>
                     </a>
                 </slide>
-                <slide :index="3">
-                    <a href="#SEOSearchEngineOptimization"><p class="triangular">SEO</p></a>
-                </slide>
-                <slide :index="4">
-                    <a href="#SearchEngineManagementPPC"><p class="triangular">PPC</p></a>
-                </slide>
                 <slide :index="5">
-                    <a href="#SocialMediaMarketing"><p class="triangular social-media">Social Media</p></a>
+                    <a href="#ContentMarketing">
+                        <p class="triangular content-marketing">Content Marketing</p>
+                    </a>
                 </slide>
                 <slide :index="6">
-                    <a href="#ProgrammaticMedia"><p class="triangular programtic">Programmatic Media</p></a>
+                    <a href="#Analytics">
+                        <p class="triangular data-analysis">Data Analysis</p>
+                    </a>
                 </slide>
                 <slide :index="7">
-                    <a href="#CreativeStudio"><p class="triangular creative">Creative & Studio</p></a>
+                    <a href="#Strategy">
+                        <p class="triangular">Strategy</p>
+                    </a>
+
                 </slide>
                 <slide :index="8">
-                    <a href="#ContentMarketing"><p class="triangular content-marketing">Content Marketing</p></a>
+                    <a href="#CreativeStudio">
+                        <p class="triangular creative">Creative & Studio</p>
+                    </a>
                 </slide>
                 <slide :index="9">
-                    <br/>
                     <a href="#MobileWebdevelopment">
-                        <p class="triangular devlopment">Development</p></a>
+                        <p class="triangular devlopment">Development</p>
+                    </a>
                 </slide>
                 <slide :index="10">
-                    <a href="#eCommerce"><p class="triangular">eCommerce</p></a>
+                    <a href="#eCommerce">
+                        <p class="triangular">eCommerce</p>
+                    </a>
                 </slide>
                 <slide :index="11">
-                    <a href="#MarketingTechnologiesSolutions"><p class="triangular martech">Mar-tech Solutions</p></a>
+                    <a href="#MarketingTechnologiesSolutions">
+                        <p class="triangular martech">Mar-tech Solutions</p>
+                    </a>
                 </slide>
 
 
             </carousel-3d>
         </div>
+        <div class="space"></div>
         <div class="row">
             <div class=" col-md-6">
+
             </div>
             <div class=" col-md-6">
-                <a href="#caseStudy" class="js-scroll-trigger">
+                <a href="#caseStudys" class="js-scroll-trigger">
                     <div class="chevron"></div>
                     <div class="chevron"></div>
                     <div class="chevron"></div>
@@ -63,7 +99,7 @@
 
 </section>
 
-<section class=" page-section container-fluid" id="caseStudy">
+<section class=" page-section container-fluid" id="caseStudys">
     <div class="section-header">
         <p class="ourCustomer">Success Stories</p>
 
@@ -74,172 +110,149 @@
             <slide :index="0">
                 <div class="card col-md-12">
                     <div class="row no-gutters">
-
-                        <div class="col-md-9" dir="rtl">
-                            <div class="card-body" style="color: black">
-
-
-                                <p class="d-inline-block card-title  " dir="rtl">
-                                    <span class="d-inline-block  float-right">
-                                        <img src="~/Images/b144 logo.png" class="logo-card" />
-
-                                    </span>
-                                    50000 זה לא מספר טלפון, זה מספר הקמפיינים ש – B144 יודעת לייצר ביום
-                                </p>
-                                @*<p class="d-inline-block card-title  " dir="rtl">50000 זה לא מספר טלפון, </p>
-                                    <p class="d-inline-block card-title  ">זה מספר הקמפיינים ש – B144 יודעת לייצר ביום </p>*@
-
-
-                                <h5 class="card-title">האתגר: </h5>
-                                <p class="card-text">
-                                    מהלך השקה מוחדש של שירות חדש שדורש חינוך ושמייצר ערך שונה לכל סגמנט או קהל יעד רלוונטי. למהלך זה קדם קמפיין השקה שביטא את הרצון של בזק להתמקד בקהל אחד מרכזי ובעקבות כף גרם ליצירת מכנה משותף רחב מדי והתקשה להסביר לקהלי היעד השונים מה הערך המוסף של שירות הבית החכם עבורם. כתוצאה מכך, מכירות המותג הגיעו לתקרת זכוכית בדמות אותם קהלים שאוהבים ומעריכים את הטכנולוגיה.
-                                </p>
-                            </div>
-                            <div class="read-more-card">
-                                <p class="card-text float-right"><a href="" style="text-decoration: underline">קרא עוד</a></p>
-                            </div>
-                        </div>
                         <div class="col-md-3">
                             <img src="~/Images/iPhone X - Outline.png" class="card-img" style="height: 500px; width: 244px; ">
                         </div>
+                        <div class="col-md-9" >
+                            <div class="card-body" style="color: black">
+                                <div class="row">
+                                    <span class="d-inline-block  float-left">
+                                        <img src="~/Images/CustomerEn/Color/5.png" class="logo-card float-left" />
+
+                                    </span>    
+                                </div>
+                                
+                                <p class="d-inline-block card-title  ">
+
+                                    ScanMarker
+                                    <br />
+                                    Bla Bla Bla
+                                </p>
+
+                                <p class="d-inline-block card-title  ">
+                                    <h5 class="card-title">The challenge</h5>
+                                <p class="card-text">
+
+                                </p>
+                            </div>
+                            <div class="read-more-card">
+                                <p class="card-text float-right"><a href="@Url.Action("ScanMarker","CaseStudy")" style="text-decoration: underline">Read More</a></p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </slide>
             <slide :index="1">
-
                 <div class="card col-md-12">
                     <div class="row no-gutters">
-
-                        <div class="col-md-8">
+                        <div class="col-md-3">
+                            <img src="~/Images/iPhone X - Outline.png" class="card-img" style="height: 500px; width: 244px; ">
+                        </div>
+                        <div class="col-md-9" >
                             <div class="card-body" style="color: black">
 
-                                <p class="d-inline-block">500000 זה לא מספר קמפיינים</p>
-                                <span class="d-inline-block btn float-left">
-                                    <img src="~/Images/b144 logo.png" class="img-fluid" />
-                                </span>
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text float-right"><a href="" style="text-decoration: underline">קרא עוד</a></p>
+                                <div class="row">
+                                    <span class="d-inline-block  float-left">
+                                        <img src="~/Images/CustomerEn/Color/5.png" class="logo-card float-left" />
+
+                                    </span>
+                                </div>
+
+                                <div class="row">
+                                    <p class="d-inline-block card-title  ">
+
+                                        Super Pharm- How we cracked the code to create the golden ad
+                                        <br />
+                                    </p>
+
+                                    
+                                </div>
+                                <div class="row">
+                                    <p class="d-inline-block card-title  ">
+                                        <h5 class="card-title">The challenge</h5>
+                                    <p class="card-text">
+                                        Maximizing the ROAS of a complex eCommerce activity in a multi-product environment (Over 12,000 SKUs)
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="read-more-card">
+                                <p class="card-text float-right"><a href="@Url.Action("SuperPharmEn","CaseStudy")" style="text-decoration: underline">Read More</a></p>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <img src="~/Images/iPhone X - Outline.png" class="card-img">
-                        </div>
+
                     </div>
                 </div>
             </slide>
             <slide :index="2">
                 <div class="card col-md-12">
                     <div class="row no-gutters">
-
-                        <div class="col-md-8">
+                        <div class="col-md-3">
+                            <img src="~/Images/iPhone X - Outline.png" class="card-img" style="height: 500px; width: 244px; ">
+                        </div>
+                        <div class="col-md-9"  >
                             <div class="card-body" style="color: black">
 
-                                <p class="d-inline-block">500000 זה לא מספר קמפיינים</p>
-                                <span class="d-inline-block btn float-left">
-                                    <img src="~/Images/b144 logo.png" />
-                                </span>
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text float-right"><a href="" style="text-decoration: underline">קרא עוד</a></p>
+                                <div class="row">
+                                    <span class="d-inline-block  float-left">
+                                        <img src="~/Images/caesarstone.png" class="logo-card float-left" />
+
+                                    </span>
+                                </div>
+                                <p class="d-inline-block card-title  ">
+                                    Caesarstone- How real time data analysis can create insights
+                                    that led to a population explosion at the trade show
+                                </p>
+
+                                <p class="d-inline-block card-title  ">
+                                <h5 class="card-title">The challenge</h5>
+                                <p class="card-text">
+                                    Getting designers and architects that are attending the “Milan Design Week’ trade show, to also visit Caesarstone’s exhibition that is not near the main event and is a 40 mins drive away.
+                                </p>
+                            </div>
+                            <div class="read-more-card">
+                                <p class="card-text float-right"><a href="@Url.Action("CaesarstoneEN","CaseStudy")" style="text-decoration: underline">Read More</a></p>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <img src="~/Images/iPhone X - Outline.png" class="card-img">
-                        </div>
+
                     </div>
                 </div>
             </slide>
             <slide :index="3">
                 <div class="card col-md-12">
                     <div class="row no-gutters">
-
-                        <div class="col-md-8">
+                        <div class="col-md-3">
+                            <img src="~/Images/iPhone X - Outline.png" class="card-img" style="height: 500px; width: 244px; ">
+                        </div>
+                        <div class="col-md-9"  >
                             <div class="card-body" style="color: black">
 
-                                <p class="d-inline-block">500000 זה לא מספר קמפיינים</p>
-                                <span class="d-inline-block btn float-left">
-                                    <img src="~/Images/b144 logo.png" />
+                                <span class="d-inline-block  float-left">
+                                    
+                                    <img src="~/Images/CustomerEn/Color/9.png" class="logo-card float-left" />
                                 </span>
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text float-right"><a href="" style="text-decoration: underline">קרא עוד</a></p>
+                                <p class="d-inline-block card-title  ">
+                                    Ministry of Tourism - Multi-channel digital campaign management in 9 countries
+                                </p>
+
+                                <p class="d-inline-block card-title  ">
+                                <h5 class="card-title">The challenge</h5>
+                                <p class="card-text">
+                                    Increasing the number of incoming tourists coming to Israel as efforts to promote tourism in Israel in the past 10 years have resulted in an increase of no more than 3% at most.
+                                </p>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <img src="~/Images/iPhone X - Outline.png" class="card-img">
-                        </div>
-                    </div>
-                </div>
-            </slide>
-            <slide :index="4">
-                <div class="card col-md-12">
-                    <div class="row no-gutters">
-
-                        <div class="col-md-8">
-                            <div class="card-body" style="color: black">
-
-                                <p class="d-inline-block">500000 זה לא מספר קמפיינים</p>
-                                <span class="d-inline-block btn float-left">
-                                    <img src="~/Images/b144 logo.png" />
-                                </span>
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text float-right"><a href="" style="text-decoration: underline">קרא עוד</a></p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <img src="~/Images/iPhone X - Outline.png" class="card-img">
-                        </div>
-                    </div>
-                </div>
-            </slide>
-            <slide :index="5">
-                <div class="card col-md-12">
-                    <div class="row no-gutters">
-
-                        <div class="col-md-8">
-                            <div class="card-body" style="color: black">
-
-                                <p class="d-inline-block">500000 זה לא מספר קמפיינים</p>
-                                <span class="d-inline-block btn float-left">
-                                    <img src="~/Images/b144 logo.png" />
-                                </span>
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text float-right"><a href="" style="text-decoration: underline">קרא עוד</a></p>
+                            <div class="read-more-card">
+                                <p class="card-text float-right"><a href="@Url.Action("MinistryEN","CaseStudy")" style="text-decoration: underline">Read More</a></p>
                             </div>
                         </div>
 
-                    </div>
-                </div>
-            </slide>
-            <slide :index="6">
-                <div class="card col-md-12">
-                    <div class="row no-gutters">
-
-                        <div class="col-md-8">
-                            <div class="card-body" style="color: black">
-
-                                <p class="d-inline-block">500000 זה לא מספר קמפיינים</p>
-                                <span class="d-inline-block btn float-left">
-                                    <img src="~/Images/b144 logo.png" />
-                                </span>
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text float-right"><a href="" style="text-decoration: underline">קרא עוד</a></p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <img src="~/Images/iPhone X - Outline.png" class="card-img">
-                        </div>
                     </div>
                 </div>
             </slide>
 
         </carousel-3d>
     </div>
-
+    <div class="space"></div>
     <div class="row">
         <div class=" col-md-6 col-sm-1">
         </div>
@@ -258,7 +271,7 @@
 
     <div class="container">
         <div class="section-header">
-            <p class="ourCustomer">A Few Of Our Clients</p>
+            <p class="ourCustomer">Our Clients</p>
 
         </div>
 
@@ -266,48 +279,48 @@
             <div class="customer-carousel-image">
 
 
-                <img src="~/Images/CustomerEn/color/1.png" class="color-image"  />
-                <img src="~/Images/CustomerEn/grey/1.png" />
+                <img src="~/Images/CustomerEn/color/1.png" />
+
 
             </div>
 
             <div class="customer-carousel-image">
-                <img src="~/Images/CustomerEn/color/2.png" class="color-image" />
-                <img src="~/Images/CustomerEn/grey/2.png" />
+                <img src="~/Images/CustomerEn/color/2.png" />
+
             </div>
 
             <div class="customer-carousel-image">
-                <img src="~/Images/CustomerEn/color/3.png" class="color-image" />
-                <img src="~/Images/CustomerEn/grey/3.png" />
+                <img src="~/Images/CustomerEn/color/3.png" />
+
             </div>
             <div class="customer-carousel-image">
-                <img src="~/Images/CustomerEn/color/4.png" class="color-image" />
-                <img src="~/Images/CustomerEn/grey/4.png" />
+                <img src="~/Images/CustomerEn/color/4.png" />
+
             </div>
             <div class="customer-carousel-image">
-                <img src="~/Images/CustomerEn/color/5.png" class="color-image" />
-                <img src="~/Images/CustomerEn/grey/5.png" />
+                <img src="~/Images/CustomerEn/color/5.png" />
+
             </div>
             <div class="customer-carousel-image">
-                <img src="~/Images/CustomerEn/color/6.png" class="color-image" />
-                <img src="~/Images/CustomerEn/grey/6.png" />
-            </div>
-            <div class="customer-carousel-image">
-                <img src="~/Images/CustomerEn/color/7.png" class="color-image" />
-                <img src="~/Images/CustomerEn/grey/7.png" />
+                <img src="~/Images/CustomerEn/color/6.png" />
+
             </div>
 
             <div class="customer-carousel-image">
-                <img src="~/Images/CustomerEn/color/8.png" class="color-image" />
-                <img src="~/Images/CustomerEn/grey/8.png" />
+                <img src="~/Images/CustomerEn/color/8.png" />
+
             </div>
             <div class="customer-carousel-image">
-                <img src="~/Images/CustomerEn/color/9.png" class="color-image" />
-                <img src="~/Images/CustomerEn/grey/9.png" />
+                <img src="~/Images/CustomerEn/color/9.png" />
+
             </div>
             <div class="customer-carousel-image">
-                <img src="~/Images/CustomerEn/color/10.png" class="color-image" />
-                <img src="~/Images/CustomerEn/grey/10.png" />
+                <img src="~/Images/CustomerEn/color/10.png" />
+
+            </div>
+            <div class="customer-carousel-image">
+                <img src="~/Images/CustomerEn/color/11.png" />
+
             </div>
         </div>
 
@@ -321,7 +334,7 @@
 Clients Section
 ============================-->
 @{
-    Html.RenderAction("GetJobsForHomePage", "Career");
+    //Html.RenderAction("GetJobsForHomePage", "Career");
 }
 
 
@@ -338,12 +351,17 @@ Clients Section
 
 
         $(".story").attr(":controls_visible", "false");
+        $(".triangular-carousel").attr(":space", "200");
         if ($(window).width() < 769) {
-            console.log("asdsa");
-            console.log($(".story").attr(":width", "274"));
-            console.log($(".story").attr(":height", "437"));
-
-            console.log($("#story carousel-3d")[0].outerHTML);
+            $("#triangularcarousel").removeClass("container");
+            //$("#triangularcarousel").addClass("container-fluid");
+            $(".story").attr(":width", "274");
+            $(".story").attr(":height", "437");
+            var xx=$(".triangular-carousel").attr(":space","100");
+            console.log(xx);
+            //$(".triangular-carousel").attr(":space", "237");
+            $(".triangular-carousel").attr(":width", "374");
+            $(".triangular-carousel").attr(":height", "237");
 
         }
 
@@ -351,7 +369,7 @@ Clients Section
 
 
         $(document).ready(function (parameters) {
-       
+
             if ($(window).width() < 1025) {
                 var elems = document.getElementsByClassName('next');
                 for (var i = 0; i < elems.length; i += 1) {
@@ -489,17 +507,12 @@ Clients Section
             $('.next span').html('<i class="fal fa-chevron-right"></i>');
         });
 
-        $(".carousel-3d-slide a p").on('click', function (event) {
-
-            
-            window.location.replace('/Home/Solutions' + $(this).attr("href"));
+        $(".carousel-3d-slide a").on('click', function (event) {
+            window.location.replace('/Home/Solutions/' + $(this).attr("href"));
 
         });
 
-            //$(document).ready(function () {
 
-            //    getAccordion("#myTab", 769);
-            //});
     </script>
 
 }

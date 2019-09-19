@@ -41,7 +41,9 @@ namespace GoNewWebsite.Controllers
         {
             WebsitePage website = new WebsitePage
             {
-                HeaderPage = new HeaderPage { Main = "About ", Content = "GO is an award-winning digital agency, specializing in high scale performance marketing and eCommerce for global brands \r\nWe offer a full-service solution starting from building eCommerce websites, Amazon stores, creating a winning digital strategy across all digital media channels, and up to data analysis and conversion rate optimization for ultimate business results.\r\n" }
+                HeaderPage = new HeaderPage { Main = "About ", Content = "GO is an award-winning digital agency, specializing in high scale performance marketing and eCommerce for global brands. \r\n" +
+                                                                         "We offer a full in-house digital solution and services. From initial strategy, building high converting eCommerce websites, mobile apps, managing Amazon stores and as well as up to Complex performance managing accounts across all digital media channels including dip level data analysis and conversion rate optimization for ultimate business results!\r\n"
+                }
 
             };
 
@@ -53,9 +55,9 @@ namespace GoNewWebsite.Controllers
         {
             WebsitePage website = new WebsitePage
             {
-                HeaderPage = new HeaderPage { Main = "Solutions ", Content = "We at GO know how to provide a complete answer at the highest professional level. From strategy, through creative cracking, to the implementation of advanced media capabilities and data systems that ultimately delivers better business results" }
+                HeaderPage = new HeaderPage { Main = "Solutions ", Content = "GO’s Signature advantage offers High Def Digital Marketing with a robust portfolio including: " }
 
-            };
+                };
 
             ViewBag.Website = website;
             return View();

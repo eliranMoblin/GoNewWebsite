@@ -41,6 +41,7 @@
 
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/animate.min.css" rel="stylesheet" />
     <link href="~/Content/fonts/css/all.min.css" rel="stylesheet" />
     @*<link href="//pro.fontawesome.com/releases/v5.1.0/css/all.css" rel="stylesheet">*@
     @*<link href="~/Content/fonts/css/fontawesome.min.css" rel="stylesheet" />*@
@@ -55,7 +56,7 @@
     @*<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />*@
 
     <script src="//code.createjs.com/createjs-2015.11.26.min.js"></script>
-    <script src="~/Scripts/Logo/logo_HTML5Canvas.js"></script>  
+    <script src="~/Scripts/Logo/logo_HTML5Canvas.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.css" />
     <link href="~/plugin/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
     <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.2.1/font-awesome-animation.css" rel="stylesheet" />
@@ -63,46 +64,46 @@
 
 </head>
 <body id="page-top" onload="init();" style="margin: 0px;">
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         
-        <div class="container-fluid">
-            <a href="@Url.Action("Index", "Home")">
-                <div class="square">
-                    <div id="animation_container">
-                        <canvas id="canvas"></canvas>
-                        <div id="dom_overlay_container">
-                        </div>
+    <div class="container-fluid">
+        <a href="@Url.Action("Index", "Home")">
+            <div class="square">
+                <div id="animation_container">
+                    <canvas id="canvas"></canvas>
+                    <div id="dom_overlay_container">
                     </div>
-
-
                 </div>
-            </a>
+
+
+            </div>
+        </a>
             
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav text-uppercase ml-auto">
-                    <li class="nav-item" nav-item="5">
-                        <a class="nav-link js-scroll-trigger active" href="@Url.Action("Index", "Home")">Home</a>
-                    </li>
-                    <li class="nav-item" nav-item="4">
-                        <a class="nav-link js-scroll-trigger About" href="@Url.Action("About", "Home")">About</a>
-                    </li>
-                    <li class="nav-item" nav-item="3">
-                        <a class="nav-link js-scroll-trigger Services" href="@Url.Action("Solutions", "Home")">Services</a>
-                    </li>
-                    <li class="nav-item" nav-item="2">
-                        <a class="nav-link js-scroll-trigger Careers" href="@Url.Action("Index", "Career")">Careers</a>
-                    </li>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" nav-item="5">
+                    <a class="nav-link js-scroll-trigger active" href="@Url.Action("Index", "Home")">Home</a>
+                </li>
+                <li class="nav-item" nav-item="4">
+                    <a class="nav-link js-scroll-trigger About" href="@Url.Action("About", "Home")">About</a>
+                </li>
+                <li class="nav-item" nav-item="3">
+                    <a class="nav-link js-scroll-trigger Services" href="@Url.Action("Solutions", "Home")">Services</a>
+                </li>
+                <li class="nav-item" nav-item="2">
+                    <a class="nav-link js-scroll-trigger Careers" href="@Url.Action("Index", "Career")">Careers</a>
+                </li>
 
-                    <li class="nav-item" nav-item="1">
-                        <a class="nav-link js-scroll-trigger" href="#ContacUs">Contact</a>
-                    </li>
+                <li class="nav-item" nav-item="1">
+                    <a class="nav-link js-scroll-trigger" href="#ContacUs">Contact</a>
+                </li>
 
 
 
-                    @*<li class="nav-item" nav-item="6">
+                @*<li class="nav-item" nav-item="6">
                         <form action="/Home/SetCulture" method="post" class=form-lang>
                             <div class="btn-group lan-btn-group" data-toggle="buttons">
 
@@ -117,19 +118,19 @@
 
                     </li>*@
 
-                </ul>
-            </div>
+            </ul>
         </div>
-    </nav>
-    <header>
-        <div class="overlay"></div>
-        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-            <source src="~/Videos/1920x520.mp4" type="video/mp4">
-        </video>
+    </div>
+</nav>
+
+<header>
+    <div class="overlay"></div>
+    <div id="video"></div>
+       
         <div class="container h-100">
             <div class="d-flex h-100 text-center align-items-center">
                 <div class="w-100 text-white">
-
+                        
                     @if (website != null)
                     {
                         <h1 class="display-3 text-header">@website.HeaderPage.Main</h1>
@@ -157,6 +158,66 @@
         <section class="page-section container footer_section" id="ContacUs">
             <div class="section-header">
                 <p class="ourCustomer">Contact us</p>
+     
+                
+             
+
+
+
+            </div>
+
+            <form class="form-inline justify-content-center">
+                
+                <div class="col-md-3">
+                    <div class="input-group mb-2">
+                        <input type="text" class="form-control" id="FullName" placeholder="Full name">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group mb-2">
+                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Email">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group mb-2">
+                        <input type="tel" class="form-control" id="phoneNumber" placeholder="Phone">
+                    </div>
+                </div>
+                <div class="col-md-3  btn-form" >
+                    <button type="submit" class="btn btn-primary ">GO</button>
+                </div>
+                
+            </form>
+
+        </section>
+       
+   
+    </div>
+<footer class=" " style="max-height: 100px">
+    <div class="container">
+                
+        <div class="row">
+                        
+            <div class="col-md-5 ">
+                <a href="https://goo.gl/maps/P7mzRa2aPSvEmLQLA" target="_blank">
+
+                    <p class="location">
+                        Giborey Israel 5, P.O.Box 8870, Netanya Israel.
+                        &nbsp; &nbsp;
+                        <i class="fa fa-map-marker"></i>
+                    </p>
+                </a>
+            </div>
+            <div class="col-md-3 ">
+                <a href="mailto:info@gim.co.il" class="location">
+                    <p class="">
+                        Office@@Gim.co.il
+                        &nbsp; &nbsp;
+                        <i class="fa fa-envelope"></i>
+                    </p>
+                </a>
+            </div>
+            <div class="col-md-3 ">
                 <a href="tel:09-8855824" class="location">
                     <p class="">
                         09-8855824
@@ -164,61 +225,24 @@
                         <i class="fa fa-phone"></i>
                     </p>
                 </a>
-                
-                <a href="mailto:info@gim.co.il" class="location">
-                    <p class="">
-
-                        Office@@Gim.co.il
-                        &nbsp; &nbsp;
-                        <i class="fa fa-envelope"></i>
-                    </p>
-                </a>
-
-                <p class="location">
-                    Giborey Israel 5 14, P.O.Box 8870, Netanya Israel.
-                    &nbsp; &nbsp;
-                    <i class="fa fa-map-marker"></i>
-                </p>
-
-
             </div>
 
-            <form class="form-inline justify-content-center">
-                
-                    <div class="col-md-3">
-                        <div class="input-group mb-2">
-                            <input type="text" class="form-control" id="FullName" placeholder="Full name">
-                        </div>
-                    </div>
-                <div class="col-md-3">
-                        <div class="input-group mb-2">
-                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Email">
-                        </div>
-                    </div>
-                <div class="col-md-3">
-                        <div class="input-group mb-2">
-                            <input type="tel" class="form-control" id="phoneNumber" placeholder="Phone">
-                        </div>
-                    </div>
-                <div class="col-md-3  btn-form" >
-                        <button type="submit" class="btn btn-primary ">GO</button>
-                    </div>
-                
-            </form>
 
-        </section>
-        <div class="footer-strip">
+                        
+        </div>
+
+    </div>
+    <div class="footer-strip">
 
 
-            <div class="col-md-7">
-                <p dir="rtl">
-                    All rights reserved to- 
-                    <span dir="ltr">GO 2019</span>
-                </p>
-            </div>
+        <div class="col-md-7">
+            <p dir="rtl">
+                All rights reserved to- 
+                <span dir="ltr">GO 2019</span>
+            </p>
         </div>
     </div>
-
+</footer>
     @*@using (Html.BeginForm("SetCulture", "Home"))
         {
             <fieldset>
@@ -267,8 +291,11 @@
     @*<script src='https://rawgit.com/Wlada/vue-carousel-3d/master/dist/vue-carousel-3d.min.js'></script>*@
     <script src="~/Scripts/Custom.js"></script>
     <script src="~/Scripts/bootstrap-tabcollapse.js"></script>
-
-    <script>
+<script src="~/Scripts/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+    <script defer="">
 
 
 
@@ -301,6 +328,7 @@
             $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
                 if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                     var target = $(this.hash);
+                    
                     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                     if (target.length) {
                         $('html, body').animate({
@@ -544,6 +572,17 @@
 </script>
 <script type="text/javascript">
     $(document).ready(function () {
+        
+        if ($(window).width() < 769)
+        {
+            var video =
+                "<video playsinline='playsinline' autoplay='autoplay' muted='muted' loop='loop'>\r\n <source src='/Videos/1920x520.mp4' type='video/mp4'>\r\n</video>";
+            $('#video').html(video);
+        } else {
+            var video =
+                "<video playsinline='playsinline' autoplay='autoplay' muted='muted' loop='loop'>\r\n <source src='/Videos/1920x520.mp4' type='video/mp4'>\r\n</video>";
+            $('#video').html(video);
+        }
         getAccordion("#myTab", 769);
     });
 </script>

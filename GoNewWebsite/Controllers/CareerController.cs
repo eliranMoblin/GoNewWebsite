@@ -5,6 +5,7 @@ using System.Net;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using Entities.Website;
 using GoNewWebsite.Models;
 using Newtonsoft.Json;
 
@@ -13,11 +14,18 @@ namespace GoNewWebsite.Controllers
     public class CareerController : BaseController
     {
         // GET: Career
-        
+        WebsitePage website = new WebsitePage
+        {
+            HeaderPage = new HeaderPage
+            {
+                Main = "Careers"
+            }
+        };
         public ActionResult Index()
         {
             var jobs =GetJobs();
-//            WebsitePage.HeaderPage.Main = "Career";
+            ViewBag.Website = website;
+            //            WebsitePage.HeaderPage.Main = "Career";
             return View(jobs);
         }
 
@@ -44,6 +52,8 @@ namespace GoNewWebsite.Controllers
 
         public async Task<ActionResult> Position(string positionId)
         {
+      
+            ViewBag.Website = website;
             string result;
             using (WebClient client = new WebClient())
             {

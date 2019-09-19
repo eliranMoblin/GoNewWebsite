@@ -4,15 +4,15 @@
 }
 
 
-<section class="page-section container" id="aboutOffice">
+<section class=" container" id="aboutOffice">
     <div class="row">
         <div class="container-fluid">
             <div class="container">
-                <h2 class="about_office"> אודות המשרד</h2>
+                <h2 class="about_office">About the Office</h2>
 
                 <div class="col-sm-10  offset-sm-1">
                     <p class="about_office_text">
-                        להביל את הלקוחות שלנו להצלחה עסקית בשותפות, אחריות וחתירה מתמדת לאיתור מנועי צמיחה חדשים שמנפצים את תקרת הזכוכית להביל את הלקוחות שלנו להצלחה עסקית בשותפות, אחריות וחתירה מתמדת לאיתור מנועי צמיחה חדשים שמנפצים את תקרת הזכוכית
+                        We at GO every wake up every morning with the goal of advancing one more step from the peak we reached yesterday. If you, too, wink from the same material, people who are looking to create value, seek to challenge the status quo, love to surround yourself with winners, want to learn from the best and strive to look at the digital world as a career - your place is with us.
                     </p>
                 </div>
 
@@ -25,6 +25,7 @@
     </div>
 
     <div class="row">
+        <div class="space"></div>
         <div class=" col-md-6">
         </div>
         <div class=" col-md-6">
@@ -50,33 +51,22 @@
                 <div class="row justify-content-center">
                     @foreach (var item in @Model)
                     {
-                        <div class="col-md-3 mb-4">
-                            <div class="card job-card img-fluid">
+                        
+                    <div class="col-md-3 mb-4">
+                        
+                        <div class=" job-card img-fluid">
+                            
+                            <a class="hrefPosition" href="@Url.Action("Position", new {positionId = @item.Uid})">
+                                <img src="~/Images/CAREERS.png" />
 
                                 <div class="card-text">
-
                                     <h5 class="card-position">@item.Name</h5>
-                                    <svg>
-                                        <g transform="translate(60,0)">
-                                            <path fill-rule="evenodd" fill="rgb(223, 223, 223)" cx="50" cy="5" class="border-danger"
-                                                  d="M242.381,79.944 C242.381,79.944 198.787,31.446 148.286,72.510 C97.784,113.573 61.000,158.000 61.000,158.000 L243.000,158.000 L242.381,79.944 Z" />
-                                        </g>
-                                    </svg>
-
-                                    <div class="overlay">
-
-                                        <div class="text">
-                                            @Html.Raw(@item.Details[0].Value)
-                                            <a class="hrefPosition" href="@Url.Action("Position", new {positionId = @item.Uid})">להגשת מועמדות</a>
-                                        </div>
-
-                                    </div>
-
                                 </div>
-
-                            </div>
+                            </a>
                         </div>
-
+                        
+                    </div>
+                        
                     }
 
 
