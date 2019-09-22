@@ -331,7 +331,7 @@ a.nav-link {
     }
 }
 
-
+    
 @keyframes pulse {
     to {
         opacity: 1;
@@ -2299,6 +2299,7 @@ p.ql-align-right.ql-direction-rtl {
     background-position: left center;
     background-repeat: no-repeat;
     padding-left: 20px; /* Adjust according to image size to push text across. */
+    font-size: 22px;
 }
 #solution {
     margin-top: -9%;
@@ -3314,41 +3315,57 @@ footer {
         }*/
 
 
-
+    .martech {
+        padding-top: 74px !important;
+        width: min-content;
+    }
     .data-analysis {
         padding-left: 73px;
-        padding-top: 116px !important;
+        padding-top: 89px !important;
     }
+    .devlopment {
+        padding-left: 45px !important;
+        padding-top: 95px !important;
+    }
+
+
+    .creative {
+        width: min-content!important;
+        padding-top: 74px !important;
+    }
+
 
     .ppc {
         padding-left: 53px !important;
-        padding-top: 87px !important;
+        padding-top: 96px !important;
     }
-
+    .content-marketing {
+        padding-top: 85px;
+    }
 
     .seo {
         padding-left: 53px !important;
-        padding-top: 87px !important;
+        padding-top: 96px !important;
     }
 
     .media-planning {
-        padding-top: 116px !important;
+        padding-top: 85px !important;
     }
 
     .social-media {
-        padding-top: 116px !important;
+        padding-top: 84px !important;
     }
 
     .programtic {
-        font-size: 18px !important;
+        font-size: 16px !important;
     }
 
     .triangular {
         cursor: pointer;
-        width: min-content;
+        
         font-size: 18px;
-        padding-left: 73px;
-        padding-top: 131px;
+        padding-left: 45px;
+        padding-top: 90px;
         color: white;
         text-align: left;
         line-height: normal;
@@ -3524,6 +3541,13 @@ footer {
         color: white !important;
         text-decoration: unset;
         padding-top: 13%;
+    }
+    .Solutions_litext {
+        background-image: url(../Images/triangle_eng.png);
+        background-position: left center;
+        background-repeat: no-repeat;
+        padding-left: 20px;
+        font-size: 19px;
     }
 }
 
