@@ -3320,12 +3320,12 @@ footer {
         width: min-content;
     }
     .data-analysis {
-        padding-left: 73px;
-        padding-top: 89px !important;
+        padding-left: 25% !important;
+        padding-top: 46% !important;
     }
     .devlopment {
-        padding-left: 45px !important;
-        padding-top: 95px !important;
+        padding-left: 25% !important;
+        padding-top: 52% !important;
     }
 
 
@@ -3336,24 +3336,24 @@ footer {
 
 
     .ppc {
-        padding-left: 53px !important;
-        padding-top: 96px !important;
+        padding-left: 26% !important;
+        padding-top: 50% !important;
     }
     .content-marketing {
-        padding-top: 85px;
+        padding-top: 47% !important;
     }
 
     .seo {
-        padding-left: 53px !important;
-        padding-top: 96px !important;
+        padding-left: 26% !important;
+        padding-top: 50% !important;
     }
 
     .media-planning {
-        padding-top: 85px !important;
+        padding-top: 47% !important;
     }
 
     .social-media {
-        padding-top: 84px !important;
+        padding-top: 47% !important;
     }
 
     .programtic {
@@ -3362,10 +3362,9 @@ footer {
 
     .triangular {
         cursor: pointer;
-        
-        font-size: 18px;
-        padding-left: 45px;
-        padding-top: 90px;
+        font-size: 16px;
+        padding-left: 24%;
+        padding-top: 50%;
         color: white;
         text-align: left;
         line-height: normal;
