@@ -70,7 +70,7 @@
         <li>
             <a href="#MarketingTechnologiesSolutions" data-number="12">
                 <span class="cd-dot"></span>
-                <span class="cd-label">Marketing Technologies Solutions</span>
+                <span class="cd-label">Marketing Technologies Services</span>
             </a>
         </li>   
     </ul>
@@ -78,25 +78,34 @@
 
 <div id="Services">
     <!--Carousel-->
-    <section class="page-section container-fluid services">
-        <div class="container">
+
+    <section class="services" id="Services">
+        <div class="container container-fluid" id="triangularcarousel">
+
             <div id="triangular">
-                <carousel-3d :perspective="0" :space="200" :border="0" :display="7" :width="274" :height="309"
+                <carousel-3d class="triangular-carousel" :perspective="0" :space="200" :border="0" :display="7" :width="274" :height="309"
                              :controls-visible="true" :controls-width="30" :controls-height="5" :clickable="true" :autoplay="false" :autoplay-timeout="5000">
                     <slide :index="0">
-                        <a href="#ProgrammaticMedia"><p class="triangular programtic">Programmatic Media</p></a>
-
+                        <a href="#ProgrammaticMedia">
+                            <p class="triangular programtic">Programmatic Media</p>
+                        </a>
                     </slide>
                     <slide :index="1">
-                        <a href="#SearchEngineManagementPPC"><p class="triangular">PPC</p></a>
+                        <a href="#SearchEngineManagementPPC">
+                            <p class="triangular ppc">PPC</p>
+                        </a>
 
                     </slide>
                     <slide :index="2">
-                        <a href="#SEOSearchEngineOptimization"><p class="triangular">SEO</p></a>
+                        <a href="#SEOSearchEngineOptimization">
+                            <p class="triangular seo">SEO</p>
+                        </a>
 
                     </slide>
                     <slide :index="3">
-                        <a href="#SocialMediaMarketing"><p class="triangular social-media">Social Media</p></a>
+                        <a href="#SocialMediaMarketing">
+                            <p class="triangular social-media">Social Media</p>
+                        </a>
                     </slide>
                     <slide :index="4">
                         <a href="#MediaPlanning">
@@ -104,7 +113,9 @@
                         </a>
                     </slide>
                     <slide :index="5">
-                        <a href="#ContentMarketing"><p class="triangular content-marketing">Content Marketing</p></a>
+                        <a href="#ContentMarketing">
+                            <p class="triangular content-marketing">Content Marketing</p>
+                        </a>
                     </slide>
                     <slide :index="6">
                         <a href="#Analytics">
@@ -128,10 +139,14 @@
                         </a>
                     </slide>
                     <slide :index="10">
-                        <a href="#eCommerce"><p class="triangular">eCommerce</p></a>
+                        <a href="#eCommerce">
+                            <p class="triangular">eCommerce</p>
+                        </a>
                     </slide>
                     <slide :index="11">
-                        <a href="#MarketingTechnologiesSolutions"><p class="triangular martech">Mar-tech Solutions</p></a>
+                        <a href="#MarketingTechnologiesSolutions">
+                            <p class="triangular martech">Mar-tech Services</p>
+                        </a>
                     </slide>
 
 
@@ -140,9 +155,10 @@
             <div class="space"></div>
             <div class="row">
                 <div class=" col-md-6">
+
                 </div>
                 <div class=" col-md-6">
-                    <a href="#portfolio" class="js-scroll-trigger">
+                    <a href="#caseStudys" class="js-scroll-trigger">
                         <div class="chevron"></div>
                         <div class="chevron"></div>
                         <div class="chevron"></div>
@@ -356,7 +372,7 @@
         </div>
     </section>
     <!--End of eCommerce-->
-    <!--Marketing Technologies Solutions-->
+    <!--Marketing Technologies Services-->
     <section class="page-section container services-section " id="MarketingTechnologiesSolutions">
         <div class="row">
 
@@ -365,7 +381,7 @@
             </div>
 
             <div class="col-md-9 order-md-1">
-                <p class="Solution_subHeader">Marketing Technologies Solutions</p>
+                <p class="Solution_subHeader">Marketing Technologies Services</p>
                 <p class="Solutions_litext">Mapping and building organizational processes tailored to the digital age - BPR</p>
                 <p class="Solutions_litext">Building personalization and marketing automation processes - MA</p>
                 <p class="Solutions_litext">Technological innovation and unique digital solutions</p>
@@ -374,7 +390,7 @@
             </div>
         </div>
     </section>
-    <!--End of Marketing Technologies Solutions-->
+    <!--End of Marketing Technologies Services-->
 
 </div>
 
@@ -382,6 +398,17 @@
 @section scripts
 {
     <script>
+
+
+        
+        $(".triangular-carousel").attr(":space", "200");
+        if ($(window).width() < 769) {
+            $("#triangularcarousel").removeClass("container");
+         $(".triangular-carousel").attr(":space", "100");
+            $(".triangular-carousel").attr(":width", "374");
+            $(".triangular-carousel").attr(":height", "237");
+
+        }
         $('.nav-link').removeClass("active");
         $('.Services').addClass("active");
         $(document).ready(function () {
@@ -473,7 +500,6 @@
         /* end dot nav */
 
 
-
     </script>
     <script>
 
@@ -501,10 +527,10 @@
                 startAutoplay: function () {
                     var t = this;
                     this.autoplay &&
-                        (this.autoplayInterval = setInterval(function () {
+                    (this.autoplayInterval = setInterval(function () {
                             "ltr" === t.dir ? t.goPrev() : t.goNext()
                         },
-                            this.autoplayTimeout))
+                        this.autoplayTimeout))
                 }
             }
         })

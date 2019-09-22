@@ -28,20 +28,20 @@ namespace GoNewWebsite.Controllers
         }
 
 
-        //public async Task<ActionResult> Page(string name)
-        //{
-        //    var results = await GoWebsiteCache.GetWebsitePages();
-        //    WebsitePage page = results.SingleOrDefault(x => x.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
-        //    List<Section> sections = await GoWebsiteCache.GetSections();
-        //    ViewBag.Sections = sections;
-        //    return View(page);
-        //}
+        public async Task<ActionResult> Page()
+        {
+            //var results = await GoWebsiteCache.GetWebsitePages();
+            //WebsitePage page = results.SingleOrDefault(x => x.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
+            //List<Section> sections = await GoWebsiteCache.GetSections();
+            //ViewBag.Sections = sections;
+            return View();
+        }
 
         public async Task<ActionResult> About()
         {
             WebsitePage website = new WebsitePage
             {
-                HeaderPage = new HeaderPage { Main = "About ", Content = "GO is an award-winning digital agency, specializing in high scale performance marketing and eCommerce for global brands. \r\n" +
+                HeaderPage = new HeaderPage { Main = "About Us ", Content = "GO is an award-winning digital agency, specializing in high scale performance marketing \r\n and eCommerce for global brands. \r\n" +
                                                                          "We offer a full in-house digital solution and services. From initial strategy, building high converting eCommerce websites, mobile apps, managing Amazon stores and as well as up to Complex performance managing accounts across all digital media channels including dip level data analysis and conversion rate optimization for ultimate business results!\r\n"
                 }
 
@@ -51,11 +51,11 @@ namespace GoNewWebsite.Controllers
             return View();
         }
 
-        public ActionResult Solutions()
+        public ActionResult Services()
         {
             WebsitePage website = new WebsitePage
             {
-                HeaderPage = new HeaderPage { Main = "Solutions ", Content = "GO’s Signature advantage offers High Def Digital Marketing with a robust portfolio including: " }
+                HeaderPage = new HeaderPage { Main = "Services ", Content = "GO’s Signature advantage offers High Def Digital Marketing with a robust portfolio including: " }
 
                 };
 

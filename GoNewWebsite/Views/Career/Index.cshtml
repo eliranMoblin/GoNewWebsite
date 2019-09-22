@@ -1,6 +1,8 @@
-﻿@model List<GoNewWebsite.Models.Jobs>
+﻿@using Common.ExtensionMethods
+@model List<GoNewWebsite.Models.Jobs>
 @{
     ViewBag.Title = "Career";
+    int counter = 0;
 }
 
 
@@ -23,9 +25,9 @@
 
         </div>
     </div>
-
+    <div class="space"></div>
     <div class="row">
-        <div class="space"></div>
+
         <div class=" col-md-6">
         </div>
         <div class=" col-md-6">
@@ -37,6 +39,7 @@
 
         </div>
     </div>
+    <div class="space"></div>
 </section>
 
 
@@ -45,16 +48,75 @@
         <p class="ourCustomer">משרות פתוחות </p>
 
     </div>
-    <div class="row">
-        <div class="container-fluid mt-4" style="color: black">
-            <div class="jobs-card">
+    
+    
+    
+    @*<div class="row">
+        @foreach (var article in Model)
+        {
+            if (counter != 0 && counter % 3 == 0)
+            {
+                @:</div>
+                @:<div class="row">
+            }
+
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <img src="~/Images/CAREERS.png" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+                    <div class="caption">
+                        <h3 id="thumbnail-label">@article.Name</h3>
+                        <p>@article.Description</p>
+                    </div>
+                </div>
+            </div>
+
+            counter++;
+        }
+    </div>*@
+    
+    <div class="container">
+        @foreach (var row in Model.ToArray().Split(3))
+        {
+            
+            <div class="row justify-content-center">
+                
+                @foreach (var item in row)
+                {
+
+                    <div class="col-md-4 mb-4 card-job">
+            
+                        <a class="hrefPosition" href="@Url.Action("Position", new {positionId = @item.Uid})">
+                            
+                            <img src="~/Images/CAREERS.png" class="img-fluid">
+                            <div class="card-caption">
+                                @item.Name
+                            </div>
+                            
+                         
+                        </a>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+    
+    @*<div class="-thumbnail">
+            <img src="~/Images/CAREERS.png" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+            <div class="card-text">
+                <h5 class="card-position">@article.Name</h5>
+            </div>
+        </div>*@
+
+    @*<div class="container">
+            
+
                 <div class="row justify-content-center">
                     @foreach (var item in @Model)
                     {
                         
-                    <div class="col-md-3 mb-4">
+                    <div class="col-md-3   job-card ">
                         
-                        <div class=" job-card img-fluid">
+                        
                             
                             <a class="hrefPosition" href="@Url.Action("Position", new {positionId = @item.Uid})">
                                 <img src="~/Images/CAREERS.png" />
@@ -65,17 +127,17 @@
                             </a>
                         </div>
                         
-                    </div>
+                    
                         
                     }
 
 
 
-                </div>
+            
             </div>
 
-        </div>
-    </div>
+        </div>*@
+    
 </section>
 
 

@@ -1,19 +1,25 @@
-﻿
-
-<section class="page-section container" id="aboutOffice">
-    <div class="row">
-        <div class="container-fluid">
-            <div class="container">
-                <h2 class="about_office">We Understand</h2>
-                <div class="col-sm-10  offset-sm-1">
-                    <p class="about_office_text">
-                        As a company founded in the heart of “Start-up Nation”, GO has an entrepreneur spirit with global account experience. We understand what’s needed to solve key challenges, to win over the competitors and more importantly, capitalize on the market dynamics. 
-                    </p>
-                </div>
-            </div>
+﻿@using Entities.Website
+@{
+    var culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name.ToLowerInvariant();
+    WebsitePage website = ViewBag.Website;
+}
+<section class="page-section d-block  d-sm-none" id="aboutOffice">
+    <div class="">
+        <div class="container-fluid text-center">
+            <p class="main_subHeader  " style="white-space: pre-line">@Html.Raw(website.HeaderPage.Content)</p>
         </div>
     </div>
+    
 
+</section>
+<section class="page-section " id="aboutOffice">
+    <div class="container">
+        <h2 class="about_office">We Understand</h2>
+        <p class="about_office_text">
+            As a company founded in the heart of “Start-up Nation”, GO has an entrepreneur spirit with global account experience. We understand what’s needed to solve key challenges, to win over the competitors and more importantly, capitalize on the market dynamics.
+        </p>
+    </div>
+    <div class="space-cusotm"></div>
     <div class="row">
         <div class=" col-md-6">
         </div>
@@ -30,20 +36,21 @@
 
 
 
-<section class="page-section container" id="weDeliver">
-    <div class="row">
-        <div class="container-fluid">
+<section class="page-section container-fluid" id="weDeliver">
+    <div class="DVideo"></div>
+    <div class="">
+        
             <div class="container">
                 <h2 class="about_office">We Deliver</h2>
-                <div class="col-sm-10  offset-sm-1">
+                
                     <p class="about_office_text">
                         We bring passion to every customer. Every brand. Every time. For over a decade, our partners have trusted us to deliver impactful results and sustained growth in the global marketplace.
                     </p>
-                </div>
+                
             </div>
-        </div>
+        
     </div>
-
+    <div class="space-cusotm"></div>
     <div class="row">
         <div class=" col-md-6">
         </div>
@@ -59,104 +66,108 @@
 </section>
 
 
-<section class="page-section container" id="WeGOBeyond">
-    <div class="row">
-        <div class="container-fluid">
-            <div class="container">
-                <h2 class="about_office">We GO Beyond </h2>
-                <div class="col-sm-10  offset-sm-1">
-                    <p class="about_office_text">
-                        Our culture is built on pushing the boundaries of what is possible. We believe in becoming experts in what we do. Our team is constantly adopting the latest technologies even before our customers need it. We will always be the first to try new things staying ahead of competition.
-                    </p>
+    <section class="page-section container" id="WeGOBeyond">
+        <div class="row">
+            <div class="container-fluid">
+                <div class="container">
+                    <h2 class="about_office">We GO Beyond </h2>
+                    
+                        <p class="about_office_text">
+                            Our culture is built on pushing the boundaries of what is possible. We believe in becoming experts in what we do. Our team is constantly adopting the latest technologies even before our customers need it. We will always be the first to try new things staying ahead of competition.
+                        </p>
+                    
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class=" col-md-6">
-        </div>
-        <div class=" col-md-6">
-            <a href="#GOBeyond" class="js-scroll-trigger">
-                <div class="chevron"></div>
-                <div class="chevron"></div>
-                <div class="chevron"></div>
-            </a>
-
-        </div>
-    </div>
-</section>
-
-
-<section class="page-section container" id="GOBeyond">
-    <div class="row">
-        <div class="container-fluid">
-            <div class="container">
-                <h2 class="about_office">GO Beyond</h2>
-                <div class="col-sm-10  offset-sm-1">
-                    <p class="about_office_text">
-                        GO offers the perfect combination of talented resources and cutting-edge technology based on our core strengths and commitment to <b> Performance Marketing and eCommerce. </b>
-                    </p>
-                    <p class="about_office_text">
-                        GO’s Signature advantage offers <b>High Def Digital Marketing </b>with a robust portfolio including:
-                    </p>
-                </div>
-
-                
+        <div class="space"></div>
+        <div class="row">
+            <div class=" col-md-6">
             </div>
-            <div class="row" dir="ltr">
+            <div class=" col-md-6">
+                <a href="#GOBeyond" class="js-scroll-trigger">
+                    <div class="chevron"></div>
+                    <div class="chevron"></div>
+                    <div class="chevron"></div>
+                </a>
 
-                <div class="col-md-6 col-sm-6">
-                    <p class="col-header">
-                        Strategy
-                    </p>
-                    <p class="col-text">
-                        We <b>GO </b> beyond market insights, with a customer journey that converts to tangible actionable results including an understanding of customer transparency.
-                    </p>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <p class="col-header">
-                        Creative
-                    </p>
-                    <p class="col-text">
-                        We <b>GO </b> beyond developing and executing promotional content with concept-to-testing messaging campaigns that engage and surpass across multiple channels.
-                    </p>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <p class="col-header">
-                        Human Technology
-                    </p>
-                    <p class="col-text">
-                        We <b>GO </b> beyond developing and executing promotional content with concept-to-testing messaging campaigns that engage and surpass across multiple channels.
-                    </p>
-                </div>
-                @*<div class="col-md-6 col-sm-6">
-                    <p class="col-header">
-                        Digital Performance eCommerce (DPE).
-                    </p>
-                    <p class="col-text">
-                        We <b>GO </b> beyond your traditional spend with our full stack service of ROI analytics, KPIs and dashboard insights, driving long term impactful traffic.
-                    </p>
-                </div>*@
-                <div class="col-md-6">
-                    <p class="col-header">
-                        PPC
-                    </p>
-                    <p class="col-text">
-                        We <b>GO </b> GO beyond maximizing ROAS with cost effective LTV models, sales funnels and cross-platform touch points for superior customer acquisition costs.
-                    </p>
-                </div>
             </div>
         </div>
-    </div>
-
- 
-</section>
+    </section>
 
 
-@section scripts
+    <section class="page-section " id="GOBeyond">
+        <div class="">
+            <div class="container-fluid">
+                <div class="container ">
+
+                    
+                    <div class="col-md-12 ">
+                        
+                        <p class="about_office_text">
+                            GO’s Signature advantage offers <b>High Def Digital Marketing </b>with a robust portfolio including:
+                        </p>
+                    </div>
+
+
+                </div>
+                <div class="container">
+                    <div class="row" dir="ltr">
+
+                        <div class="col-md-6 col-sm-6">
+                            <p class="col-header">
+                                Strategy
+                            </p>
+                            <p class="col-text">
+                                We <b>GO </b> beyond market insights, with a customer journey that converts to tangible actionable results including an understanding of customer transparency.
+                            </p>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <p class="col-header">
+                                Creative
+                            </p>
+                            <p class="col-text">
+                                We <b>GO </b> beyond developing and executing promotional content with concept-to-testing messaging campaigns that engage and surpass across multiple channels.
+                            </p>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <p class="col-header">
+                                Human Technology
+                            </p>
+                            <p class="col-text">
+                                We <b>GO </b> beyond developing and executing promotional content with concept-to-testing messaging campaigns that engage and surpass across multiple channels.
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="col-header">
+                                PPC
+                            </p>
+                            <p class="col-text">
+                                We <b>GO </b> GO beyond maximizing ROAS with cost effective LTV models, sales funnels and cross-platform touch points for superior customer acquisition costs.
+                            </p>
+                        </div>
+                    </div>
+
+                    @*<div class="col-md-6 col-sm-6">
+                            <p class="col-header">
+                                Digital Performance eCommerce (DPE).
+                            </p>
+                            <p class="col-text">
+                                We <b>GO </b> beyond your traditional spend with our full stack service of ROI analytics, KPIs and dashboard insights, driving long term impactful traffic.
+                            </p>
+                        </div>*@
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    @section scripts
 {
-    <script>
-        $('.nav-link').removeClass("active");
-        $('.About').addClass("active");
-    </script>
-}
+        <script>
+            $('.nav-link').removeClass("active");
+            $('.About').addClass("active");
+                    //$('.container').addClass("container-fluid");
+                    //$('.container').removeClass("container");
+        </script>
+    }

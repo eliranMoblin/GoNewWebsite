@@ -18,17 +18,23 @@
 
 body {
     /*text-align: right !important;*/
-    background: url('../images/go_desktop backgroung.jpg') no-repeat center center fixed;
-    background-size: 100% 100%;
+    /*background: url('../images/go_desktop backgroung.jpg') no-repeat center center fixed;*/
+
+    /*background-size: 100% 100%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: cover;*/
 }
 
+
+
+
+
 .career-header {
-    color: #ed312e;
-    font-size: 65px;
+    /*color: #ed312e;*/
+    font-size: 62px;
+    font-weight: 400;
 }
 
 .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
@@ -39,12 +45,14 @@ body {
     padding: 0 !important;
     font: inherit;
 }
-
+.description {
+    margin-top: -63px;
+}   
 html,
 body {
     /*height: 100%;*/
     margin: 0;
-    /*background-color: transparent;*/
+    background-color: #1b242c;
     color: white;
 }
 /* layout */
@@ -60,8 +68,7 @@ body {
 /* Header**/
 header {
     position: relative;
-    /*background-color: black;*/
-    height: 75vh;
+    height: 50vh;
     min-height: 32rem;
     width: 100%;
     overflow: hidden;
@@ -99,6 +106,31 @@ header {
     }
 
 
+section {
+    position: relative;
+    /*height: 50vh;*/
+    /*min-height: 32rem;*/
+    width: 100%;
+    padding-bottom: 8%;
+    /*overflow: hidden;*/
+}
+form.form-inline.justify-content-center {
+    margin-left: -1.6%;
+}
+#TreVideo {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
 
 @media (pointer: coarse) and (hover: none) {
     /*header {
@@ -221,9 +253,9 @@ a.nav-link {
 }
 
 .footer-strip {
-    height: 36px;
+    /*height: 36px;*/
     text-align: right;
-    background-color: #1e2a32;
+    background-color: #1b242c;
     margin-left: -1%;
     padding-bottom: 45px;
     margin-right: -1%;
@@ -374,7 +406,7 @@ svg {
 }
 
 
-
+                                                                                                                                                                                
 /**Agency*/
 /*!
  * Start Bootstrap - Agency v5.2.1 (https://startbootstrap.com/template-overviews/agency)
@@ -392,10 +424,10 @@ p {
 }
 
 .space {
-    padding-bottom: 10%;
+    padding-bottom: 11%;
 }
 .space-cusotm {
-    padding-bottom: 7%;
+    padding-bottom: 5%;
 }
 /*.overlay {
     position: absolute;
@@ -419,9 +451,31 @@ p {
     transform: scale(0.9);
 }
 
-.card-position {
+
+.card-job:hover {
+    
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+}
+.card-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 40%;
+    left: 14%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: black !important;
     text-align: center;
-    transform: translate(-6%, -456%);
+    
+}
+
+.card-position {
+    background-image: url('../Images/CAREERS.png') ;
+    text-align: center;
+    color: black;
+    /*transform: translate(0%, -456%);*/
 }
 
 .text {
@@ -445,7 +499,7 @@ p {
     text-decoration: unset !important;
     text-align: center;
     left: 4%;
-    position: absolute;
+    
     /*top: 67%;*/
     font-weight: 600;
 }
@@ -461,10 +515,9 @@ h6 {
 }
 
 
-.page-section {
-    padding: 100px 0;
+/*.page-section {
+    padding: 0% 0;
 }
-
     .page-section h2.section-heading {
         font-size: 40px;
         margin-top: 0;
@@ -478,7 +531,7 @@ h6 {
         margin-bottom: 75px;
         text-transform: none;
         font-family: 'Rubik';
-    }
+    }*/
 
 /*@media (min-width: 768px) {
     section {
@@ -1227,10 +1280,10 @@ div#triangular {
     background-size: contain;
 }
 
-.carousel-3d-slide img {
+/*.carousel-3d-slide img {
     width: auto !important;
     padding: 15px;
-}
+}*/
 
 .carousel-3d-slide {
     border-radius: 0.95rem !important;
@@ -1276,7 +1329,6 @@ div#triangular {
 
     #triangular .carousel-3d-container .carousel-3d-slider .carousel-3d-slide.right-1 .triangular {
         color: #232c33 !important;
-        font-size: 12.5px;
     }
 
 
@@ -1291,7 +1343,6 @@ div#triangular {
 
     #triangular .carousel-3d-container .carousel-3d-slider .carousel-3d-slide.right-2 .triangular {
         color: #182229 !important;
-        font-size: 12.5px;
     }
 
 #triangular .carousel-3d-container .carousel-3d-slider .carousel-3d-slide.left-2 {
@@ -1312,7 +1363,11 @@ div#triangular {
     background-image: url('../Images/Rectangle4.png');
     max-width: 100%;
     height: auto;
+    
+    
 }
+
+
 
     #triangular .carousel-3d-container .carousel-3d-slider .carousel-3d-slide.right-3 .triangular {
         color: #19232a !important;
@@ -1345,15 +1400,17 @@ div#triangular {
 .services {
     background-image: linear-gradient(#1c242e, #1B242C);
     /*background-color: #1c242e !important;*/
-    padding: 30.9px 0 !important;
+    padding: 46px 0 !important
 }
 
 .customers_section {
     background-color: #1b242c !important;
+    z-index: 999 !important;
 }
 
 .footer_section {
     background-color: #1b242c !important;
+    padding: 50px 0;   
 }
 
 #story .carousel-3d-container .carousel-3d-slider .carousel-3d-slide.left-1 {
@@ -1408,9 +1465,10 @@ div#triangular {
 }
 
 .text-header {
+    text-align: center;
     white-space: pre-line;
     font-size: 63px !important;
-    line-height: 2;
+    padding-top: 10%;
 }
 
 .main_subHeader {
@@ -1465,7 +1523,7 @@ label.btn.btn-lang.active {
 
 .card-body {
     text-align: left !important;
-    margin: 3%;
+    /*margin: 3%;*/
 }
 
 .devlopment {
@@ -1480,13 +1538,11 @@ p.card-title {
     p.card-title span {
         /*padding-left: 102px;*/
     }
-    
+
 
 img.logo-card {
-    /*margin-top: 8%;
-    margin-right: 8%;
-    margin-bottom: 8%;*/
-    /*margin-left: 8%;*/
+    margin-left: 4%;
+    width: 55% !important;
 }
 
 h5.card-title {
@@ -1531,6 +1587,7 @@ p.card-text {
     border-color: rgb(237,48,45);
     width: inherit;
     height: 53px;
+    font-size: 19px;
     margin-top: -8px;
     font-weight: normal;
 }
@@ -1765,6 +1822,7 @@ p.card-text {
     margin-right: 20px;
     border-bottom: 0;
     padding-right: 15px;
+    z-index: 999;
 }
 
 .nav-tabs .nav-link {
@@ -1817,17 +1875,25 @@ p.card-text {
     text-decoration: underline;
 }
 .logo-section {
-    float: left;
+    float: right;
+    /*text-align: center;
+    vertical-align: middle;
+    display: table-cell;*/
+
 }
 
+
+
 .read-more-card {
-    padding-right: 18%;
+    bottom: 32px;
+    left: 702px;
     font-weight: 600;
+    position: absolute;
     text-decoration: underline !important;
 }
 
 .logo-card {
-    padding: 0px !important;
+    /*margin: 12px !important;*/
 }
 
 .nav-tabs .nav-link.active {
@@ -1974,21 +2040,43 @@ video {
 .tab-pane {
 }
 
-.item-content {
-    margin: 0px;
+/*.item-content {
+    margin: 43px;
+}*/
+.item-content p {
+    font-size: 19px;
 }
 
-    .item-content ul {
-        padding-left: 0.2%;
-    }
+.item-content ul {
+    padding-left: 0.2%;
+}
 
+
+.description p {
+    line-height: 2rem;
+    text-align: center;
+    background-position: left center;
+    background-repeat: no-repeat;
+    font-size: 21px;
+    /*padding-left: 20px;*/
+}
 .requirement ul li {
     line-height: 2.2rem;
     background-image: url(../Images/triangle_eng.png);
     background-position: left center;
     background-repeat: no-repeat;
-    font-size: 25px;
+    font-size: 21px;
     padding-left: 20px;
+}
+.requirement {
+    /*margin-top: -50px;*/
+}
+
+a.btn.btn-primary {
+    padding: 11px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .item-content ul li {
@@ -2011,16 +2099,25 @@ video {
     color: white !important;
     text-decoration: unset;
 }
-
-.location {
-    text-align: center;
-    color: white;
+.location-geo {
+    color: white !important;
+    text-decoration: unset;
 }
+.location {
+    color: white !important;
+    text-decoration: unset;
+}
+
+.all-rights {
+    color: white !important;
+    text-decoration: unset;
+}
+
+
 
 .ourCustomer {
     text-align: center;
     font-size: 36px;
-    padding-bottom: 25px;
 }
 
 
@@ -2028,8 +2125,16 @@ p.section-header {
     text-align: center;
     font-size: 46px;
     padding-bottom: 25px;
-}
+    text-align: center;
+    font-size: 46px;
+    padding-bottom: 25px;
+    position: relative !important;
 
+}
+.section-header {text-align: center;
+    font-size: 46px;
+    padding-bottom: 25px;
+    position: relative !important; }
 section[data-title] {
     font-family: 'Rubik';
 }
@@ -2050,7 +2155,9 @@ section.active {
     border-color: transparent;
 }
 
-
+#weDeliver .DVideo #TreVideo {
+    top: 43% !important;
+}
 
 .result-section {
     font-size: 62px;
@@ -2058,8 +2165,15 @@ section.active {
     color: #e43735;
 }
 .about_office {
+    position: relative;
     font-size: 62px;
     font-weight: normal !important;
+}
+
+.caseStudy_header{
+    font-size: 62px;
+    font-weight: normal !important;
+    margin-top: -53px;
 }
 
 .about_office_text {
@@ -2101,10 +2215,10 @@ section.active {
     transition: opacity 1s ease;
 }*/
 p.ql-align-right.ql-direction-rtl {
-    font-size: 22px;
+    /*font-size: 22px;
     text-align: center;
     white-space: pre-line;
-    line-height: 1.4;
+    line-height: 1.4;*/
     /*font-size: 28px;*/
 }
 
@@ -2121,7 +2235,8 @@ p.ql-align-right.ql-direction-rtl {
 
 
 
-.fullscreen-bg {
+
+/*.fullscreen-bg {
     position: fixed;
     top: 0;
     right: 0;
@@ -2137,7 +2252,7 @@ p.ql-align-right.ql-direction-rtl {
     left: 0;
     width: 100%;
     height: 100%;
-}
+}*/
 
 
 .owl-nav {
@@ -2185,7 +2300,15 @@ p.ql-align-right.ql-direction-rtl {
     background-repeat: no-repeat;
     padding-left: 20px; /* Adjust according to image size to push text across. */
 }
-
+#solution {
+    margin-top: -9%;
+}
+#results {
+    margin-top: -9%;
+}
+.graph {
+    margin: 5px;
+}
 .ministry_case_study {
     background-image: url('../Images/triangle_eng.png');
     text-align: left;
@@ -2193,7 +2316,6 @@ p.ql-align-right.ql-direction-rtl {
     background-repeat: no-repeat;
     padding-bottom: 6%;
     font-size: 22px;
-    
     white-space: pre-line;
     line-height: 1.4;
     padding-left: 20px; /* Adjust according to image size to push text across. */
@@ -2554,21 +2676,73 @@ Main components
     height: 180px !important;
     width: 100%;
     cursor: pointer;
+    margin-right: 0.25rem !important;
+    margin-left: 5.5rem !important;
+    margin-bottom: 1.5rem !important;   
 }
 
-.jobs-card {
+/*.jobs-card {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+}*/
+
+footer {
+    background-color: #1b242c;
+    width: 100%;
+    bottom: 0;
+    font-weight: lighter;
+    color: white;
 }
+
+    footer h3 {
+        font-weight: lighter;
+    }
+
+    footer ul {
+        padding-left: 5px;
+        list-style: none;
+    }
+
+    footer p {
+        text-align: justify;
+        font-size: 15px;
+    }
+
+    footer iframe {
+        width: 100%;
+        position: relative;
+        height: 170px;
+    }
+
+.sm {
+    list-style: none;
+    overflow: auto;
+}
+
+    .sm li {
+        display: inline;
+        padding: 5px;
+        float: left;
+    }
+
+        .sm li a img {
+            width: 32px;
+        }
+
 
 #caseStudy {
     background-color: transparent;
     padding-top: 0;
     /*margin-bottom: -72px;*/
-    margin-top: -3%;
+    margin-top: -6%;
+}
+
+
+.card-img {
+    margin: 11px;
 }
 /*.video-responsive {
     padding-bottom: 56.25%;
@@ -2619,9 +2793,10 @@ Main components
     }
 }
 
-@media (min-width: 576px) {
+/*@media (min-width: 576px) {
     .jobs-card {
-        max-width: 540px;
+        max-width: 440px;
+
     }
 }
 
@@ -2635,7 +2810,7 @@ Main components
     .jobs-card {
         max-width: 960px;
     }
-}
+}*/
 
 @media (min-width: 1200px) {
     .jobs-card {
@@ -2808,9 +2983,12 @@ Main components
 
 @media all and (min-width: 769px) {
     .tab-content {
-        float: left;
+        /*float: left;
         height: 503px;
         width: 70% !important;
+        margin-left: -35px;*/
+        height: 503px;
+        max-width: 66% !important;
         margin-left: -35px;
     }
 
@@ -2953,6 +3131,13 @@ Main components
 
 
 @media (max-width: 867px) {
+
+    #TreVideo {
+        /*position: unset !important;
+        z-index: 0;
+        width: 100%;*/
+        transform: translateX(-50%) translateY(-60%);
+    }
     /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
     .triangular-float {
         float: right;
@@ -2971,29 +3156,24 @@ Main components
     }
 
     .col-text {
-        font-size: 16px;
+        font-size: 19px;
     }
 
     .col-header {
         padding-top: 13%;
-        font-size: 18px;
+        font-size: 19px;
     }
 
     .btn-form {
         padding-top: 10%;
     }
 
-    header {
+    /*header {
         min-height: 42rem;
-    }
+    }*/
 
     .footer-strip {
-        height: 36px;
-        text-align: right;
-        background-color: #1e2a32;
-        /* margin-left: -1%; */
-        padding-bottom: 45px;
-        margin-right: 0%;
+        
     }
 
     body {
@@ -3194,7 +3374,7 @@ Main components
         margin-left: auto;
     }
     .about_office {
-        font-size: 32px;
+        font-size: 31px;
         font-weight: normal !important;
     }
 
@@ -3206,7 +3386,10 @@ Main components
         padding-top: 0;
         margin-bottom: -72px;
         margin-top: -45%;
+        
     }
+
+    
     .services {
         width: 100%;
         background-image: unset !important;
@@ -3214,10 +3397,11 @@ Main components
         padding: 30.9px 0 !important;
     }
     .text-header {
+        text-align: center;
         white-space: pre-line;
-        font-size: 63px !important;
+        font-size: 42px !important;
         line-height: 2;
-        padding-top: 58px;
+        padding-top: 64%;
     }
     /*.col-image-section {
         height: 25px;
@@ -3229,7 +3413,118 @@ Main components
         width: 100%;
         overflow: hidden;
     }*/
-}
+    .job-card {
+        height: 177px !important;
+        width: 79%;
+        cursor: pointer;
+        margin-right: 22.25rem !important;
+         margin-left: 0rem !important; 
+        margin-bottom: 1.5rem !important;
+    }
+    .career-header {
+        font-size: 38px;
+    }
+    .requirement ul li {
+        line-height: 2.2rem;
+        background-image: url(../Images/triangle_eng.png);
+        background-position: left center;
+        background-repeat: no-repeat;
+        font-size: 18px;
+        padding-left: 20px;
+        margin: 0 0 30px 0;
+    }
 
+    form.form-inline.justify-content-center {
+        margin-left: 0%;
+    }
+
+    p.card-title {
+        font-size: 17px;
+    }
+    h5.card-title {
+        font-size: 17px;
+        padding-top: 0%;
+    }
+    p.card-text {
+        font-size: 17px;
+    }
+    .read-more-card {
+        bottom: -17px;
+        left: 143px;
+        font-weight: 600;
+        position: absolute;
+        text-decoration: underline !important;
+    }
+    img.logo-card {
+    margin-left: 7%;
+    width: 70% !important;
+}
+    .caseStudy_header {
+     font-size: 22px;
+     font-weight: normal !important;
+     margin-top: -53px;
+ }
+
+    .main_subHeader {
+        font-size: 19px;
+        white-space: pre-line !important;
+    }
+
+    
+    section {
+        position: relative;
+        width: 100%;
+        padding-bottom: 26%;
+     
+    }
+    .about_office_text {
+         font-size: 19px;
+        position: relative;
+         text-align: center;
+         white-space: pre-line;
+         line-height: 1.6;
+     }
+    header {
+        position: relative;
+         /*height: unset; 
+         min-height: unset; 
+         width: unset;*/ 
+        overflow: hidden;
+    }
+    header video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: 0;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    header .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    header .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .all-rights {
+        color: white !important;
+        text-decoration: unset;
+        padding-top: 13%;
+    }
+}
 
 

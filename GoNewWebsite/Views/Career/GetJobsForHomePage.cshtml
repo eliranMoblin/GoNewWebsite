@@ -4,76 +4,82 @@
     var isActive = true;
 }
 
-<section class="page-section container" id="Job">
-    <div class="section-header">
-        <p class="ourCustomer">Careers</p>
+<section class="page-section container-fluid" id="Job">
+    <div id="3DVideo_1"></div>
+    <div class="container">
+        <div class="section-header">
+            <p class="ourCustomer">Careers</p>
 
-    </div>
-    <div class="row">
+        </div>
+
         <div class="container">
+            <div class="row">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
 
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-
-                @foreach (var item in Model)
-                {
-
-                    if (isActive)
+                    @foreach (var item in Model)
                     {
-                        <li class="nav-item">
-                            <a class="nav-link job-il active" data-toggle="tab" href="#@item.Name.Replace(" ", string.Empty)" role="tab" aria-controls="@item.Name.Replace(" ", string.Empty)"> @item.Name</a>
-                        </li>
-                        { isActive = false; }
+
+                        if (isActive)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link job-il active" data-toggle="tab" href="#@item.Name.Replace(" ", string.Empty)" role="tab" aria-controls="@item.Name.Replace(" ", string.Empty)"> @item.Name</a>
+                            </li>
+                            {
+                                isActive = false;
+                            }
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link job-il" data-toggle="tab" href="#@item.Name.Replace(" ", string.Empty)" role="tab" aria-controls="@item.Name.Replace(" ", string.Empty)"> @item.Name</a>
+                            </li>
+                        }
                     }
-                    else
-                    {
-                        <li class="nav-item">
-                            <a class="nav-link job-il" data-toggle="tab" href="#@item.Name.Replace(" ", string.Empty)" role="tab" aria-controls="@item.Name.Replace(" ", string.Empty)"> @item.Name</a>
-                        </li>
+                    @{
+                        isActive = true;
                     }
-                }
-                @{
-                    isActive = true;
-                }
 
 
-            </ul>
-            <div class="tab-content">
+                </ul>
+                <div class="tab-content">
 
 
-                @foreach (var item in Model)
-                {
-                    if (isActive)
+                    @foreach (var item in Model)
                     {
-                <div class="tab-pane active" id="@item.Name.Replace(" ", string.Empty)" role="tabpanel">
-                    <div class="item-content">
-                        @Html.Raw(@item.Details[0].Value)
-                        <p class="read-more"> <a class="" href="@Url.Action("Position", new {positionId = @item.Uid})">Apply Now</a></p>
-                    </div>
-                    
-                </div>
-                        isActive = false;
-                    }
-                    else
-                    {
-                        <div class="tab-pane" id="@item.Name.Replace(" ", string.Empty)" role="tabpanel">
-                            <div class="item-content">
-                                @Html.Raw(@item.Details[0].Value)
-                                <p class="read-more"> <a class="" href="@Url.Action("Position", new {positionId = @item.Uid})">Apply Now</a></p>
+                        if (isActive)
+                        {
+                            <div class="tab-pane active" id="@item.Name.Replace(" ", string.Empty)" role="tabpanel">
+                                <div class="item-content">
+                                    @Html.Raw(@item.Details[0].Value)
+                                    <p class="read-more"> <a class="" href="@Url.Action("Position", new {positionId = @item.Uid})">Apply Now</a></p>
+                                </div>
+
                             </div>
-                           
-                        </div>    
+                            isActive = false;
+                        }
+                        else
+                        {
+                            <div class="tab-pane" id="@item.Name.Replace(" ", string.Empty)" role="tabpanel">
+                                <div class="item-content">
+                                    @Html.Raw(@item.Details[0].Value)
+                                    <p class="read-more"> <a class="" href="@Url.Action("Position", new {positionId = @item.Uid})">Apply Now</a></p>
+                                </div>
+
+                            </div>
+                        }
+
                     }
-                    
-                }
 
 
+                </div>
+                <!-- /Bootstrap Tabs -->
+                <!-- Bootstrap Accordion -->
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"></div>
+                <!-- /Bootstrap Accordion -->
             </div>
-            <!-- /Bootstrap Tabs -->
-            <!-- Bootstrap Accordion -->
-            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"></div>
-            <!-- /Bootstrap Accordion -->
         </div>
     </div>
+    
 
 
 </section>

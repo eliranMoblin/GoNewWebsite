@@ -91,7 +91,7 @@
                     <a class="nav-link js-scroll-trigger About" href="@Url.Action("About", "Home")">About</a>
                 </li>
                 <li class="nav-item" nav-item="3">
-                    <a class="nav-link js-scroll-trigger Services" href="@Url.Action("Solutions", "Home")">Services</a>
+                    <a class="nav-link js-scroll-trigger Services" href="@Url.Action("Services", "Home")">Services</a>
                 </li>
                 <li class="nav-item" nav-item="2">
                     <a class="nav-link js-scroll-trigger Careers" href="@Url.Action("Index", "Career")">Careers</a>
@@ -126,7 +126,7 @@
 <header>
     <div class="overlay"></div>
     <div id="video"></div>
-       
+    <div class="container-fluid">
         <div class="container h-100">
             <div class="d-flex h-100 text-center align-items-center">
                 <div class="w-100 text-white">
@@ -135,150 +135,124 @@
                     {
                         <h1 class="display-3 text-header">@website.HeaderPage.Main</h1>
                         if (!string.IsNullOrEmpty(website.HeaderPage.Content))
-                         {
-                             <p class="main_subHeader mb-0" style="white-space: pre-line">@Html.Raw(website.HeaderPage.Content)</p>
-                         }
+                        {
+                        <div class="d-none d-md-block">
+                            <p class="main_subHeader  " style="white-space: pre-line">@Html.Raw(website.HeaderPage.Content)</p>
+                        </div>
+                            
+                        }
 
                     }
                     
                 </div>
             </div>
         </div>
+    </div>
+        
     </header>
 
 
-    <div class="container-fluid body-content">
-        <div class="fullscreen-bg">
-            <video loop muted autoplay poster="" class="fullscreen-bg__video">
+<div class="container-fluid body-content">
+
+    @*<video loop muted autoplay poster="" class="fullscreen-bg__video">
                 <source src="~/Videos/3D_1920x1000.mp4" type="video/mp4" />
 
-            </video>
-        </div>
-        @RenderBody()
-        <section class="page-section container footer_section" id="ContacUs">
-            <div class="section-header">
-                <p class="ourCustomer">Contact us</p>
-     
-                
-             
+            </video>*@
+    
+    @RenderBody()
+        
+ 
 
-
-
-            </div>
-
-            <form class="form-inline justify-content-center">
-                
-                <div class="col-md-3">
-                    <div class="input-group mb-2">
-                        <input type="text" class="form-control" id="FullName" placeholder="Full name">
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="input-group mb-2">
-                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Email">
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="input-group mb-2">
-                        <input type="tel" class="form-control" id="phoneNumber" placeholder="Phone">
-                    </div>
-                </div>
-                <div class="col-md-3  btn-form" >
-                    <button type="submit" class="btn btn-primary ">GO</button>
-                </div>
-                
-            </form>
-
-        </section>
+</div>
        
-   
+<section class=" container footer_section" id="ContactUs">
+    <div class="section-header">
+        <p class="ourCustomer">Contact us</p>
     </div>
-<footer class=" " style="max-height: 100px">
+
+    <form class="form-inline justify-content-center">
+
+        <div class="col-md-3">
+            <div class="input-group mb-2">
+                <input type="text" class="form-control" id="FullName" placeholder="Full name">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="input-group mb-2">
+                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Email">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="input-group mb-2">
+                <input type="tel" class="form-control" id="phoneNumber" placeholder="Phone">
+            </div>
+        </div>
+        <div class="col-md-3  btn-form">
+            <button type="submit" class="btn btn-primary ">Go</button>
+        </div>
+
+    </form>
+
+</section>
+<footer class="footer-strip">
     <div class="container">
-                
-        <div class="row">
-                        
-            <div class="col-md-5 ">
-                <a href="https://goo.gl/maps/P7mzRa2aPSvEmLQLA" target="_blank">
+        
+        <div class="row ">
 
-                    <p class="location">
-                        Giborey Israel 5, P.O.Box 8870, Netanya Israel.
-                        &nbsp; &nbsp;
-                        <i class="fa fa-map-marker"></i>
-                    </p>
-                </a>
-            </div>
-            <div class="col-md-3 ">
-                <a href="mailto:info@gim.co.il" class="location">
-                    <p class="">
-                        Office@@Gim.co.il
-                        &nbsp; &nbsp;
-                        <i class="fa fa-envelope"></i>
-                    </p>
-                </a>
-            </div>
-            <div class="col-md-3 ">
-                <a href="tel:09-8855824" class="location">
-                    <p class="">
-                        09-8855824
-                        &nbsp; &nbsp;
-                        <i class="fa fa-phone"></i>
-                    </p>
-                </a>
-            </div>
-
-
-                        
+        <div class="col-md-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d685.005626998908!2d34.85981077856146!3d32.27520927720782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sgo%20moblin!5e0!3m2!1sen!2sil!4v1569154191814!5m2!1sen!2sil" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
         </div>
+        <div class="col-md-6">
+            <ul>
+                <li>
+                    <a href="https://goo.gl/maps/P7mzRa2aPSvEmLQLA" target="_blank" class="location-geo">
+                        <p class="">
+                            <i class="fa fa-map-marker"></i>
+                            &nbsp; &nbsp;
+                            Giborey Israel 5, P.O.Box 8870, Netanya Israel.
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:Office@gim.co.il" class="location">
+                        <p class="">
+                            <i class="fa fa-envelope"></i>
+                            &nbsp; &nbsp;
+                            Office@@Gim.co.il
+                        </p>
+                    </a>
+                </li>
+                <li>
 
-    </div>
-    <div class="footer-strip">
+                    <a href="tel:09-8855824" class="location">
+                        <p class="">
+                            <i class="fa fa-phone"></i>
+                            &nbsp; &nbsp;
+                            09-8855824
+                        </p>
+                    </a>
+                </li>
+                <ul class="sm">
 
+                    <li><a href="https://www.linkedin.com/company/go-internet-marketing/about/" target="_blank"><i class="fab fa-linkedin fa-2x" style="color:white"></i></a></li>
+                    <li><a href="https://www.facebook.com/GoInternetMarketing/" target="_blank"><i class="fab fa-facebook-square fa-2x" style="color:white"></i></a></li>
+                </ul>
+                <li>
 
-        <div class="col-md-7">
-            <p dir="rtl">
-                All rights reserved to- 
-                <span dir="ltr">GO 2019</span>
-            </p>
+                    <a href="tel:09-8855824" class="all-rights">
+                        <p class="">
+                            <i class="far fa-copyright"></i>
+                            All rights reserved to- GO 2019
+                        </p>
+                    </a>
+                </li>
+            </ul>
         </div>
+        </div>
+        
     </div>
 </footer>
-    @*@using (Html.BeginForm("SetCulture", "Home"))
-        {
-            <fieldset>
-                <legend>@Resources.ChooseYourLanguage</legend>
 
-                <div class="control-group">
-                    <div class="controls">
-                        <label for="en-us">
-                            <input name="culture" id="en-us" value="en-us" type="radio" @selected("en-us", culture) /> English
-                        </label>
-                    </div>
-                </div>
-
-                <div class="control-group">
-                    <div class="controls">
-                        <label for="es">
-                            <input name="culture" id="es" value="es" type="radio" @selected("es", culture) /> Español
-                        </label>
-                    </div>
-                </div>
-
-                <div class="control-group">
-                    <div class="controls">
-                        <label for="ar">
-                            <input name="culture" id="he" value="he" type="radio" @selected("he", culture) /> עברית
-                        </label>
-                    </div>
-                </div>
-
-
-            </fieldset>
-
-
-
-
-        }*@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
@@ -348,6 +322,17 @@
             $('body').scrollspy({
                 target: '#mainNav',
                 offset: 56
+            });
+
+            var position = $('#ContactU'); 
+
+            $(window).scroll(function() {
+                var scroll = $('#ContactU'); 
+                if(scroll > position) {
+                    console.log('scrollUp');
+                    $('div').text('Scrolling Up Scripts');
+                }
+                position = scroll;
             });
 
             // Collapse Navbar
@@ -573,15 +558,30 @@
 <script type="text/javascript">
     $(document).ready(function () {
         
-        if ($(window).width() < 769)
-        {
+        if ($(window).width() < 361) {
+            $('.location-geo').html(function(i,h){
+                return h.replace(/&nbsp;/g,'');
+            });
+        }
+        if ($(window).width() < 769) {
+          
             var video =
                 "<video playsinline='playsinline' autoplay='autoplay' muted='muted' loop='loop'>\r\n <source src='/Videos/1920x520.mp4' type='video/mp4'>\r\n</video>";
             $('#video').html(video);
+            $('#3DVideo_1').html(
+                "<video id='TreVideo' preload='auto' autoplay='true' loop='loop' muted='muted' volume='0'><source src='/Videos/3D_1920x1000.mp4' type='video/mp4'></video>");
+            $('.DVideo')
+                .html(
+                    "<video id='TreVideo' preload='auto' autoplay='true' loop='loop' muted='muted' volume='0'><source src='/Videos/3D_1920x1000.mp4' type='video/mp4'></video>");
         } else {
             var video =
                 "<video playsinline='playsinline' autoplay='autoplay' muted='muted' loop='loop'>\r\n <source src='/Videos/1920x520.mp4' type='video/mp4'>\r\n</video>";
             $('#video').html(video);
+            $('#3DVideo_1').html(
+                "<video id='TreVideo' preload='auto' autoplay='true' loop='loop' muted='muted' volume='0'><source src='/Videos/3D_1920x1000.mp4' type='video/mp4'></video>");
+            $('.DVideo')
+                .html(
+                    "<video id='TreVideo' preload='auto' autoplay='true' loop='loop' muted='muted' volume='0'><source src='/Videos/3D_1920x1000.mp4' type='video/mp4'></video>");
         }
         getAccordion("#myTab", 769);
     });
@@ -589,3 +589,4 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+    
