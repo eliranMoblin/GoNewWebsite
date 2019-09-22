@@ -3441,28 +3441,35 @@ footer {
         font-size: 38px;
     }
     .requirement ul li {
-        line-height: 2.2rem;
+        line-height: 2.5rem;
         background-image: url(../Images/triangle_eng.png);
         background-position: left center;
         background-repeat: no-repeat;
-        font-size: 18px;
+        padding-left: 20px;
+        font-size: 19px;
+    }
+        /*line-height: 2.2rem;
+        background-image: url(../Images/triangle_eng.png);
+        background-position: left center;
+        background-repeat: no-repeat;
+        font-size: 19px;
         padding-left: 20px;
         margin: 0 0 30px 0;
-    }
+    }*/
 
     form.form-inline.justify-content-center {
         margin-left: 0%;
     }
 
     p.card-title {
-        font-size: 17px;
+        font-size: 19px;
     }
     h5.card-title {
-        font-size: 17px;
+        font-size: 19px;
         padding-top: 0%;
     }
     p.card-text {
-        font-size: 17px;
+        font-size: 19px;
     }
     .read-more-card {
         bottom: -17px;
@@ -3547,6 +3554,11 @@ footer {
         background-repeat: no-repeat;
         padding-left: 20px;
         font-size: 19px;
+    }
+
+    .requirement {
+        margin-left: -11%;
+        margin-top: -4%;
     }
 }
 
