@@ -51,7 +51,9 @@
                             <div class="tab-pane active" id="@item.Name.Replace(" ", string.Empty)" role="tabpanel">
                                 <div class="item-content">
                                     @Html.Raw(@item.Details[0].Value)
-                                    <p class="read-more"> <a class="" href="@Url.Action("Position", new {positionId = @item.Uid})">Apply Now</a></p>
+                                    <p class="read-more">
+                                         <a class="" href="@Url.Action("Position", new {positionId = @item.Uid})">Apply Now</a>
+                                    </p>
                                 </div>
 
                             </div>

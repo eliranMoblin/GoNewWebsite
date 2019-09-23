@@ -15,22 +15,6 @@
 
 
 
-
-body {
-    /*text-align: right !important;*/
-    /*background: url('../images/go_desktop backgroung.jpg') no-repeat center center fixed;*/
-
-    /*background-size: 100% 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;*/
-}
-
-
-
-
-
 .career-header {
     /*color: #ed312e;*/
     padding-bottom: 3.7%;
@@ -63,9 +47,6 @@ body {
     flex-flow: column;
 }
 
-.display-3 {
-    /*white-space: pre-line !important;*/
-}
 /* Header**/
 header {
     position: relative;
@@ -106,6 +87,7 @@ header {
         z-index: 1;
     }
 
+.no-header { padding-top: 19% !important;}
 
 section {
     position: relative;
@@ -143,7 +125,7 @@ form.form-inline.justify-content-center {
 }
 
 
-.video-responsive {
+/*.video-responsive {
     padding-bottom: 56.25%;
     position: relative;
     width: 100%;
@@ -158,9 +140,9 @@ form.form-inline.justify-content-center {
     width: 100%;
     background: #000;
     z-index: 5;
-}
+}*/
 
-#over_video {
+/*#over_video {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -172,7 +154,7 @@ form.form-inline.justify-content-center {
     font-family: Verdana, Arial, Helvetica, sans-serif;
     margin-top: 20%;
     text-shadow: 4px 4px 4px #5C433B;
-}
+}*/
 
 
 
@@ -217,13 +199,10 @@ html {
 }
 
 a.nav-link.js-scroll-trigger.active {
-    /*border-bottom: 5px solid red;
-    text-decoration: unset;*/
-    border-bottom: 5px solid red;
+    border-bottom: 2px solid red;
     display: inline-block;
-    padding-bottom: 10px;
-    /*font-family: sans-serif;*/
-}
+    padding-bottom: 1px !important;
+    }
 
 a.nav-link {
 }
@@ -462,7 +441,7 @@ p {
 .card-caption {
     position: absolute;
     right: 15%;
-    bottom: 40%;
+    bottom: 34%;
     left: 14%;
     z-index: 10;
     padding-top: 20px;
@@ -566,23 +545,24 @@ img::-moz-selection {
 }
 
 .btn-xl {
-    font-size: 18px;
+    font-size: 19px;
     padding: 20px 40px;
 }
 
 
 
 #mainNav {
-    background-color: #212529;
+    background-color: #1c242e;
 }
 
-
+/*li.active-class > a {
+        border-bottom:1px solid white;
+    }*/
 
     #mainNav .navbar-nav .nav-item .nav-link {
-        font-size: 90%;
+        
         font-weight: 400;
-        padding: 0.75em 0;
-        letter-spacing: 1px;
+        /*padding: 0.75em 0;*/
         color: white;
         /*font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';*/
     }
@@ -592,8 +572,21 @@ img::-moz-selection {
     line-height: 52px;
 }
 
-
+  #dom_overlay_container {
+        visibility: hidden;
+    }
 @media (min-width: 992px) {
+    /*ul.navbar-nav.ml-auto {
+        height: 0vh;
+    }*/
+    #animation_container {
+        width: auto !important;
+        height: 70.3576px !important;
+    }
+    canvas#canvas {
+        width: auto !important;
+        height: 70.3576px !important;
+    }
     #mainNav {
         padding-top: 25px;
         padding-bottom: 25px;
@@ -610,7 +603,7 @@ img::-moz-selection {
         }
 
         #mainNav .navbar-nav .nav-item .nav-link {
-            padding: 1.1em 1em !important;
+            padding: 0.3em 1em !important
         }
 
         #mainNav.navbar-shrink {
@@ -1508,11 +1501,11 @@ label.btn.btn-lang.active {
 }
 
 .content-marketing {
-    padding-top: 117px;
+    padding-top: 119px;
 }
 
 .martech {
-    padding-top: 117px;
+    padding-top: 119px;
 }
 
 .creative {
@@ -1534,6 +1527,7 @@ label.btn.btn-lang.active {
 
 p.card-title {
     font-size: 27px;
+    margin-top: -0.7rem;
 }
 
     p.card-title span {
@@ -1547,11 +1541,11 @@ img.logo-card {
 }
 
 h5.card-title {
-    font-size: 18px;
-    padding-top: 4%;
+    font-size: 19px;
+    padding-top: 0%;
 }
 p.card-text {
-    font-size: 18px;
+    font-size: 19px;
 }
 /*.card {
     width: 1139px;
@@ -1647,7 +1641,7 @@ p.card-text {
     width: 427px !important;
     height: 52px !important;
     background-clip: padding-box;
-    border: 1px solid #ced4da;
+    border: 1px solid #465058;
     border-radius: 0.25rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -1661,7 +1655,13 @@ p.card-text {
         box-shadow: 0 0 0 0.2rem rgba(237, 48, 45, 0.5);
     }
 
+.iframe-map {
+    margin-right: -3%;
+}
 
+.footer-details {
+    padding-left: 3%;
+}
 /** Tab Accoirion*/
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,900');
 /*
@@ -1671,10 +1671,6 @@ p.card-text {
  Some styles to make this demo look pretty (or at least decent)
  If you want to style everything yourself, you shouldn't need these
  */
-
-
-
-
 .tabbed-content {
     /*background: #fff;
     box-shadow: 1px 1px 6px #ccc;
@@ -1708,7 +1704,7 @@ p.card-text {
 
 .item {
     margin-bottom: 2px;
-    font-size: 18px;
+    font-size: 19px;
     /*border-bottom: solid #30373c 2px;*/
 }
 
@@ -1761,7 +1757,7 @@ p.card-text {
 
 .tabbed-content .item::before {
     content: '  '; /*attr(data-icon) '      'attr(data-title);*/
-    font-size: 18px;
+    font-size: 19px;
     font-weight: normal;
     font-family: 'Rubik';
 }
@@ -1886,8 +1882,8 @@ p.card-text {
 
 
 .read-more-card {
-    bottom: 32px;
-    left: 702px;
+    bottom: 7%;
+    left: 84%;
     font-weight: 600;
     position: absolute;
     text-decoration: underline !important;
@@ -1901,7 +1897,7 @@ p.card-text {
     color: black;
     background-color: white !important;
     border-color: transparent !important;
-    border-radius: 10px 0px 0px 10px !important;
+    border-radius: 5px 0px 0px 5px !important;
 }
 
 .nav-item {
@@ -1918,13 +1914,17 @@ p.card-text {
     border-top-right-radius: 0.25rem;
 }
 
-.panel-heading {
+/*.panel-heading {
     background-color: transparent;
     font-size: 22px !important;
     height: 58px;
     border-bottom: solid #30373c 1px !important;
     text-align: left;
-    padding: 17px;
+    padding: 19px;
+}*/
+
+.item-content p {
+    line-height: 1.2rem;
 }
 
     .panel-heading.active {
@@ -1939,11 +1939,13 @@ p.card-text {
 .panel-heading {
     padding: 0;
     border: 0;
+    border-bottom: solid #30373c 1px !important;
+
 }
 
 .panel-title > a, .panel-title > a:active {
     display: block;
-    font-size: 18px;
+    font-size: 19px;
     padding: 15px;
     color: white;
 }
@@ -2024,12 +2026,15 @@ video {
 }
 
 .tab-content > .active {
-    padding: 15px;
+    padding-top: 4%;
+    padding-right: 3%;
+    padding-bottom: 15px;
+    padding-left: 26px;
+    /* padding: 15px; */
     display: block;
     color: black;
     background-color: #ffffff;
     height: auto;
-    padding-right: 3%;
     height: 82.6%;
     border-radius: 0px 10px 10px 0px !important;
 }
@@ -2144,7 +2149,7 @@ section[data-title] {
 section.active {
     background-color: white;
     color: black;
-    font-size: 18px;
+    font-size: 19px;
     font-weight: normal;
     font-family: 'Rubik';
 }
@@ -2157,12 +2162,18 @@ section.active {
     border-color: transparent;
 }
 
-#openPosition .DVideo #TreVideo {
-    top: 45% !important;
-}
+section#aboutOffice {
 
-#weDeliver .DVideo #TreVideo {
-    top: 47% !important;
+    z-index: 99;
+}
+#openPosition .DVideo #TreVideo {
+    top: 210% !important;
+}
+#about-video .DVideo #TreVideo {
+    top: 117% !important;
+}
+    #weDeliver .DVideo #TreVideo {
+    top: 210% !important;
 }
 
 .result-section {
@@ -2286,6 +2297,7 @@ card-jo
 
 .col-text {
     font-size: 22px;
+    margin-top: -2.7%;
 }
 
 .customer-carousel-image {
@@ -2302,7 +2314,7 @@ card-jo
 
 .Solutions_litext {
     background-image: url('../Images/triangle_eng.png');
-    background-position: left center;
+    background-position: left 2px;
     background-repeat: no-repeat;
     padding-left: 20px; /* Adjust according to image size to push text across. */
     font-size: 22px;
@@ -2505,7 +2517,7 @@ Main components
     .no-touch #cd-vertical-nav .cd-dot {
         position: relative;
         /* we set a top value in order to align the dot with the label. If you change label's font, you may need to change this top value*/
-        top: 8px;
+        top: 3px;
         height: 24px;
         width: 24px;
         border-radius: 50%;
@@ -2805,7 +2817,8 @@ footer {
 
 
 .card-img {
-    margin: 11px;
+    padding: 32px;
+    margin-left: 21px;
 }
 /*.video-responsive {
     padding-bottom: 56.25%;
@@ -2909,15 +2922,33 @@ footer {
     }
 
     .read-more {
-        /* float: left; */
-        margin-top: 10%;
-        position: absolute;
-        /* font-weight: 600; */
-        /* margin-left: 6%; */
-        padding-right: 292px;
+        float: unset;
+        position: unset;
+        bottom: 10px;
+        font-weight: 600;
+        margin-left: 0%;
+        margin-top: 10% !important;
         text-decoration: underline;
     }
 
+
+
+
+
+
+        /* float: left; */
+        /* margin-top: 10%; */
+        /*bottom: 0px;
+        position: absolute;
+        font-weight: 600;
+        margin-left: -6%;
+        padding-right: 292px;
+        text-decoration: underline;*/
+    
+
+    .read-more a {
+        color: white;
+    }
     /*#story .carousel-3d-container .carousel-3d-slider .carousel-3d-slide.current {
         height: 325px !important;
     }*/
@@ -2946,7 +2977,7 @@ footer {
     }
 
     section.active {
-        font-size: 18px;
+        font-size: 19px;
         font-weight: normal;
         background-color: white;
         color: black;
@@ -3054,7 +3085,9 @@ footer {
         max-width: 66% !important;
         margin-left: -35px;
     }
-
+    /*.panel.panel-default {
+        width: 150px;
+    }*/
     .tabbed-content .tabs {
         display: block;
     }
@@ -3093,6 +3126,15 @@ footer {
         margin-right: 369px;
         color: black;
     }
+
+    .panel-heading {
+        background-color: transparent;
+        font-size: 9px !important;
+        height: 58px;
+        border-bottom: solid #30373c 1px !important;
+        text-align: left;
+        padding: 19px;
+    }
 }
 
 @media (min-width: 768px) {
@@ -3121,7 +3163,7 @@ footer {
 
             .timeline > li .timeline-image h4 {
                 font-size: 13px;
-                line-height: 18px;
+                line-height: 19px;
                 margin-top: 16px;
             }
 
@@ -3156,7 +3198,7 @@ footer {
         }
 
             .timeline > li .timeline-image h4 {
-                font-size: 18px;
+                font-size: 19px;
                 line-height: 26px;
                 margin-top: 30px;
             }
@@ -3194,7 +3236,9 @@ footer {
 
 
 @media (max-width: 867px) {
-
+    .no-header {
+        padding-top: 46% !important;
+    }
     #TreVideo {
         /*position: unset !important;
         z-index: 0;
@@ -3286,7 +3330,7 @@ footer {
     }
 
     .main_subHeader {
-        font-size: 18px;
+        font-size: 19px;
         white-space: pre-line !important;
     }
 
@@ -3534,7 +3578,7 @@ footer {
         font-size: 19px;
     }
     .read-more-card {
-        bottom: -17px;
+        bottom: -19px;
         left: 143px;
         font-weight: 600;
         position: absolute;
