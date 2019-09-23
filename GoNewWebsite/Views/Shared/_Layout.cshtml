@@ -65,6 +65,7 @@
 
         <div class="container-fluid">
             
+            <a href="@Url.Action("Index", "Home")">
                 <div class="square">
                     <div id="animation_container">
                         <canvas id="canvas"></canvas>
@@ -74,9 +75,10 @@
 
 
                 </div>
+            </a>
 
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
+                <i class="fas fa-bars fa-custom"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
@@ -202,15 +204,7 @@
         <div class="container">
 
             <div class="row ">
-
-                <div class="col-md-6">
-                    @*<div class="iframe-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d685.005626998908!2d34.85981077856146!3d32.27520927720782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sgo%20moblin!5e0!3m2!1sen!2sil!4v1569154191814!5m2!1sen!2sil" width="600" height="450" frameborder="0" style="border: 0;" allowfullscreen=""></iframe>
-                    </div>*@
-                    
-                </div>
-                <div class="col-md-5">
-                    <div class="footer-details">
+<div class="footer-details">
                         <ul>
                             <li>
                                 <a href="https://goo.gl/maps/P7mzRa2aPSvEmLQLA" target="_blank" class="location-geo">
@@ -240,11 +234,11 @@
                                     </p>
                                 </a>
                             </li>
-                            <ul class="sm">
+                            @*<ul class="sm">
 
                                 <li><a href="https://www.linkedin.com/company/go-internet-marketing/about/" target="_blank"><i class="fab fa-linkedin fa-2x" style="color: white"></i></a></li>
                                 <li><a href="https://www.facebook.com/GoInternetMarketing/" target="_blank"><i class="fab fa-facebook-square fa-2x" style="color: white"></i></a></li>
-                            </ul>
+                            </ul>*@
                             <li>
 
                                 <a href="tel:09-8855824" class="all-rights">
@@ -256,8 +250,6 @@
                             </li>
                         </ul>
                     </div>
-                    
-                </div>
             </div>
 
         </div>
@@ -512,7 +504,7 @@
             makeResponsive(true, 'both', false, 10);
             AdobeAn.compositionLoaded(lib.properties.id);
             fnStartAnimation();
-        } console.log(totalDepth);
+        } 
     </script>    
 <script>
     (function ($) {
