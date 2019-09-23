@@ -1,12 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Entities;
 using Entities.Website;
 using GoNewWebsite.Helpers;
+using GoNewWebsite.Models;
+using Newtonsoft.Json.Linq;
 
 namespace GoNewWebsite.Controllers
 {
@@ -51,6 +56,32 @@ namespace GoNewWebsite.Controllers
             return View();
         }
 
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Submit(ContactUsViewModel modal)
+        {
+            HttpResponseMessage response = null;
+            using (var client = new HttpClient())
+            {
+                var url = "https://api.gomoblin.co.il/api/Submited";
+                JObject jObject = new JObject
+                {
+                    {"Id", Guid.NewGuid()},
+                    {"SessionId",Guid.NewGuid() },
+                    {"CampaignId", "70b3e027-660b-49dc-8403-2bfd41db2325"},
+                    {"Email", modal.Email},
+                    {"FullName", modal.FullName},
+                    {"PhoneNumber",modal.PhoneNumber }
+                };
+                response = await client.PostAsync(url, new StringContent(jObject.ToString(), Encoding.UTF8, "application/json"));
+                if (response.StatusCode == HttpStatusCode.OK)
+                {
+                    return Json(HttpStatusCode.OK, JsonRequestBehavior.AllowGet);
+                }
+            }
+            return Json(HttpStatusCode.OK, JsonRequestBehavior.AllowGet);
+        }
         public ActionResult Services()
         {
             WebsitePage website = new WebsitePage

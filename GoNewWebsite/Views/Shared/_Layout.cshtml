@@ -2,7 +2,6 @@
 @using GoNewWebsite.Helpers
 @using Web;
 
-
 @{
     var culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name.ToLowerInvariant();
     WebsitePage website = ViewBag.Website;
@@ -23,15 +22,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#ff0000">
     <meta name="og:type" content="website">
-    <meta name="og:url" content="http://onepager.gim.co.il">
-    <meta name="og:image:secure_url" content="http://onepager.gim.co.il/Img/fabi.png">
+    <meta name="og:url" content="http://go-moblin.azurewebsites.net">
+    <meta name="og:image:secure_url" content="http://go-moblin.azurewebsites.net/Img/fabi.png">
     <meta property="og:title" content="GO Digital Marketing" />
     <meta property="og:description" name="description" content="Digital Marketing. Business Results." />
     <meta property="og:site_name" content="GO Digital Marketing" />
     <meta property='og:title' content='GO Digital Marketing' />
-    <meta property='og:image' content='http://onepager.gim.co.il/Img/1200x627.png' />
+    <meta property='og:image' content='http://go-moblin.azurewebsites.net/images/1200x627.png' />
     <meta property='og:description' content='Digital Marketing. Business Results.' />
-    <meta property='og:url' content='http://onepager.gim.co.il' />
+    <meta property='og:url' content='http://go-moblin.azurewebsites.net' />
 
     <meta name="twitter:title" content="GO Digital Marketing">
     <meta name="twitter:description" content="Digital Marketing. Business Results." />
@@ -43,8 +42,6 @@
     @Scripts.Render("~/bundles/modernizr")
     <link href="~/Content/animate.min.css" rel="stylesheet" />
     <link href="~/Content/fonts/css/all.min.css" rel="stylesheet" />
-    @*<link href="//pro.fontawesome.com/releases/v5.1.0/css/all.css" rel="stylesheet">*@
-    @*<link href="~/Content/fonts/css/fontawesome.min.css" rel="stylesheet" />*@
 
     <!--[if IE]>
         <link rel="shortcut icon" href="~/Img/fabi.png" type="image/vnd.microsoft.icon" />
@@ -64,198 +61,213 @@
 
 </head>
 <body id="page-top" onload="init();" style="margin: 0px;">
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-        
-    <div class="container-fluid">
-        <a href="@Url.Action("Index", "Home")">
-            <div class="square">
-                <div id="animation_container">
-                    <canvas id="canvas"></canvas>
-                    <div id="dom_overlay_container">
-                    </div>
-                </div>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
 
-
-            </div>
-        </a>
-            
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item" nav-item="5">
-                    <a class="nav-link js-scroll-trigger active" href="@Url.Action("Index", "Home")">Home</a>
-                </li>
-                <li class="nav-item" nav-item="4">
-                    <a class="nav-link js-scroll-trigger About" href="@Url.Action("About", "Home")">About</a>
-                </li>
-                <li class="nav-item" nav-item="3">
-                    <a class="nav-link js-scroll-trigger Services" href="@Url.Action("Services", "Home")">Services</a>
-                </li>
-                <li class="nav-item" nav-item="2">
-                    <a class="nav-link js-scroll-trigger Careers" href="@Url.Action("Index", "Career")">Careers</a>
-                </li>
-
-                <li class="nav-item" nav-item="1">
-                    <a class="nav-link js-scroll-trigger" href="#ContacUs">Contact</a>
-                </li>
-
-
-
-                @*<li class="nav-item" nav-item="6">
-                        <form action="/Home/SetCulture" method="post" class=form-lang>
-                            <div class="btn-group lan-btn-group" data-toggle="buttons">
-
-                                <label class="btn btn-lang">
-                                    <input class="culture" name="culture" id="en-us" value="en-us" type="radio" @selected("en-us", culture) /> En
-                                </label>
-                                <label class="btn btn-lang">
-                                    <input class="culture" name="culture" id="he" value="he" type="radio" @selected("he", culture) /> עב
-                                </label>
-                            </div>
-                        </form>
-
-                    </li>*@
-
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<header>
-    <div class="overlay"></div>
-    <div id="video"></div>
-    <div class="container-fluid">
-        <div class="container h-100">
-            <div class="d-flex h-100 text-center align-items-center">
-                <div class="w-100 text-white">
-                        
-                    @if (website != null)
-                    {
-                        <h1 class="display-3 text-header">@website.HeaderPage.Main</h1>
-                        if (!string.IsNullOrEmpty(website.HeaderPage.Content))
-                        {
-                        <div class="d-none d-md-block">
-                            <p class="main_subHeader  " style="white-space: pre-line">@Html.Raw(website.HeaderPage.Content)</p>
+        <div class="container-fluid">
+            <a href="@Url.Action("Index", "Home")">
+                <div class="square">
+                    <div id="animation_container">
+                        <canvas id="canvas"></canvas>
+                        <div id="dom_overlay_container">
                         </div>
-                            
+                    </div>
+
+
+                </div>
+            </a>
+
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item" nav-item="5">
+                        <a class="nav-link js-scroll-trigger active" href="@Url.Action("Index", "Home")">Home</a>
+                    </li>
+                    <li class="nav-item" nav-item="4">
+                        <a class="nav-link js-scroll-trigger About" href="@Url.Action("About", "Home")">About</a>
+                    </li>
+                    <li class="nav-item" nav-item="3">
+                        <a class="nav-link js-scroll-trigger Services" href="@Url.Action("Services", "Home")">Services</a>
+                    </li>
+                    <li class="nav-item" nav-item="2">
+                        <a class="nav-link js-scroll-trigger Careers" href="@Url.Action("Index", "Career")">Careers</a>
+                    </li>
+
+                    <li class="nav-item" nav-item="1">
+                        <a class="nav-link js-scroll-trigger" href="#ContactUs">Contact</a>
+                    </li>
+
+
+
+                    @*<li class="nav-item" nav-item="6">
+                            <form action="/Home/SetCulture" method="post" class=form-lang>
+                                <div class="btn-group lan-btn-group" data-toggle="buttons">
+
+                                    <label class="btn btn-lang">
+                                        <input class="culture" name="culture" id="en-us" value="en-us" type="radio" @selected("en-us", culture) /> En
+                                    </label>
+                                    <label class="btn btn-lang">
+                                        <input class="culture" name="culture" id="he" value="he" type="radio" @selected("he", culture) /> עב
+                                    </label>
+                                </div>
+                            </form>
+
+                        </li>*@
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="overlay"></div>
+        <div id="video"></div>
+        <div class="container-fluid">
+            <div class="container h-100">
+                <div class="d-flex h-100 text-center align-items-center">
+                    <div class="w-100 text-white">
+
+                        @if (website != null)
+                        {
+                            <h1 class="display-3 text-header">@website.HeaderPage.Main</h1>
+                            if (!string.IsNullOrEmpty(website.HeaderPage.Content))
+                            {
+                                if (website.HeaderPage.Content.Length>200)
+                                {
+                                    <div class="d-none d-md-block">
+                                        <p class="main_subHeader  " style="white-space: pre-line">@Html.Raw(website.HeaderPage.Content)</p>
+                                    </div>    
+                                }
+                                else
+                                {
+                                    <p class="main_subHeader  " style="white-space: pre-line">@Html.Raw(website.HeaderPage.Content)</p>
+                                }
+                                
+
+                            }
+
                         }
 
-                    }
-                    
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-        
+
     </header>
 
 
-<div class="container-fluid body-content">
+    <div class="container-fluid body-content">
 
-    @*<video loop muted autoplay poster="" class="fullscreen-bg__video">
+        @*<video loop muted autoplay poster="" class="fullscreen-bg__video">
                 <source src="~/Videos/3D_1920x1000.mp4" type="video/mp4" />
 
             </video>*@
-    
-    @RenderBody()
-        
- 
 
-</div>
-       
-<section class=" container footer_section" id="ContactUs">
-    <div class="section-header">
-        <p class="ourCustomer">Contact us</p>
+        @RenderBody()
+
+
+
     </div>
 
-    <form class="form-inline justify-content-center">
+    <section class=" container footer_section" id="ContactUs">
+        <div class="section-header">
+            <p class="ourCustomer">Contact us</p>
+        </div>
+      @Html.Partial("_ContactForm")
 
-        <div class="col-md-3">
-            <div class="input-group mb-2">
-                <input type="text" class="form-control" id="FullName" placeholder="Full name">
+
+    </section>
+    <footer class="footer-strip">
+        <div class="container">
+
+            <div class="row ">
+
+                <div class="col-md-6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d685.005626998908!2d34.85981077856146!3d32.27520927720782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sgo%20moblin!5e0!3m2!1sen!2sil!4v1569154191814!5m2!1sen!2sil" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+                <div class="col-md-6">
+                    <ul>
+                        <li>
+                            <a href="https://goo.gl/maps/P7mzRa2aPSvEmLQLA" target="_blank" class="location-geo">
+                                <p class="">
+                                    <i class="fa fa-map-marker"></i>
+                                    &nbsp; &nbsp;
+                                    Giborey Israel 5, P.O.Box 8870, Netanya Israel.
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:Office@gim.co.il" class="location">
+                                <p class="">
+                                    <i class="fa fa-envelope"></i>
+                                    &nbsp; &nbsp;
+                                    Office@@Gim.co.il
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+
+                            <a href="tel:09-8855824" class="location">
+                                <p class="">
+                                    <i class="fa fa-phone"></i>
+                                    &nbsp; &nbsp;
+                                    09-8855824
+                                </p>
+                            </a>
+                        </li>
+                        <ul class="sm">
+
+                            <li><a href="https://www.linkedin.com/company/go-internet-marketing/about/" target="_blank"><i class="fab fa-linkedin fa-2x" style="color:white"></i></a></li>
+                            <li><a href="https://www.facebook.com/GoInternetMarketing/" target="_blank"><i class="fab fa-facebook-square fa-2x" style="color:white"></i></a></li>
+                        </ul>
+                        <li>
+
+                            <a href="tel:09-8855824" class="all-rights">
+                                <p class="">
+                                    <i class="far fa-copyright"></i>
+                                    All rights reserved to- GO 2019
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
+
         </div>
-        <div class="col-md-3">
-            <div class="input-group mb-2">
-                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Email">
+    </footer>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #ff0000">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title text-left" dir="ltr">Thank you </h4>
+                </div>
+                <div class="modal-body">
+                    <p>Thank you for contact us we will contact you soon </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
             </div>
-        </div>
-        <div class="col-md-3">
-            <div class="input-group mb-2">
-                <input type="tel" class="form-control" id="phoneNumber" placeholder="Phone">
-            </div>
-        </div>
-        <div class="col-md-3  btn-form">
-            <button type="submit" class="btn btn-primary ">Go</button>
-        </div>
 
-    </form>
-
-</section>
-<footer class="footer-strip">
-    <div class="container">
-        
-        <div class="row ">
-
-        <div class="col-md-6">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d685.005626998908!2d34.85981077856146!3d32.27520927720782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sgo%20moblin!5e0!3m2!1sen!2sil!4v1569154191814!5m2!1sen!2sil" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
         </div>
-        <div class="col-md-6">
-            <ul>
-                <li>
-                    <a href="https://goo.gl/maps/P7mzRa2aPSvEmLQLA" target="_blank" class="location-geo">
-                        <p class="">
-                            <i class="fa fa-map-marker"></i>
-                            &nbsp; &nbsp;
-                            Giborey Israel 5, P.O.Box 8870, Netanya Israel.
-                        </p>
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:Office@gim.co.il" class="location">
-                        <p class="">
-                            <i class="fa fa-envelope"></i>
-                            &nbsp; &nbsp;
-                            Office@@Gim.co.il
-                        </p>
-                    </a>
-                </li>
-                <li>
-
-                    <a href="tel:09-8855824" class="location">
-                        <p class="">
-                            <i class="fa fa-phone"></i>
-                            &nbsp; &nbsp;
-                            09-8855824
-                        </p>
-                    </a>
-                </li>
-                <ul class="sm">
-
-                    <li><a href="https://www.linkedin.com/company/go-internet-marketing/about/" target="_blank"><i class="fab fa-linkedin fa-2x" style="color:white"></i></a></li>
-                    <li><a href="https://www.facebook.com/GoInternetMarketing/" target="_blank"><i class="fab fa-facebook-square fa-2x" style="color:white"></i></a></li>
-                </ul>
-                <li>
-
-                    <a href="tel:09-8855824" class="all-rights">
-                        <p class="">
-                            <i class="far fa-copyright"></i>
-                            All rights reserved to- GO 2019
-                        </p>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        </div>
-        
     </div>
-</footer>
+
 
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    <script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")" type="text/javascript"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/Scripts/bootstrap.bundle.min.js" defer=""></script>
     <script src="~/plugin/owlcarousel/owl.carousel.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.11/jquery.mousewheel.min.js"></script>
     <script src="~/Scripts/jquery.easing.min.js"></script>
@@ -265,10 +277,32 @@
     @*<script src='https://rawgit.com/Wlada/vue-carousel-3d/master/dist/vue-carousel-3d.min.js'></script>*@
     <script src="~/Scripts/Custom.js"></script>
     <script src="~/Scripts/bootstrap-tabcollapse.js"></script>
-<script src="~/Scripts/wow.min.js"></script>
-<script>
-    new WOW().init();
-</script>
+    <script src="~/Scripts/wow.min.js"></script>
+    <script>
+        new WOW().init();
+        
+        function OnSuccess(data) {
+
+            $('#thankyou').text('Thank you')
+            //$('#myModal').modal('toggle');
+            $('form').hide();            
+            $('form')[0].reset()();
+        }
+        function OnFailure(data) {
+          
+        }
+
+
+
+        var onBeginSubmit = function () {
+            //var v = grecaptcha.getResponse();
+            //if (v.length == 0) {
+            //    $('#recapchaValid').show();
+            //    //alert("You can't leave without Captcha.");
+            //    return false;
+            //}
+        };
+    </script>
     <script defer="">
 
 
@@ -302,7 +336,7 @@
             $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
                 if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                     var target = $(this.hash);
-                    
+
                     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                     if (target.length) {
                         $('html, body').animate({
@@ -324,16 +358,6 @@
                 offset: 56
             });
 
-            var position = $('#ContactU'); 
-
-            $(window).scroll(function() {
-                var scroll = $('#ContactU'); 
-                if(scroll > position) {
-                    console.log('scrollUp');
-                    $('div').text('Scrolling Up Scripts');
-                }
-                position = scroll;
-            });
 
             // Collapse Navbar
             var navbarCollapse = function () {
@@ -480,13 +504,13 @@
                         iw = window.innerWidth / 6, ih = window.innerHeight;
                     }
 
-                    
+
 
                     var pRatio = window.devicePixelRatio || 1, xRatio = iw / w, yRatio = ih / h, sRatio = 1;
                     if (isResp) {
                         if ((respDim == 'width' && lastW == iw) || (respDim == 'height' && lastH == ih)) {
                             sRatio = lastS;
-                            
+
                         } else if (!isScale) {
                             if (iw < w || ih < h)
                                 sRatio = Math.min(xRatio, yRatio);
@@ -532,60 +556,60 @@
 
         })(jQuery);
     </script>
-<script type="text/javascript">
-    $(document).ready(function () {
+    <script type="text/javascript">
+        $(document).ready(function () {
 
-        //$(".navbar-nav").html(
+            //$(".navbar-nav").html(
 
-        //    $(".navbar-nav").children("li").sort(function (a, b) {
+            //    $(".navbar-nav").children("li").sort(function (a, b) {
 
-        //        return $(a).text().toUpperCase().localeCompare(
+            //        return $(a).text().toUpperCase().localeCompare(
 
-        //            $(b).text().toUpperCase());
+            //            $(b).text().toUpperCase());
 
-        //    }) // End Sort
+            //    }) // End Sort
 
-        //); // End HTML
-        //var deferred = sortMeBy("nav-item", "ul.navbar-nav", "li", "asc");
-        $('label').click(function () {
-            var xx = $(this)[0].childNodes;
-            console.log();
-            $.post("\Home//SetCulture", { culture: xx[1].defaultValue })
-        });
-
-    });
-</script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        
-        if ($(window).width() < 361) {
-            $('.location-geo').html(function(i,h){
-                return h.replace(/&nbsp;/g,'');
+            //); // End HTML
+            //var deferred = sortMeBy("nav-item", "ul.navbar-nav", "li", "asc");
+            $('label').click(function () {
+                var xx = $(this)[0].childNodes;
+                console.log();
+                $.post("\Home//SetCulture", { culture: xx[1].defaultValue })
             });
-        }
-        if ($(window).width() < 769) {
-          
-            var video =
-                "<video playsinline='playsinline' autoplay='autoplay' muted='muted' loop='loop'>\r\n <source src='/Videos/1920x520.mp4' type='video/mp4'>\r\n</video>";
-            $('#video').html(video);
-            $('#3DVideo_1').html(
-                "<video id='TreVideo' preload='auto' autoplay='true' loop='loop' muted='muted' volume='0'><source src='/Videos/3D_1920x1000.mp4' type='video/mp4'></video>");
-            $('.DVideo')
-                .html(
+
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            if ($(window).width() < 376) {
+                $('.location-geo').html(function (i, h) {
+                    return h.replace(/&nbsp;/g, '');
+                });
+            }
+            if ($(window).width() < 769) {
+
+                var video =
+                    "<video playsinline='playsinline' autoplay='autoplay' muted='muted' loop='loop'>\r\n <source src='/Videos/1920x520.mp4' type='video/mp4'>\r\n</video>";
+                $('#video').html(video);
+                $('#3DVideo_1').html(
                     "<video id='TreVideo' preload='auto' autoplay='true' loop='loop' muted='muted' volume='0'><source src='/Videos/3D_1920x1000.mp4' type='video/mp4'></video>");
-        } else {
-            var video =
-                "<video playsinline='playsinline' autoplay='autoplay' muted='muted' loop='loop'>\r\n <source src='/Videos/1920x520.mp4' type='video/mp4'>\r\n</video>";
-            $('#video').html(video);
-            $('#3DVideo_1').html(
-                "<video id='TreVideo' preload='auto' autoplay='true' loop='loop' muted='muted' volume='0'><source src='/Videos/3D_1920x1000.mp4' type='video/mp4'></video>");
-            $('.DVideo')
-                .html(
+                $('.DVideo')
+                    .html(
+                        "<video id='TreVideo' preload='auto' autoplay='true' loop='loop' muted='muted' volume='0'><source src='/Videos/3D_1920x1000.mp4' type='video/mp4'></video>");
+            } else {
+                var video =
+                    "<video playsinline='playsinline' autoplay='autoplay' muted='muted' loop='loop'>\r\n <source src='/Videos/1920x520.mp4' type='video/mp4'>\r\n</video>";
+                $('#video').html(video);
+                $('#3DVideo_1').html(
                     "<video id='TreVideo' preload='auto' autoplay='true' loop='loop' muted='muted' volume='0'><source src='/Videos/3D_1920x1000.mp4' type='video/mp4'></video>");
-        }
-        getAccordion("#myTab", 769);
-    });
-</script>
+                $('.DVideo')
+                    .html(
+                        "<video id='TreVideo' preload='auto' autoplay='true' loop='loop' muted='muted' volume='0'><source src='/Videos/3D_1920x1000.mp4' type='video/mp4'></video>");
+            }
+            getAccordion("#myTab", 769);
+        });
+    </script>
     @RenderSection("scripts", required: false)
 </body>
 </html>

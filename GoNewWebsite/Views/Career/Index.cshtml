@@ -7,20 +7,15 @@
 
 
 <section class=" container" id="aboutOffice">
+    
     <div class="row">
         <div class="container-fluid">
             <div class="container">
                 <h2 class="about_office">About the Office</h2>
-
-                <div class="col-sm-10  offset-sm-1">
                     <p class="about_office_text">
-                        We at GO every wake up every morning with the goal of advancing one more step from the peak we reached yesterday. If you, too, wink from the same material, people who are looking to create value, seek to challenge the status quo, love to surround yourself with winners, want to learn from the best and strive to look at the digital world as a career - your place is with us.
+We at GO every wake up every morning with the goal of advancing one more step from the peak we reached yesterday. If you, too, wink from the same material, people who are looking to create value, seek to challenge the status quo, love to surround yourself with winners, want to learn from the best and strive to look at the digital world as a career - your place is with us.
                     </p>
-                </div>
-
             </div>
-
-
 
 
         </div>
@@ -39,67 +34,41 @@
 
         </div>
     </div>
-    <div class="space"></div>
+
 </section>
 
 
 <section class="page-section container-fluid" id="openPosition">
-    <div class="section-header">
-        <p class="ourCustomer">משרות פתוחות </p>
+    <div class="DVideo"></div>
 
-    </div>
-    
-    
-    
-    @*<div class="row">
-        @foreach (var article in Model)
-        {
-            if (counter != 0 && counter % 3 == 0)
-            {
-                @:</div>
-                @:<div class="row">
-            }
-
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <img src="~/Images/CAREERS.png" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
-                    <div class="caption">
-                        <h3 id="thumbnail-label">@article.Name</h3>
-                        <p>@article.Description</p>
-                    </div>
-                </div>
-            </div>
-
-            counter++;
-        }
-    </div>*@
     
     <div class="container">
+        <h2 class="about_office">Open Positions </h2>
         @foreach (var row in Model.ToArray().Split(3))
         {
-            
+
             <div class="row justify-content-center">
-                
+
                 @foreach (var item in row)
                 {
 
                     <div class="col-md-4 mb-4 card-job">
-            
+
                         <a class="hrefPosition" href="@Url.Action("Position", new {positionId = @item.Uid})">
-                            
+
                             <img src="~/Images/CAREERS.png" class="img-fluid">
                             <div class="card-caption">
                                 @item.Name
                             </div>
-                            
-                         
+
+
                         </a>
                     </div>
                 }
             </div>
         }
     </div>
-    
+
     @*<div class="-thumbnail">
             <img src="~/Images/CAREERS.png" data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
             <div class="card-text">
@@ -108,16 +77,16 @@
         </div>*@
 
     @*<div class="container">
-            
+
 
                 <div class="row justify-content-center">
                     @foreach (var item in @Model)
                     {
-                        
+
                     <div class="col-md-3   job-card ">
-                        
-                        
-                            
+
+
+
                             <a class="hrefPosition" href="@Url.Action("Position", new {positionId = @item.Uid})">
                                 <img src="~/Images/CAREERS.png" />
 
@@ -126,18 +95,18 @@
                                 </div>
                             </a>
                         </div>
-                        
-                    
-                        
+
+
+
                     }
 
 
 
-            
+
             </div>
 
         </div>*@
-    
+
 </section>
 
 

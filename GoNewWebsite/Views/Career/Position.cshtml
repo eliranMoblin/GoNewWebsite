@@ -3,15 +3,24 @@
     ViewBag.Title = "Position";
 }
 
-<h2 class="career-header">@Model.Name</h2>
+<div class="cf text-center">
+    <a href="@Url.Action("Index", "Career")" style="color: white">
+        <img src="~/Images/english-arrow.png" width="100">
+        <p class="back ">
+            Back
+
+        </p>
+    </a>
+    
+</div>
+
+    <h2 class="career-header">@Model.Name</h2>
 
 
-<section class=" container" id="aboutUs">
-    <div class="row">
-        <div class="">
-
-        
-            <div class="col-sm-10  offset-sm-1 ">
+    <section class=" container" id="aboutUs">
+        <div class="row">
+            <div class="">
+                <h2 class="about_office"> Description</h2>
                 <div class="description">
                     <p class="about_office_text">
                         @Html.Raw(@Model.Details[0].Value)
@@ -19,93 +28,93 @@
                 </div>
 
             </div>
-
-
-
-
         </div>
-    </div>
 
-    
-    <div class="row">
-        <div class=" col-md-6">
+        
+        <div class="space"></div>
+        <div class="row">
+            <div class=" col-md-6">
+            </div>
+            <div class=" col-md-6">
+                <a href="#weLooking" class="js-scroll-trigger">
+                    <div class="chevron"></div>
+                    <div class="chevron"></div>
+                    <div class="chevron"></div>
+                </a>
+
+            </div>
         </div>
-        <div class=" col-md-6">
-            <a href="#weLooking" class="js-scroll-trigger">
-                <div class="chevron"></div>
-                <div class="chevron"></div>
-                <div class="chevron"></div>
-            </a>
-
-        </div>
-    </div>
-    
-
-</section>
 
 
-<section class="container-fluid" id="requirement">
-    <div class="row">
-        <div class="container">
-            
+    </section>
+
+
+    <section class="container-fluid" id="requirement">
+        <div class="row">
+            <div class="container">
+
                 <h2 class="about_office"> Requirements</h2>
 
-                
-                    <div class="requirement">
 
-                        @Html.Raw(@Model.Details[1].Value)
+                <div class="requirement">
 
-                    </div>
+                    @Html.Raw(@Model.Details[1].Value)
 
-                
+                </div>
 
-            
+
+
+
+
+            </div>
+        </div>
+
+        <div class="space-cusotm"></div>
+
+        <div class="row align-items-center">
+            <div class="col">
+
+            </div>
+            <div class="col">
+
+            </div>
+
+            <div class="col-md-4">
+                <div class="applay-now-btn">
+                    <a href="mailto:@Model.Email?subject=@Model.Name" class="btn btn-primary">Apply Now</a>
+                </div>
+
+
+            </div>
+            <div class="col">
+
+            </div>
 
         </div>
-    </div>
+        <div class="space-cusotm"></div>
+        <div class="row">
+            <div class=" col-md-6">
+            </div>
+            <div class=" col-md-6">
+                <a href="#openPosition" class="js-scroll-trigger">
+                    <div class="chevron"></div>
+                    <div class="chevron"></div>
+                    <div class="chevron"></div>
+                </a>
 
-    <div class="space-cusotm"></div>
-    <div class="row align-items-center">
-        <div class="col">
-
+            </div>
         </div>
-        <div class="col">
 
-        </div>
-        <div class="col-md-3">
-            <a href="mailto:@Model.Email?subject=@Model.Name" class="btn btn-primary">Apply Now</a>
-        </div>
-        <div class="col">
-
-        </div>
-        <div class="col">
-
-        </div>
-    </div>
-    <div class="space"></div>
-    <div class="row">
-        <div class=" col-md-6">
-        </div>
-        <div class=" col-md-6">
-            <a href="#openPosition" class="js-scroll-trigger">
-                <div class="chevron"></div>
-                <div class="chevron"></div>
-                <div class="chevron"></div>
-            </a>
-
-        </div>
-    </div>
-    
-</section>
+    </section>
 
 
 
 
 
-@section scripts
+    @section scripts
 {
-    <script type="text/javascript">
-        $('.nav-link').removeClass("active");
-        $('.Careers').addClass("active");
-    </script>
-}
+        <script type="text/javascript">
+            $('.nav-link').removeClass("active");
+            $('.Careers').addClass("active");
+        </script>
+    }

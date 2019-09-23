@@ -140,6 +140,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\CultureHelper.cs" />
+    <Compile Include="Models\ContactUsViewModel.cs" />
     <Compile Include="Models\Jobs.cs" />
     <Compile Include="Models\Position.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -241,11 +242,13 @@
     <Content Include="Images\CustomerEn\grey\7.png" />
     <Content Include="Images\CustomerEn\grey\8.png" />
     <Content Include="Images\CustomerEn\grey\9.png" />
+    <Content Include="Images\english-arrow.png" />
     <Content Include="Images\fabi.png" />
     <Content Include="Images\GO_Desktop backgroung.jpg" />
     <Content Include="Images\GO_Mobile_background.jpg" />
     <Content Include="Images\Graph.png" />
     <Content Include="Images\Group 5979 copy.png" />
+    <Content Include="Images\hebrew-arrow.png" />
     <Content Include="Images\iPhone X - Outline.png" />
     <Content Include="Images\loading.gif" />
     <Content Include="Images\Rectangle.png" />
@@ -399,6 +402,7 @@
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.carousel-1.1.min.js" />
     <Content Include="Scripts\jquery.easing.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -457,6 +461,7 @@
     <Content Include="Views\CaseStudy\CaesarstoneEN.cshtml" />
     <Content Include="Views\CaseStudy\MinistryEN.cshtml" />
     <Content Include="Views\CaseStudy\ScanMarker.cshtml" />
+    <Content Include="Views\Shared\_ContactForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
