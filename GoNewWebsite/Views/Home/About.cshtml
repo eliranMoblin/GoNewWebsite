@@ -172,6 +172,19 @@
         <script>
             $('.nav-link').removeClass("active");
             $('.About').addClass("active");
+
+            $(window).scroll(function () {
+                var x = $('#Contact').hasClass("active");
+                
+                if (x) {
+                
+                } else {
+                    $('.nav-link').removeClass("active");
+                    $('.About').addClass("active");
+                }
+
+            })
+
                     //$('.container').addClass("container-fluid");
                     //$('.container').removeClass("container");
         </script>

@@ -4,7 +4,7 @@
 
         <div id="triangular">
             <carousel-3d class="triangular-carousel" :perspective="0" :space="200" :border="0" :display="7" :width="274" :height="309" :animationSpeed="1"
-                         :controls-visible="true" :controls-width="30" :controls-height="5" :clickable="true" :autoplay="false" :autoplay-timeout="5000">
+                         :controls-visible="true" :controls-width="30" :controls-height="5" :clickable="true" :autoplay="true" :autoplay-timeout="5000">
                 <slide :index="0">
                     <a href="#ProgrammaticMedia">
                         <p class="triangular programtic">Programmatic Media</p>
@@ -90,6 +90,9 @@
     </div>
 
 </section>
+<div id="home-video">
+    <div class="DVideo"></div>
+</div>
 
 
 <section class=" container-fluid" id="caseStudys">
@@ -98,156 +101,156 @@
     <div class="section-header">
         <p class="ourCustomer">Success Stories</p>
     </div>
-    
-        <div id="story">
-            <carousel-3d class="story" :perspective="0" :space="500" :display="3" :border="0"
-                         :width="1113" :height="445" :controls-visible="true" :controls-prev-html="'❬'" :controls-next-html="'❭'" :controls-width="30" :controls-height="60" :clickable="true" :autoplay="false" :autoplay-timeout="5000">
-                <slide :index="0">
-                    <div class="card col-md-12">
-                        <div class="row ">
-                            <div class="col-md-3 d-none d-md-block">
-                                <img src="~/Images/case_study_scanmarker.png" class="img-fluid card-img">
-                            </div>
-                            <div class="col-md-9 ">
-                                <div class="card-body" style="color: black">
-                                    <div class="row">
-                                        <span class="d-inline-block  float-left">
-                                            <img src="~/Images/case_study_logo_scanmarker2.png" class="logo-card img-fluid " />
-                                        </span>
-                                    </div>
-                                    <p class="d-inline-block card-title  ">
-                                        Scan Marker - From Audit to Growth
-                                    </p>
-                                    <div class="d-none d-md-block">
-                                        <p class="d-inline-block card-title   ">
+
+    <div id="story">
+        <carousel-3d class="story" :perspective="0" :space="500" :display="3" :border="0"
+                     :width="1113" :height="445" :controls-visible="true" :controls-prev-html="'❬'" :controls-next-html="'❭'" :controls-width="30" :controls-height="60" :clickable="true" :autoplay="false" :autoplay-timeout="5000">
+            <slide :index="0">
+                <div class="card col-md-12">
+                    <div class="row ">
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="~/Images/case_study_scanmarker.png" class="img-fluid card-img">
+                        </div>
+                        <div class="col-md-9 ">
+                            <div class="card-body" style="color: black">
+                                <div class="row">
+                                    <span class="d-inline-block  float-left">
+                                        <img src="~/Images/case_study_logo_scanmarker2.png" class="logo-card img-fluid " />
+                                    </span>
+                                </div>
+                                <p class="d-inline-block card-title  ">
+                                    Scan Marker - From Audit to Growth
+                                </p>
+                                <div class="d-none d-md-block">
+                                    <p class="d-inline-block card-title   ">
                                         <h5 class="card-title">The challenge</h5>
-                                        <p class="card-text read-more-line">
-                                            Scanmarker, the leading digital highlighter tool, was struggling to scale their online business and were mainly relying on a sole channel for marketing.
-                                        </p>
-                                    </div>
-
-                                </div>
-                                <div class="read-more-card">
-                                    <p class="card-text float-right"><a href="@Url.Action("ScanMarker", "CaseStudy")" style="text-decoration: underline">Read More</a></p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div><!--ScanMarker-->
-                </slide>
-                <slide :index="1">
-                    <div class="card col-md-12">
-                        <div class="row ">
-                            <div class="col-md-3 d-none d-md-block">
-                                <img src="~/Images/case_study_super_pharm_black.png" class="card-img img-fluid superpharm-img">
-                            </div>
-                            <div class="col-md-9">
-                                <div class="card-body" style="color: black">
-
-                                    <div class="row">
-                                        <span class="d-inline-block  float-left">
-                                            <img src="~/Images/super farm_blue.png" class="logo-card img-fluid" />
-
-                                        </span>
-                                    </div>
-
-                                    <div class="">
-                                        <p class="d-inline-block card-title  ">
-                                            Super Pharm- How we cracked the code to create
-                                            <br />
-                                            the golden ad
-                                        </p>
-
-
-                                    </div>
-                                    <div class="d-none d-md-block">
-                                        <p class="d-inline-block card-title  ">
-                                            <h5 class="card-title">The challenge</h5>
-                                        <p class="card-text">
-                                            Maximizing the ROAS of a complex eCommerce activity in a multi-product environment (Over 12,000 SKUs)
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="read-more-card">
-                                    <p class="card-text float-right"><a href="@Url.Action("SuperPharmEn", "CaseStudy")" style="text-decoration: underline">Read More</a></p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </slide>
-                <slide :index="2">
-                    <div class="card col-md-12">
-                        <div class="row ">
-                            <div class="col-md-3 d-none d-md-block">
-                                <img src="~/Images/case_study_caesarstone.png" class="img-fluid card-img">
-                            </div>
-                            <div class="col-md-9">
-                                <div class="card-body" style="color: black">
-
-                                    <div class="row">
-                                        <span class="d-inline-block  float-left">
-                                            <img src="~/Images/case_study_logo_caesarstone2.png" class="logo-card float-left" />
-
-                                        </span>
-                                    </div>
-                                    <p class="d-inline-block card-title  ">
-                                        Caesarstone- How real time data analysis can create insights
-                                        that led to a population explosion at the trade show
+                                    <p class="card-text read-more-line">
+                                        Scanmarker, the leading digital highlighter tool, was struggling to scale their online business and were mainly relying on a sole channel for marketing.
                                     </p>
-                                    <div class="d-none d-md-block">
-                                        <p class="d-inline-block card-title  ">
-                                            <h5 class="card-title">The challenge</h5>
-                                        <p class="card-text">
-                                            Getting designers and architects that are attending the “Milan Design Week’ trade show, to also visit Caesarstone’s exhibition that is not near the main event and is a 40 mins drive away.
-                                        </p>
-                                    </div>
-                                    </div>
-                                <div class="read-more-card">
-                                        <p class="card-text float-right"><a href="@Url.Action("CaesarstoneEN", "CaseStudy")" style="text-decoration: underline">Read More</a></p>
-                                    </div>
                                 </div>
 
-                        </div>
-                    </div>
-                </slide>
-                <slide :index="3">
-                    <div class="card col-md-12">
-                        <div class="row ">
-                            <div class="col-md-3 d-none d-md-block">
-                                <img src="~/Images/case_study_lapam.png" class="card-img img-fluid">
                             </div>
-                            <div class="col-md-9">
-                                <div class="card-body" style="color: black">
-                                    <div class="row">
-                                        <span class="d-inline-block  float-left">
+                            <div class="read-more-card">
+                                <p class="card-text float-right"><a href="@Url.Action("ScanMarker", "CaseStudy")" style="text-decoration: underline">Read More</a></p>
+                            </div>
+                        </div>
 
-                                            <img src="~/Images/case_study_logo_lapam.png" class="logo-card  float-left" />
-                                        </span>
-                                    </div>
-                                    <p class="d-inline-block card-title  ">
-                                        Ministry of Tourism - Multi-channel digital campaign management in 9 countries
-                                    </p>
-                                    <div class="d-none d-md-block">
-                                        <p class="d-inline-block card-title  ">
-                                            <h5 class="card-title">The challenge</h5>
-                                        <p class="card-text read-more-line">
-                                            Increasing the number of incoming tourists coming to Israel as efforts to promote tourism in Israel in the past 10 years have resulted in an increase of no more than 3% at most.
-                                        </p>
-                                    </div>
-                                    </div>
-                                <div class="read-more-card">
-                                        <p class="card-text float-right"><a href="@Url.Action("MinistryEN", "CaseStudy")" style="text-decoration: underline">Read More</a></p>
-                                    </div>
+                    </div>
+                </div><!--ScanMarker-->
+            </slide>
+            <slide :index="1">
+                <div class="card col-md-12">
+                    <div class="row ">
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="~/Images/case_study_super_pharm_black.png" class="card-img img-fluid superpharm-img">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body" style="color: black">
+
+                                <div class="row">
+                                    <span class="d-inline-block  float-left">
+                                        <img src="~/Images/super farm_blue.png" class="logo-card img-fluid" />
+
+                                    </span>
                                 </div>
 
-                        </div>
-                    </div>
-                </slide>
+                                <div class="">
+                                    <p class="d-inline-block card-title  ">
+                                        Super Pharm- How we cracked the code to create
+                                        <br />
+                                        the golden ad
+                                    </p>
 
-            </carousel-3d>
-        </div>
-    
+
+                                </div>
+                                <div class="d-none d-md-block">
+                                    <p class="d-inline-block card-title  ">
+                                        <h5 class="card-title">The challenge</h5>
+                                    <p class="card-text">
+                                        Maximizing the ROAS of a complex eCommerce activity in a multi-product environment (Over 12,000 SKUs)
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="read-more-card">
+                                <p class="card-text float-right"><a href="@Url.Action("SuperPharmEn", "CaseStudy")" style="text-decoration: underline">Read More</a></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </slide>
+            <slide :index="2">
+                <div class="card col-md-12">
+                    <div class="row ">
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="~/Images/case_study_caesarstone.png" class="img-fluid card-img">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body" style="color: black">
+
+                                <div class="row">
+                                    <span class="d-inline-block  float-left">
+                                        <img src="~/Images/case_study_logo_caesarstone2.png" class="logo-card float-left" />
+
+                                    </span>
+                                </div>
+                                <p class="d-inline-block card-title  ">
+                                    Caesarstone- How real time data analysis can create insights
+                                    that led to a population explosion at the trade show
+                                </p>
+                                <div class="d-none d-md-block">
+                                    <p class="d-inline-block card-title  ">
+                                        <h5 class="card-title">The challenge</h5>
+                                    <p class="card-text">
+                                        Getting designers and architects that are attending the “Milan Design Week’ trade show, to also visit Caesarstone’s exhibition that is not near the main event and is a 40 mins drive away.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="read-more-card">
+                                <p class="card-text float-right"><a href="@Url.Action("CaesarstoneEN", "CaseStudy")" style="text-decoration: underline">Read More</a></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </slide>
+            <slide :index="3">
+                <div class="card col-md-12">
+                    <div class="row ">
+                        <div class="col-md-3 d-none d-md-block">
+                            <img src="~/Images/case_study_lapam.png" class="card-img img-fluid">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body" style="color: black">
+                                <div class="row">
+                                    <span class="d-inline-block  float-left">
+
+                                        <img src="~/Images/case_study_logo_lapam.png" class="logo-card  float-left" />
+                                    </span>
+                                </div>
+                                <p class="d-inline-block card-title  ">
+                                    Ministry of Tourism - Multi-channel digital campaign management in 9 countries
+                                </p>
+                                <div class="d-none d-md-block">
+                                    <p class="d-inline-block card-title  ">
+                                        <h5 class="card-title">The challenge</h5>
+                                    <p class="card-text read-more-line">
+                                        Increasing the number of incoming tourists coming to Israel as efforts to promote tourism in Israel in the past 10 years have resulted in an increase of no more than 3% at most.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="read-more-card">
+                                <p class="card-text float-right"><a href="@Url.Action("MinistryEN", "CaseStudy")" style="text-decoration: underline">Read More</a></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </slide>
+
+        </carousel-3d>
+    </div>
+
 
     <div class="space-cusotm"></div>
     <div class="row">
@@ -359,7 +362,19 @@ Clients Section
             $(".triangular-carousel").attr(":height", "237");
 
         }
+        $('.nav-link').removeClass("active");
+        $('.Home').addClass("active");
+        $(window).scroll(function () {
+            var x = $('#Contact').hasClass("active");
 
+            if (x) {
+
+            } else {
+                $('.nav-link').removeClass("active");
+                $('.Home').addClass("active");
+            }
+
+        })
 
 
 

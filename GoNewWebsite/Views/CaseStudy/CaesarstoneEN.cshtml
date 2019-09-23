@@ -38,7 +38,9 @@
     </div>
     <div class="space"></div>
 </section>
-
+<div id="about-video">
+    <div class="DVideo"></div>
+</div>
 <section class=" container" id="solution">
     <div class="row">
         <div class="container-fluid">
@@ -46,8 +48,8 @@
 
 
                 <div class="row">
-                    <div class="col-md-3 col-sm-2 col-image-section">
-                        <img src="~/Images/case_study_caesarstone.png" class="img-fluid n">
+                    <div class="col-md-3 col-sm-2 col-image-section cseaarSotne">
+                        <img src="~/Images/case_study_caesarstone.png" class="img-fluid ">
                     </div>
                     <div class="col-md-9">
                         <div class="col-sm-10  offset-sm-1">
@@ -93,7 +95,8 @@
 
         </div>
     </div>
-    <div class="space"></div>
+    <div class="space d-none d-md-block "></div>
+    
 </section>
 
 
@@ -105,22 +108,46 @@
                 <h2 class="result-section"> The Results</h2>
                 <div class="row">
                     <div class="col-md-6">
-                        <ul>
-                            <li class="about_office_text">
-                                On the third day of the campaign we received an SMS from Caesarstone CMO:
-                                “PLEASE STOP THE CAMPAIGN”
-                            </li>
-                            <li class="about_office_text">
-                                The exhibition was packed with more than 1000 people that were left outside…
-                            </li>
-                        </ul>
+                        <div class="description">
+                            <p class="about_office_text">
+                                <li class="about_office_text">
+                                    On the third day of the campaign we received an SMS from Caesarstone CMO:
+                                    “PLEASE STOP THE CAMPAIGN”
+                                </li>
+                                <li class="about_office_text">
+                                    The exhibition was packed with more than 1000 people that were left outside…
+                                </li>
+                            </p>
+                        </div>
                     </div>
+                    
                     @*<div class="col-md-6">
 
-                        <img src="~/Images/case_study_graph_caesarstone.png" class="img-fluid" />
-                    </div>*@
+            <img src="~/Images/case_study_graph_caesarstone.png" class="img-fluid" />
+        </div>*@
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+
+@section scripts
+{
+    <script>
+        $('.nav-link').removeClass("active");
+        $('.Home').addClass("active");
+        $(window).scroll(function () {
+            var x = $('#Contact').hasClass("active");
+                
+            if (x) {
+                
+            } else {
+                $('.nav-link').removeClass("active");
+                $('.Home').addClass("active");
+            }
+
+        })
+
+        </script>    
+    }

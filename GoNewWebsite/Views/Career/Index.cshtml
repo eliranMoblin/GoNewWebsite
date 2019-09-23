@@ -13,7 +13,7 @@
             <div class="container">
                 <h2 class="about_office">About the Office</h2>
                     <p class="about_office_text">
-We at GO every wake up every morning with the goal of advancing one more step from the peak we reached yesterday. If you, too, wink from the same material, people who are looking to create value, seek to challenge the status quo, love to surround yourself with winners, want to learn from the best and strive to look at the digital world as a career - your place is with us.
+                        Join a team of people who are mutually passionate about pushing the limits and breaking records. If you think you've got what it takes to join our global award-winning team, to be part of place that looks to create value and challenge the status quo, a place to work and learn from the best. And if for you this digital world is a career, you belong with us!
                     </p>
             </div>
 
@@ -116,5 +116,18 @@ We at GO every wake up every morning with the goal of advancing one more step fr
     <script type="text/javascript">
         $('.nav-link').removeClass("active");
         $('.Careers').addClass("active");
+
+
+        $(window).scroll(function () {
+            var x = $('#Contact').hasClass("active");
+                
+            if (x) {
+                
+            } else {
+                $('.nav-link').removeClass("active");
+                $('.Careers').addClass("active");
+            }
+
+        })
     </script>
 }

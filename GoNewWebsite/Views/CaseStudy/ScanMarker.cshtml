@@ -47,7 +47,9 @@
     </div>
     <div class="space"></div>
 </section>
-
+<div id="about-video">
+    <div class="DVideo"></div>
+</div>
 <section class=" container" id="solution">
     <div class="row">
         <div class="container-fluid">
@@ -55,7 +57,7 @@
 
 
                 <div class="row">
-                    <div class="col-md-3 col-sm-2 col-image-section">
+                    <div class="col-md-3 col-sm-2 col-image-section scanMarker">
                         <img src="~/Images/case_study_scanmarker.png" class="img-fluid n">
                     </div>
                     <div class="col-md-9">
@@ -118,22 +120,46 @@
                 <h2 class="result-section"> The Results</h2>
                 <div class="row">
                     <div class="col-md-6">
-                        <ul>
-                            <li class="about_office_text">
-                                Ad Spend grew by 400% In less than 6 months, while keeping the CPA under target!
-                            </li>
-                        </ul>
+                        <div class="description">
+                            <p class="about_office_text">
+                                <li class="about_office_text">
+                                    Ad Spend grew by 400% In less than 6 months, while keeping the CPA under target!
+                                </li>
+                            </p>
+                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <img src="~/Images/case_study_graph_scanmarker.png" class="img-fluid" />
+
+               
+                        <div class="col-md-4">
+                            <img src="~/Images/case_study_graph_scanmarker.png" class="img-fluid" />
+                        </div>
                     </div>
+
+
                 </div>
-
-
-            </div>
 
 
         </div>
     </div>
 
 </section>
+
+@section scripts
+{
+    <script>
+        $('.nav-link').removeClass("active");
+        $('.Home').addClass("active");
+        $(window).scroll(function () {
+            var x = $('#Contact').hasClass("active");
+                
+            if (x) {
+                
+            } else {
+                $('.nav-link').removeClass("active");
+                $('.Home').addClass("active");
+            }
+
+        })
+
+    </script>    
+}

@@ -91,19 +91,6 @@
             </div>
 
         </div>
-        <div class="space-cusotm"></div>
-        <div class="row">
-            <div class=" col-md-6">
-            </div>
-            <div class=" col-md-6">
-                <a href="#openPosition" class="js-scroll-trigger">
-                    <div class="chevron"></div>
-                    <div class="chevron"></div>
-                    <div class="chevron"></div>
-                </a>
-
-            </div>
-        </div>
 
     </section>
 
@@ -116,5 +103,19 @@
         <script type="text/javascript">
             $('.nav-link').removeClass("active");
             $('.Careers').addClass("active");
+
+
+            $(window).scroll(function () {
+                var x = $('#Contact').hasClass("active");
+                
+                if (x) {
+                
+                } else {
+                    $('.nav-link').removeClass("active");
+                    $('.Careers').addClass("active");
+                }
+
+            })
+
         </script>
     }

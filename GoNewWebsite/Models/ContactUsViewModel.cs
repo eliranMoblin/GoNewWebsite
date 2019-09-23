@@ -9,9 +9,9 @@ namespace GoNewWebsite.Models
 {
     public class ContactUsViewModel
     {
-        [JsonProperty("*FirstName")]
+        [JsonProperty("FirstName")]
         [Required(ErrorMessage = "Please enter your full name")]
-        [Display(Name = "Full Name")]
+        [Display(Name = "*Full Name")]
         [StringLength(100, ErrorMessage = "Please Enter Full Name", MinimumLength = 2)]
         public string FullName { get; set; }
 
